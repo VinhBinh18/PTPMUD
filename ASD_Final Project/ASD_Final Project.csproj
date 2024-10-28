@@ -60,6 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Admin_Control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin_Control.Designer.cs">
+      <DependentUpon>Admin_Control.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Alert.cs">
       <SubType>Form</SubType>
     </Compile>
