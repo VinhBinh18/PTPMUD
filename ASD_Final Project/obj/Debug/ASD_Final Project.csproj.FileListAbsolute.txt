@@ -16,3 +16,6 @@ C:\Users\MSI\source\repos\ASD_Final Project\ASD_Final Project\obj\Debug\ASD_Fina
 C:\Users\MSI\source\repos\ASD_Final Project\ASD_Final Project\obj\Debug\ASD_Fina.406409A5.Up2Date
 C:\Users\MSI\source\repos\ASD_Final Project\ASD_Final Project\obj\Debug\ASD_Final Project.exe
 C:\Users\MSI\source\repos\ASD_Final Project\ASD_Final Project\obj\Debug\ASD_Final Project.pdb
+C:\Users\MSI\source\repos\ASD_Final Project\ASD_Final Project\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.dll
+C:\Users\MSI\source\repos\ASD_Final Project\ASD_Final Project\bin\Debug\Bunifu.UI.WinForms.BunifuScrollBar.dll
+C:\Users\MSI\source\repos\ASD_Final Project\ASD_Final Project\obj\Debug\ASD_Final_Project.Form_Dashboard.resources
