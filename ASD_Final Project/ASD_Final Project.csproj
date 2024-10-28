@@ -86,6 +86,9 @@
     <Compile Include="Signup_Form.Designer.cs">
       <DependentUpon>Signup_Form.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Admin\Admin_Control.resx">
+      <DependentUpon>Admin_Control.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Alert.resx">
       <DependentUpon>Form_Alert.cs</DependentUpon>
     </EmbeddedResource>
