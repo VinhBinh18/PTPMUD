@@ -14,3 +14,5 @@
 /.vs/ASD_Final Project/v17/DocumentLayout.backup.json
 /.vs/ASD_Final Project/v17/DocumentLayout.json
 /ASD_Final Project/obj/Debug/DesignTimeResolveAssemblyReferences.cache
+.vs
+.cache
