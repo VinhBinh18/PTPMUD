@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\phuon\\source\\repos\\PTPMUD\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{56B002F8-9F74-408A-A427-06B7057B7532}|ASD_Final Project\\ASD_Final Project.csproj|c:\\users\\phuon\\source\\repos\\ptpmud\\asd_final project\\form_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{56B002F8-9F74-408A-A427-06B7057B7532}|ASD_Final Project\\ASD_Final Project.csproj|solutionrelative:asd_final project\\form_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56B002F8-9F74-408A-A427-06B7057B7532}|ASD_Final Project\\ASD_Final Project.csproj|c:\\users\\phuon\\source\\repos\\ptpmud\\asd_final project\\login_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{56B002F8-9F74-408A-A427-06B7057B7532}|ASD_Final Project\\ASD_Final Project.csproj|solutionrelative:asd_final project\\login_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +18,39 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form_Dashboard.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\phuon\\source\\repos\\PTPMUD\\ASD_Final Project\\Form_Dashboard.cs",
+              "RelativeDocumentMoniker": "ASD_Final Project\\Form_Dashboard.cs",
+              "ToolTip": "C:\\Users\\phuon\\source\\repos\\PTPMUD\\ASD_Final Project\\Form_Dashboard.cs [Design]",
+              "RelativeToolTip": "ASD_Final Project\\Form_Dashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T17:40:16.889Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login_Form.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\phuon\\source\\repos\\PTPMUD\\ASD_Final Project\\Login_Form.cs",
+              "RelativeDocumentMoniker": "ASD_Final Project\\Login_Form.cs",
+              "ToolTip": "C:\\Users\\phuon\\source\\repos\\PTPMUD\\ASD_Final Project\\Login_Form.cs [Design]",
+              "RelativeToolTip": "ASD_Final Project\\Login_Form.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T17:40:14.607Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         }
