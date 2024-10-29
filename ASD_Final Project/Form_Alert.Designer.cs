@@ -54,9 +54,9 @@
             this.pictureBox1.ErrorImage = null;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 7);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(55, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(55, 55);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -68,9 +68,9 @@
             this.btn_CloseAlert.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_CloseAlert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_CloseAlert.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(138)))), ((int)(((byte)(87)))));
-            this.btn_CloseAlert.Location = new System.Drawing.Point(489, 23);
+            this.btn_CloseAlert.Location = new System.Drawing.Point(489, 17);
             this.btn_CloseAlert.Name = "btn_CloseAlert";
-            this.btn_CloseAlert.Size = new System.Drawing.Size(35, 30);
+            this.btn_CloseAlert.Size = new System.Drawing.Size(35, 35);
             this.btn_CloseAlert.TabIndex = 1;
             this.btn_CloseAlert.UseVisualStyleBackColor = true;
             this.btn_CloseAlert.Click += new System.EventHandler(this.btn_CloseAlert_Click);

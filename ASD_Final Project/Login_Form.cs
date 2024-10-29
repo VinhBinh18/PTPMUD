@@ -128,5 +128,12 @@ namespace ASD_Final_Project
                 this.Alert("Login successfully", Form_Alert.enmType.Success);
             }
         }
+
+        private void lbl_Forget_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form_Dashboard form_dashboard = new Form_Dashboard();
+            form_dashboard.Show();
+            this.Hide();
+        }
     }
 }
