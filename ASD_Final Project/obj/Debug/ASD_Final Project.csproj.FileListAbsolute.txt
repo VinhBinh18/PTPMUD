@@ -40,14 +40,3 @@ C:\Users\MSI\source\repos\ASD_Final Project Rico\ASD_Final Project\obj\Debug\ASD
 C:\Users\MSI\source\repos\ASD_Final Project Rico\ASD_Final Project\obj\Debug\ASD_Final Project.pdb
 C:\Users\MSI\source\repos\ASD_Final Project Rico\ASD_Final Project\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.dll
 C:\Users\MSI\source\repos\ASD_Final Project Rico\ASD_Final Project\obj\Debug\ASD_Final_Project.Form_Dashboard.resources
-C:\Users\phuon\Source\Repos\PTPMUD\ASD_Final Project\obj\Debug\ASD_Final Project.csproj.AssemblyReference.cache
-C:\Users\phuon\Source\Repos\PTPMUD\ASD_Final Project\obj\Debug\ASD_Final_Project.Admin.Admin_Control.resources
-C:\Users\phuon\Source\Repos\PTPMUD\ASD_Final Project\obj\Debug\ASD_Final_Project.Form_Alert.resources
-C:\Users\phuon\Source\Repos\PTPMUD\ASD_Final Project\obj\Debug\ASD_Final_Project.Form1.resources
-C:\Users\phuon\Source\Repos\PTPMUD\ASD_Final Project\obj\Debug\ASD_Final_Project.Properties.Resources.resources
-C:\Users\phuon\Source\Repos\PTPMUD\ASD_Final Project\obj\Debug\ASD_Final_Project.Signup_Form.resources
-C:\Users\phuon\Source\Repos\PTPMUD\ASD_Final Project\obj\Debug\ASD_Final Project.csproj.GenerateResource.cache
-C:\Users\phuon\Source\Repos\PTPMUD\ASD_Final Project\obj\Debug\ASD_Final Project.exe.licenses
-C:\Users\phuon\Source\Repos\PTPMUD\ASD_Final Project\obj\Debug\ASD_Final Project.csproj.CoreCompileInputs.cache
-C:\Users\phuon\Source\Repos\PTPMUD\ASD_Final Project\obj\Debug\ASD_Final Project.exe
-C:\Users\phuon\Source\Repos\PTPMUD\ASD_Final Project\obj\Debug\ASD_Final Project.pdb
