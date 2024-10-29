@@ -16,3 +16,26 @@ C:\Users\MSI\source\repos\ASD_Final Project\ASD_Final Project\obj\Debug\ASD_Fina
 C:\Users\MSI\source\repos\ASD_Final Project\ASD_Final Project\obj\Debug\ASD_Fina.406409A5.Up2Date
 C:\Users\MSI\source\repos\ASD_Final Project\ASD_Final Project\obj\Debug\ASD_Final Project.exe
 C:\Users\MSI\source\repos\ASD_Final Project\ASD_Final Project\obj\Debug\ASD_Final Project.pdb
+C:\Users\MSI\source\repos\ASD_Final Project Rico\ASD_Final Project\bin\Debug\ASD_Final Project.exe.config
+C:\Users\MSI\source\repos\ASD_Final Project Rico\ASD_Final Project\bin\Debug\ASD_Final Project.exe
+C:\Users\MSI\source\repos\ASD_Final Project Rico\ASD_Final Project\bin\Debug\ASD_Final Project.pdb
+C:\Users\MSI\source\repos\ASD_Final Project Rico\ASD_Final Project\bin\Debug\Bunifu.UI.WinForms.1.5.3.dll
+C:\Users\MSI\source\repos\ASD_Final Project Rico\ASD_Final Project\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
+C:\Users\MSI\source\repos\ASD_Final Project Rico\ASD_Final Project\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.dll
+C:\Users\MSI\source\repos\ASD_Final Project Rico\ASD_Final Project\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll
+C:\Users\MSI\source\repos\ASD_Final Project Rico\ASD_Final Project\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\MSI\source\repos\ASD_Final Project Rico\ASD_Final Project\bin\Debug\System.Data.SqlClient.dll
+C:\Users\MSI\source\repos\ASD_Final Project Rico\ASD_Final Project\bin\Debug\TableDependency.SqlClient.dll
+C:\Users\MSI\source\repos\ASD_Final Project Rico\ASD_Final Project\obj\Debug\ASD_Final Project.csproj.AssemblyReference.cache
+C:\Users\MSI\source\repos\ASD_Final Project Rico\ASD_Final Project\obj\Debug\ASD_Final_Project.Admin.Admin_Control.resources
+C:\Users\MSI\source\repos\ASD_Final Project Rico\ASD_Final Project\obj\Debug\ASD_Final_Project.Form_Alert.resources
+C:\Users\MSI\source\repos\ASD_Final Project Rico\ASD_Final Project\obj\Debug\ASD_Final_Project.Form1.resources
+C:\Users\MSI\source\repos\ASD_Final Project Rico\ASD_Final Project\obj\Debug\ASD_Final_Project.Properties.Resources.resources
+C:\Users\MSI\source\repos\ASD_Final Project Rico\ASD_Final Project\obj\Debug\ASD_Final_Project.Signup_Form.resources
+C:\Users\MSI\source\repos\ASD_Final Project Rico\ASD_Final Project\obj\Debug\ASD_Final Project.csproj.GenerateResource.cache
+C:\Users\MSI\source\repos\ASD_Final Project Rico\ASD_Final Project\obj\Debug\ASD_Final Project.exe.licenses
+C:\Users\MSI\source\repos\ASD_Final Project Rico\ASD_Final Project\obj\Debug\ASD_Final Project.csproj.CoreCompileInputs.cache
+C:\Users\MSI\source\repos\ASD_Final Project Rico\ASD_Final Project\obj\Debug\ASD_Fina.406409A5.Up2Date
+C:\Users\MSI\source\repos\ASD_Final Project Rico\ASD_Final Project\obj\Debug\ASD_Final Project.exe
+C:\Users\MSI\source\repos\ASD_Final Project Rico\ASD_Final Project\obj\Debug\ASD_Final Project.pdb
+C:\Users\MSI\source\repos\ASD_Final Project Rico\ASD_Final Project\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.dll
