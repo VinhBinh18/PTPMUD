@@ -31,13 +31,6 @@ namespace ASD_Final_Project
         {
             btn_Close.ForeColor = Color.Red;
         }
-
-        private void lbl_Already_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Form1 login_Form = new Form1();
-            login_Form.Show();
-            this.Hide(); 
-        }
         public void Alert(string msg, Form_Alert.enmType type)
         {
             Form_Alert frm = new Form_Alert();
@@ -46,7 +39,7 @@ namespace ASD_Final_Project
 
         private void btn_Createnew_Click(object sender, EventArgs e)
         {
-            if (txt_Username.Text == "" || txt_Password.Text == "" || Roles.Text == "")
+            if (txt_Username.Text == "" || txt_Password.Text == "" )
             {
 
                 this.Alert("Please fill in all the required information", Form_Alert.enmType.Error);
