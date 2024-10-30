@@ -20,14 +20,14 @@ namespace ASD_Final_Project.Admin
 
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=PRIN\MSSQLSERVER02;Initial Catalog=hello;Integrated Security=True;Encrypt=False";
+        string str = @"Data Source=PRIN\MSSQLSERVER02;Initial Catalog=WH_MANAGEMENT;Integrated Security=True;Encrypt=False";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
 
         void loaddata()
         {
             command = connection.CreateCommand();
-            command.CommandText = "select * from Person";
+            command.CommandText = "SELECT Users.UserID, Users.UserName, Users.Addresss, Users.Phone, Roles.RolesName FROM Users JOIN Roles ON Users.RolesID = Roles.RolesID; ";
             adapter.SelectCommand = command;
             table.Clear();
             adapter.Fill(table);
@@ -35,20 +35,36 @@ namespace ASD_Final_Project.Admin
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            command = connection.CreateCommand();
-            command.CommandText = "insert into Person values('" + txt_name.Text + "','" + txt_phone.Text + "')";
-            command.ExecuteNonQuery();
 
-        }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void Admin_AddUser_Load(object sender, EventArgs e)
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pn_btn_submit_Click(object sender, EventArgs e)
+        {
+            if(pn_txt_name.Text == null || pn_txt_address.Text == null || pn_txt_phone.Text == null) 
+            {
+                MessageBox.Show("Please fill full infor User");
+            }
+            /* command = connection.CreateCommand();
+            command.CommandText = "insert into User values('" + txt_name.Text + "','" + txt_phone.Text + "')";
+            command.ExecuteNonQuery();*/
+        }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            pn.Visible = true;
+            pn.Dock = DockStyle.Fill;
+        }
+
+        private void Admin_Control_Load(object sender, EventArgs e)
         {
             connection = new SqlConnection(str);
             connection.Open();

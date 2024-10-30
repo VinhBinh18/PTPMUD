@@ -131,9 +131,9 @@ namespace ASD_Final_Project
 
         private void lbl_Forget_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Form_Dashboard form_dashboard = new Form_Dashboard();
+       /*     Form_Dashboard form_dashboard = new Form_Dashboard();
             form_dashboard.Show();
-            this.Hide();
+            this.Hide();*/
         }
     }
 }

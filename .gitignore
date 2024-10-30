@@ -2,12 +2,21 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/ASD_Final Project/FileContentIndex/4cc6410c-72ad-46e4-915a-9c29f071a9b5.vsidx
-/.vs/ASD_Final Project/FileContentIndex/57504f0b-d09c-4880-90ef-34275fcd615f.vsidx
-/.vs/ASD_Final Project/FileContentIndex/d5286d75-1ca2-47ea-a9ae-b8a93d104779.vsidx
-/.vs/ASD_Final Project/FileContentIndex/ef6a8d1c-ea8b-4983-b061-efadd1cffb74.vsidx
-/.vs/ASD_Final Project/FileContentIndex/0fe64933-95b5-4ea9-8319-cb464fa394f0.vsidx
-/.vs/ASD_Final Project/FileContentIndex/5b03fdf6-3c7e-4c4d-897b-c61ac10056e7.vsidx
-/.vs/ASD_Final Project/FileContentIndex/6015a903-4622-4555-99fe-4c4f0353e3d9.vsidx
-/.vs/ASD_Final Project/FileContentIndex/c642bb2f-ae9d-4218-b95a-4d5780949f43.vsidx
-/.vs/ASD_Final Project/FileContentIndex/cc2155e3-1dea-4012-8a60-99c7c90810df.vsidx
+/.vs/ASD_Final Project/FileContentIndex
+/ASD_Final Project/obj/Debug/ASD_Final Project.csproj.AssemblyReference.cache
+/ASD_Final Project/obj/Debug/DesignTimeResolveAssemblyReferences.cache
+/ASD_Final Project/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/.vs/ASD_Final Project/v17/.suo
+/.vs/ASD_Final Project/v17/DocumentLayout.backup.json
+/.vs/ASD_Final Project/v17/DocumentLayout.json
+/.vs
+/ASD_Final Project/obj/Debug/TempPE
+/ASD_Final Project/obj
+/ASD_Final Project/bin/
+/ASD_Final Project/.vs
+/ASD_Final Project/bin/Debug/ASD_Final Project.exe
+/ASD_Final Project/bin/Debug/ASD_Final Project.exe.config
+/ASD_Final Project/bin/Debug/ASD_Final Project.pdb
+/ASD_Final Project/bin/Debug/System.ComponentModel.Annotations.dll
+/ASD_Final Project/bin/Debug/System.Data.SqlClient.dll
+/ASD_Final Project/bin/Debug/TableDependency.SqlClient.dll
