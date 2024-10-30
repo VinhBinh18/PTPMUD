@@ -17,16 +17,14 @@ namespace ASD_Final_Project
             InitializeComponent();
         }
 
-        private void label1_MouseHover(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btn_Logout_Click(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            Signup_Form signup_Form = new Signup_Form();
-            signup_Form.Show();
-            this.Hide();
+
         }
     }
 }

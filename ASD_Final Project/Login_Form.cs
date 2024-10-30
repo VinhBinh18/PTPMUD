@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,11 @@ namespace ASD_Final_Project
 {
     public partial class Form1 : Form
     {
+
+        bool isMouseDown;
+
+        int xLast;
+        int yLast;
         public Form1()
         {
             InitializeComponent();
@@ -118,7 +124,7 @@ namespace ASD_Final_Project
 
         private void btn_Login_Click_1(object sender, EventArgs e)
         {
-            if (txt_Username.Text == "" || txt_Password.Text == "")
+            if (txt_Username.Text == "" || txt_Password.Text == "" || Roles.Text == "")
             {
               
                 this.Alert("Please fill in all the required information", Form_Alert.enmType.Error);
@@ -129,11 +135,51 @@ namespace ASD_Final_Project
             }
         }
 
+        private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            isMouseDown = true;
+            xLast = e.X;
+            yLast = e.Y;
+
+            base.OnMouseDown(e);
+        }
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isMouseDown)
+            {
+                int newY = this.Top + (e.Y - yLast);
+                int newX = this.Left + (e.X - xLast);
+
+                this.Location = new Point(newX, newY);
+            }
+
+            base.OnMouseMove(e);
+        }
+
+        private void Form1_MouseUp(object sender, MouseEventArgs e)
+        {
+            isMouseDown = false;
+
+            base.OnMouseUp(e);
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void lbl_Forget_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-       /*     Form_Dashboard form_dashboard = new Form_Dashboard();
+            Form_Dashboard form_dashboard = new Form_Dashboard();
             form_dashboard.Show();
-            this.Hide();*/
+            this.Hide();
+
         }
     }
 }

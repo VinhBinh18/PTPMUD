@@ -46,6 +46,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
       <HintPath>..\..\..\..\Downloads\framework\BunifuCrack-main\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar">
+      <HintPath>..\..\..\..\Downloads\framework\BunifuCrack-main\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
       <HintPath>..\..\..\..\Downloads\framework\BunifuCrack-main\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
     </Reference>
@@ -64,6 +67,8 @@
       <HintPath>..\packages\System.Data.SqlClient.4.3.0\lib\net46\System.Data.SqlClient.dll</HintPath>
     </Reference>
     <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -96,8 +101,10 @@
     <Compile Include="Form_Dashboard.Designer.cs">
       <DependentUpon>Form_Dashboard.cs</DependentUpon>
     </Compile>
+
     <Compile Include="Programs\InventoryService.cs" />
-    <Compile Include="Login_Form.cs">
+
+ <Compile Include="Login_Form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login_Form.Designer.cs">
@@ -108,6 +115,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Programs\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Signup_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,14 +144,9 @@
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Signup_Form.resx">
       <DependentUpon>Signup_Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +181,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\roles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corgi1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
