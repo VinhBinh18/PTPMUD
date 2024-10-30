@@ -33,7 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
     <Reference Include="Bunifu.UI.WinForms.1.5.3">
       <HintPath>..\..\..\..\Downloads\framework\BunifuCrack-main\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
     </Reference>
@@ -101,15 +100,7 @@
     <Compile Include="Form_Dashboard.Designer.cs">
       <DependentUpon>Form_Dashboard.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Programs\InventoryService.cs" />
-
- <Compile Include="Login_Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login_Form.Designer.cs">
-      <DependentUpon>Login_Form.cs</DependentUpon>
-    </Compile>
     <Compile Include="Programs\Product.cs" />
     <Compile Include="Programs\ProductRepository.cs" />
     <Compile Include="Program.cs" />
@@ -137,9 +128,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Dashboard.resx">
       <DependentUpon>Form_Dashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login_Form.resx">
-      <DependentUpon>Login_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
