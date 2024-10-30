@@ -27,7 +27,7 @@ namespace ASD_Final_Project.Admin
         void loaddata()
         {
             command = connection.CreateCommand();
-            command.CommandText = "select * from User ";
+            command.CommandText = "SELECT Users.UserID, Users.UserName, Users.Addresss, Users.Phone, Roles.RolesName FROM Users JOIN Roles ON Users.RolesID = Roles.RolesID; ";
             adapter.SelectCommand = command;
             table.Clear();
             adapter.Fill(table);
@@ -42,13 +42,6 @@ namespace ASD_Final_Project.Admin
 
         }
 
-        private void Admin_AddUser_Load(object sender, EventArgs e)
-        {
-            connection = new SqlConnection(str);
-            connection.Open();
-            loaddata();
-        }
-
         private void label8_Click(object sender, EventArgs e)
         {
 
@@ -56,7 +49,7 @@ namespace ASD_Final_Project.Admin
 
         private void pn_btn_submit_Click(object sender, EventArgs e)
         {
-            if(pn_txt_name == null || pn_txt_address == null || pn_txt_phone == null) 
+            if(pn_txt_name.Text == null || pn_txt_address.Text == null || pn_txt_phone.Text == null) 
             {
                 MessageBox.Show("Please fill full infor User");
             }
@@ -69,6 +62,13 @@ namespace ASD_Final_Project.Admin
         {
             pn.Visible = true;
             pn.Dock = DockStyle.Fill;
+        }
+
+        private void Admin_Control_Load(object sender, EventArgs e)
+        {
+            connection = new SqlConnection(str);
+            connection.Open();
+            loaddata();
         }
     }
 }

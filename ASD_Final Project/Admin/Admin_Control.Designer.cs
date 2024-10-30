@@ -178,9 +178,9 @@
             this.pn.Controls.Add(this.label7);
             this.pn.Controls.Add(this.Address);
             this.pn.Controls.Add(this.labe100);
-            this.pn.Location = new System.Drawing.Point(266, 24);
+            this.pn.Location = new System.Drawing.Point(536, 59);
             this.pn.Name = "pn";
-            this.pn.Size = new System.Drawing.Size(534, 426);
+            this.pn.Size = new System.Drawing.Size(252, 109);
             this.pn.TabIndex = 26;
             this.pn.Visible = false;
             // 
@@ -280,6 +280,7 @@
             this.Controls.Add(this.btn_add);
             this.Name = "Admin_Control";
             this.Text = "Admin_Control";
+            this.Load += new System.EventHandler(this.Admin_Control_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.pn.ResumeLayout(false);
             this.pn.PerformLayout();
