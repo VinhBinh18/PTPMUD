@@ -57,7 +57,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel10 = new System.Windows.Forms.Panel();
+            this.pnl_login = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuDropdown2 = new Bunifu.UI.WinForms.BunifuDropdown();
@@ -101,7 +101,7 @@
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel10.SuspendLayout();
+            this.pnl_login.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -198,28 +198,28 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel10
+            // pnl_login
             // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel10.Controls.Add(this.panel2);
-            this.panel10.Controls.Add(this.pictureBox4);
-            this.panel10.Controls.Add(this.label5);
-            this.panel10.Controls.Add(this.bunifuDropdown1);
-            this.panel10.Controls.Add(this.btn_Login);
-            this.panel10.Controls.Add(this.lbl_Newaccount);
-            this.panel10.Controls.Add(this.lbl_Forget);
-            this.panel10.Controls.Add(this.pictureBox3);
-            this.panel10.Controls.Add(this.label6);
-            this.panel10.Controls.Add(this.panel13);
-            this.panel10.Controls.Add(this.label8);
-            this.panel10.Controls.Add(this.pictureBox2);
-            this.panel10.Controls.Add(this.label9);
-            this.panel10.Controls.Add(this.panel16);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(240, 40);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(780, 713);
-            this.panel10.TabIndex = 16;
+            this.pnl_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnl_login.Controls.Add(this.panel2);
+            this.pnl_login.Controls.Add(this.pictureBox4);
+            this.pnl_login.Controls.Add(this.label5);
+            this.pnl_login.Controls.Add(this.bunifuDropdown1);
+            this.pnl_login.Controls.Add(this.btn_Login);
+            this.pnl_login.Controls.Add(this.lbl_Newaccount);
+            this.pnl_login.Controls.Add(this.lbl_Forget);
+            this.pnl_login.Controls.Add(this.pictureBox3);
+            this.pnl_login.Controls.Add(this.label6);
+            this.pnl_login.Controls.Add(this.panel13);
+            this.pnl_login.Controls.Add(this.label8);
+            this.pnl_login.Controls.Add(this.pictureBox2);
+            this.pnl_login.Controls.Add(this.label9);
+            this.pnl_login.Controls.Add(this.panel16);
+            this.pnl_login.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_login.Location = new System.Drawing.Point(240, 40);
+            this.pnl_login.Name = "pnl_login";
+            this.pnl_login.Size = new System.Drawing.Size(780, 713);
+            this.pnl_login.TabIndex = 16;
             // 
             // panel2
             // 
@@ -234,8 +234,7 @@
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.panel11);
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Location = new System.Drawing.Point(606, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(780, 713);
             this.panel2.TabIndex = 29;
@@ -1184,7 +1183,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1020, 753);
-            this.Controls.Add(this.panel10);
+            this.Controls.Add(this.pnl_login);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1193,8 +1192,8 @@
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
+            this.pnl_login.ResumeLayout(false);
+            this.pnl_login.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -1221,7 +1220,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel pnl_login;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label5;
