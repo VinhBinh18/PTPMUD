@@ -43,5 +43,18 @@ namespace ASD_Final_Project
             Form_Alert frm = new Form_Alert();
             frm.showAlert(msg, type);
         }
+
+        private void btn_Createnew_Click(object sender, EventArgs e)
+        {
+            if (txt_Username.Text == "" || txt_Password.Text == "" || Roles.Text == "")
+            {
+
+                this.Alert("Please fill in all the required information", Form_Alert.enmType.Error);
+            }
+            else
+            {
+                this.Alert("Login successfully", Form_Alert.enmType.Success);
+            }
+        }
     }
 }

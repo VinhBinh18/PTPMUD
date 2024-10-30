@@ -2,6 +2,7 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
+
 /.vs/ASD_Final Project/FileContentIndex
 /ASD_Final Project/obj/Debug/ASD_Final Project.csproj.AssemblyReference.cache
 /ASD_Final Project/obj/Debug/DesignTimeResolveAssemblyReferences.cache
@@ -20,3 +21,4 @@
 /ASD_Final Project/bin/Debug/System.ComponentModel.Annotations.dll
 /ASD_Final Project/bin/Debug/System.Data.SqlClient.dll
 /ASD_Final Project/bin/Debug/TableDependency.SqlClient.dll
+
