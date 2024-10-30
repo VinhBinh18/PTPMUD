@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ASD_Final_Project.Program
+namespace ASD_Final_Project.Programs
 {
     public class ProductRepository
     {

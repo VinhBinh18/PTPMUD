@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Timers;
 
 
-namespace ASD_Final_Project.Program
+namespace ASD_Final_Project.Programs
 {
     public class WarehouseService
     {
