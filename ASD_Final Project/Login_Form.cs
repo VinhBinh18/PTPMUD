@@ -179,6 +179,7 @@ namespace ASD_Final_Project
             Form_Dashboard form_dashboard = new Form_Dashboard();
             form_dashboard.Show();
             this.Hide();
+
         }
     }
 }

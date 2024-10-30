@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties37 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties38 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties39 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties40 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Signup_Form));
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -45,6 +49,7 @@
             this.pnl_signup = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.Roles = new Bunifu.UI.WinForms.BunifuDropdown();
+
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -69,6 +74,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+
             this.pnl_signup.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -89,6 +95,7 @@
             this.pnl_signup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pnl_signup.Controls.Add(this.label4);
             this.pnl_signup.Controls.Add(this.Roles);
+
             this.pnl_signup.Controls.Add(this.label1);
             this.pnl_signup.Controls.Add(this.panel2);
             this.pnl_signup.Controls.Add(this.btn_Createnew);
@@ -159,11 +166,13 @@
             this.Roles.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.Roles.TextLeftMargin = 5;
             // 
+
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(97, 336);
+
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(157, 19);
             this.label1.TabIndex = 25;
@@ -173,6 +182,7 @@
             // 
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Location = new System.Drawing.Point(282, 323);
+
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(394, 70);
             this.panel2.TabIndex = 24;
@@ -242,6 +252,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bunifuTextBox1.OnIdleState = stateProperties4;
+
             this.bunifuTextBox1.Padding = new System.Windows.Forms.Padding(3);
             this.bunifuTextBox1.PasswordChar = '\0';
             this.bunifuTextBox1.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -299,6 +310,7 @@
             borderEdges1.TopLeft = true;
             borderEdges1.TopRight = true;
             this.btn_Createnew.CustomizableEdges = borderEdges1;
+
             this.btn_Createnew.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_Createnew.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_Createnew.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -324,6 +336,7 @@
             this.btn_Createnew.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btn_Createnew.IndicateFocus = false;
             this.btn_Createnew.Location = new System.Drawing.Point(229, 617);
+
             this.btn_Createnew.Name = "btn_Createnew";
             this.btn_Createnew.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_Createnew.OnDisabledState.BorderRadius = 20;
@@ -358,6 +371,7 @@
             this.btn_Createnew.OnPressedState.IconLeftImage = null;
             this.btn_Createnew.OnPressedState.IconRightImage = null;
             this.btn_Createnew.Size = new System.Drawing.Size(294, 56);
+
             this.btn_Createnew.TabIndex = 23;
             this.btn_Createnew.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Createnew.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -373,6 +387,7 @@
             this.lbl_Already.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold);
             this.lbl_Already.LinkColor = System.Drawing.Color.Black;
             this.lbl_Already.Location = new System.Drawing.Point(297, 569);
+
             this.lbl_Already.Name = "lbl_Already";
             this.lbl_Already.Size = new System.Drawing.Size(153, 16);
             this.lbl_Already.TabIndex = 22;
@@ -384,7 +399,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(97, 242);
+            this.label3.Location = new System.Drawing.Point(97, 234);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 19);
             this.label3.TabIndex = 19;
@@ -393,7 +408,7 @@
             // panel6
             // 
             this.panel6.Controls.Add(this.panel11);
-            this.panel6.Location = new System.Drawing.Point(282, 227);
+            this.panel6.Location = new System.Drawing.Point(282, 219);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(394, 70);
             this.panel6.TabIndex = 18;
@@ -463,6 +478,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_Password.OnIdleState = stateProperties8;
+
             this.txt_Password.Padding = new System.Windows.Forms.Padding(3);
             this.txt_Password.PasswordChar = '\0';
             this.txt_Password.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -572,6 +588,7 @@
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_Username.OnIdleState = stateProperties12;
+
             this.txt_Username.Padding = new System.Windows.Forms.Padding(3);
             this.txt_Username.PasswordChar = '\0';
             this.txt_Username.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -667,6 +684,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 40);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(240, 713);
+
             this.panel3.TabIndex = 15;
             // 
             // label2
@@ -685,17 +703,20 @@
             this.pictureBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 192);
+
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(240, 240);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+
             // Signup_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1020, 753);
+
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnl_signup);
@@ -745,6 +766,7 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label2;
         private Bunifu.UI.WinForms.BunifuDropdown Roles;
+
         private System.Windows.Forms.Label label4;
     }
 }

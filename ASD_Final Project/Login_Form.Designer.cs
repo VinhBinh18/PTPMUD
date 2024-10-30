@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -38,9 +39,8 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_Mininize = new System.Windows.Forms.Button();
-            this.btn_Close = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -50,10 +50,11 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.lbl_Username = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.txt_Password = new Bunifu.UI.WinForms.BunifuTextBox();
             this.panel12 = new System.Windows.Forms.Panel();
+
             this.label3 = new System.Windows.Forms.Label();
             this.lbl_Forget = new System.Windows.Forms.LinkLabel();
             this.lbl_Newaccount = new System.Windows.Forms.LinkLabel();
@@ -75,6 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+
             this.SuspendLayout();
             // 
             // panel1
@@ -88,41 +90,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1019, 40);
             this.panel1.TabIndex = 0;
-            // 
-            // btn_Mininize
-            // 
-            this.btn_Mininize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Mininize.BackgroundImage")));
-            this.btn_Mininize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Mininize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Mininize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.btn_Mininize.Location = new System.Drawing.Point(935, 0);
-            this.btn_Mininize.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_Mininize.Name = "btn_Mininize";
-            this.btn_Mininize.Size = new System.Drawing.Size(42, 38);
-            this.btn_Mininize.TabIndex = 0;
-            this.btn_Mininize.TabStop = false;
-            this.btn_Mininize.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.btn_Mininize.UseVisualStyleBackColor = true;
-            this.btn_Mininize.Click += new System.EventHandler(this.btn_Mininize_Click);
-            this.btn_Mininize.MouseHover += new System.EventHandler(this.btn_Mininize_MouseHover);
-            // 
-            // btn_Close
-            // 
-            this.btn_Close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Close.BackgroundImage")));
-            this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Close.CausesValidation = false;
-            this.btn_Close.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Close.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.btn_Close.Location = new System.Drawing.Point(976, 0);
-            this.btn_Close.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_Close.Name = "btn_Close";
-            this.btn_Close.Size = new System.Drawing.Size(42, 38);
-            this.btn_Close.TabIndex = 0;
-            this.btn_Close.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.btn_Close.UseVisualStyleBackColor = true;
-            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
-            this.btn_Close.MouseHover += new System.EventHandler(this.btn_Close_MouseHover);
             // 
             // panel3
             // 
@@ -299,6 +266,7 @@
             this.panel11.TabIndex = 1;
             this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
             // 
+
             // txt_Password
             // 
             this.txt_Password.AcceptsReturn = false;
@@ -392,6 +360,7 @@
             this.label3.Text = "Password";
             // 
             // lbl_Forget
+
             // 
             this.lbl_Forget.ActiveLinkColor = System.Drawing.Color.White;
             this.lbl_Forget.AutoSize = true;
@@ -602,6 +571,7 @@
             this.btn_Login.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn_Login.UseDefaultRadiusAndThickness = true;
             this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click_1);
+
             // 
             // pictureBox3
             // 
@@ -622,6 +592,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
+
             // 
             // Form1
             // 
@@ -651,6 +622,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+
             this.ResumeLayout(false);
 
         }
@@ -679,8 +651,10 @@
         private System.Windows.Forms.LinkLabel lbl_Forget;
         private System.Windows.Forms.LinkLabel lbl_Newaccount;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_Login;
+
         private System.Windows.Forms.Panel pnl_login;
         private Bunifu.UI.WinForms.BunifuDropdown Roles;
+
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label4;
     }

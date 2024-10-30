@@ -34,6 +34,7 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Dashboard));
             this.panel1 = new System.Windows.Forms.Panel();
+
             this.panel9 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -76,10 +77,12 @@
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            this.SuspendLayout();
+
+
             // 
             // panel1
             // 
+
             this.panel1.Controls.Add(this.pictureBox8);
             this.panel1.Controls.Add(this.bunifuTextBox1);
             this.panel1.Controls.Add(this.bunifuDropdown1);
@@ -298,6 +301,7 @@
             this.label4.Size = new System.Drawing.Size(64, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "Customer";
+
             // 
             // bunifuDropdown1
             // 
@@ -339,6 +343,7 @@
             this.bunifuDropdown1.TabIndex = 8;
             this.bunifuDropdown1.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.bunifuDropdown1.TextLeftMargin = 9;
+
             // 
             // bunifuTextBox1
             // 
@@ -359,7 +364,9 @@
             this.bunifuTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox1.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
             this.bunifuTextBox1.DefaultText = "";
+
             this.bunifuTextBox1.FillColor = System.Drawing.Color.WhiteSmoke;
+
             this.bunifuTextBox1.HideSelection = true;
             this.bunifuTextBox1.IconLeft = null;
             this.bunifuTextBox1.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -367,7 +374,9 @@
             this.bunifuTextBox1.IconRight = null;
             this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox1.Lines = new string[0];
+
             this.bunifuTextBox1.Location = new System.Drawing.Point(226, 9);
+
             this.bunifuTextBox1.MaxLength = 32767;
             this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox1.Modified = false;
@@ -390,6 +399,7 @@
             this.bunifuTextBox1.OnHoverState = stateProperties3;
             stateProperties4.BorderColor = System.Drawing.Color.Silver;
             stateProperties4.FillColor = System.Drawing.Color.WhiteSmoke;
+
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bunifuTextBox1.OnIdleState = stateProperties4;
@@ -397,15 +407,18 @@
             this.bunifuTextBox1.PasswordChar = '\0';
             this.bunifuTextBox1.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bunifuTextBox1.PlaceholderText = "Search...";
+
             this.bunifuTextBox1.ReadOnly = false;
             this.bunifuTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.bunifuTextBox1.SelectedText = "";
             this.bunifuTextBox1.SelectionLength = 0;
             this.bunifuTextBox1.SelectionStart = 0;
             this.bunifuTextBox1.ShortcutsEnabled = true;
+
             this.bunifuTextBox1.Size = new System.Drawing.Size(233, 32);
             this.bunifuTextBox1.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bunifuTextBox1.TabIndex = 3;
+
             this.bunifuTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuTextBox1.TextMarginBottom = 0;
             this.bunifuTextBox1.TextMarginLeft = 3;
@@ -423,6 +436,7 @@
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 3;
             this.pictureBox8.TabStop = false;
+
             // 
             // Form_Dashboard
             // 
@@ -460,6 +474,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
+
         }
 
         #endregion
@@ -490,5 +505,6 @@
         private Bunifu.UI.WinForms.BunifuDropdown bunifuDropdown1;
         private System.Windows.Forms.PictureBox pictureBox8;
         private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox1;
+
     }
 }
