@@ -316,7 +316,7 @@
   <data name="pictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAABnpJREFUeF7tm2nIdVMYhl/znM88FcqYeVYoQiRTviTzD1NCQvIDIRnyg5QxRabM
+        DQAACw0B7QfALAAABnpJREFUeF7tm2nIdVMYhl/znM88FcqYeVYoQiRTviTzD1NCQvIDIRnyg5QxRabM
         ocx+mJUQMg8hMmTMPE/3dfpuPW3P2fvsc/Y653313XXVedde495reNaz1js1V3M1Fq0udhfHiQvFneJZ
         8bZ4V3wpvhZ/ifUFWkLsIE4Sl4n7xPPiVeE034mHxbTTQmIfcYP4RPzdgrMEOlJkz6v8LpYV00KLitPE
         pyKr7CC8JhCNonFZnCq8rImL7vqByCrYFg+DB0X2vMpDYqI6TAz6tQbBw2AT8ZzI4kQoezkxEe0l/hBZ
@@ -377,7 +377,7 @@
         AABJRU5ErkJggg==
 </value>
   </data>
-  <data name="txt_pw.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txt_Password.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAXIAAAAnCAYAAAASEMP5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAD9SURBVHhe7dSxDcIAEARB99+iE/dAAYDQRogCfGhOmug/
@@ -413,7 +413,7 @@
         TkSuQmCC
 </value>
   </data>
-  <data name="bunifuTextBox2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txt_Username.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAXIAAAAnCAYAAAASEMP5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAD9SURBVHhe7dSxDcIAEARB99+iE/dAAYDQRogCfGhOmug/
