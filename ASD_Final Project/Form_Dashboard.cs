@@ -21,5 +21,12 @@ namespace ASD_Final_Project
         {
 
         }
+
+        private void btn_Logout_Click(object sender, EventArgs e)
+        {
+            Signup_Form signup_Form = new Signup_Form();
+            signup_Form.Show();
+            this.Hide();
+        }
     }
 }
