@@ -23,7 +23,7 @@ namespace ASD_Final_Project.Program
             try
             {
                 _dbConnection.Open();
-                using (var command = new SqlCommand("SELECT Id, Username, Email FROM Users", _dbConnection))
+                using (var command = new SqlCommand("SELECT Users.UserID, Users.UserName, Users.Addresss, Users.Phone, Roles.RolesName FROM Users JOIN Roles ON Users.RolesID = Roles.RolesID;", _dbConnection))
                 {
                     using (var reader = command.ExecuteReader())
                     {
@@ -33,8 +33,9 @@ namespace ASD_Final_Project.Program
                             {
                                 Id = reader.GetInt32(0),
                                 Username = reader.GetString(1),
-                                Email = reader.GetString(2)
-                                // Chưa bao gồm Password vì lý do bảo mật
+                                Address = reader.GetString(2),
+                                Phone = reader.GetString(3),
+                                Role = reader.GetString(4)
                             };
                             users.Add(user);
                         }
@@ -58,11 +59,23 @@ namespace ASD_Final_Project.Program
             try
             {
                 _dbConnection.Open();
-                using (var command = new SqlCommand("INSERT INTO Users (Username, Email, Password) VALUES (@Username, @Email, @Password)", _dbConnection))
+                using (var command = new SqlCommand("INSERT INTO Users (Username, Address, Phone, RolesID) VALUES (@Username, @Address, @Phone, @RolesId)", _dbConnection))
                 {
                     command.Parameters.AddWithValue("@Username", user.Username);
-                    command.Parameters.AddWithValue("@Email", user.Email);
-                    command.Parameters.AddWithValue("@Password", user.Password); // Chưa mã hóa
+                    command.Parameters.AddWithValue("@Address", user.Address);
+                    command.Parameters.AddWithValue("@Phone", user.Phone);
+                    if(user.Role == "Admin")
+                    {
+                        command.Parameters.AddWithValue("@RolesID", 1);
+                    }
+                    if (user.Role == "Manager")
+                    {
+                        command.Parameters.AddWithValue("@RolesID", 2);
+                    }
+                    if (user.Role == "Staff")
+                    {
+                        command.Parameters.AddWithValue("@RolesID", 3);
+                    }
 
                     command.ExecuteNonQuery();
                 }
@@ -82,13 +95,24 @@ namespace ASD_Final_Project.Program
             try
             {
                 _dbConnection.Open();
-                using (var command = new SqlCommand("UPDATE Users SET Username = @Username, Email = @Email, Password = @Password WHERE Id = @Id", _dbConnection))
+                using (var command = new SqlCommand("UPDATE Users SET Username = @Username, Address = @Address, Phone = @Phone, RolesId = @RolesID WHERE Id = @Id", _dbConnection))
                 {
                     command.Parameters.AddWithValue("@Id", user.Id);
                     command.Parameters.AddWithValue("@Username", user.Username);
-                    command.Parameters.AddWithValue("@Email", user.Email);
-                    command.Parameters.AddWithValue("@Password", user.Password); // Chưa mã hóa
-
+                    command.Parameters.AddWithValue("@Address", user.Address);
+                    command.Parameters.AddWithValue("@Phone", user.Phone); 
+                    if (user.Role == "Admin")
+                    {
+                        command.Parameters.AddWithValue("@RolesID", 1);
+                    }
+                    if (user.Role == "Manager")
+                    {
+                        command.Parameters.AddWithValue("@RolesID", 2);
+                    }
+                    if (user.Role == "Staff")
+                    {
+                        command.Parameters.AddWithValue("@RolesID", 3);
+                    }
                     command.ExecuteNonQuery();
                 }
             }
