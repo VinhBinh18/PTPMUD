@@ -23,7 +23,7 @@ namespace ASD_Final_Project.Program
             try
             {
                 _dbConnection.Open();
-                using (var command = new SqlCommand("SELECT Users.UserID, Users.UserName, Users.Addresss, Users.Phone, Roles.RolesName FROM Users JOIN Roles ON Users.RolesID = Roles.RolesID;", _dbConnection))
+                using (var command = new SqlCommand("SELECT U.U_ID AS UserID, U.U_Name AS UserName, U.U_Addresss AS Address, U.U_Phone AS Phone, R.Rl_Name AS RoleName FROM Users U JOIN Roles R ON U.Rl_ID = R.Rl_ID;", _dbConnection))
                 {
                     using (var reader = command.ExecuteReader())
                     {
@@ -129,22 +129,22 @@ namespace ASD_Final_Project.Program
         public void DeleteUser(int userId)
         {
             try
-        {
-            _dbConnection.Open();
-            using (var command = new SqlCommand("DELETE FROM Users WHERE Id = @Id", _dbConnection))
             {
-                command.Parameters.AddWithValue("@Id", userId);
-                command.ExecuteNonQuery();
+                _dbConnection.Open();
+                using (var command = new SqlCommand("DELETE FROM Users WHERE Id = @Id", _dbConnection))
+                {
+                    command.Parameters.AddWithValue("@Id", userId);
+                    command.ExecuteNonQuery();
+                }
             }
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"Error: {ex.Message}");
-        }
-        finally
-        {
-            _dbConnection.Close();
-        }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+            finally
+            {
+                _dbConnection.Close();
+            }
         }
     }
 }

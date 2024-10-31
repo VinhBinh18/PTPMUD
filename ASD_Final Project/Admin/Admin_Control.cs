@@ -14,12 +14,11 @@ namespace ASD_Final_Project.Admin
 {
     public partial class Admin_Control : Form
     {
-        private UserRepository _userRepository;
+        private readonly UserRepository _userRepository;
       /*  SqlConnection connection;
         SqlCommand command;*/
-        string str = @"Data Source=PRIN\MAY1;Initial Catalog=WH_MANAGEMENT;Integrated Security=True;Encrypt=False";
+        string str = @"Data Source=PRIN\MSSQLSERVER02;Initial Catalog=WH_MANAGEMENT;Integrated Security=True;Encrypt=False";
         /*SqlDataAdapter adapter = new SqlDataAdapter();*/
-        DataTable table = new DataTable();
 
         public Admin_Control()
         {
@@ -28,7 +27,7 @@ namespace ASD_Final_Project.Admin
         }
 
 
-        void loaddata()
+        void Loaddata()
         {
             /*command = connection.CreateCommand();
             //command.CommandText = "SELECT Users.UserID, Users.UserName, Users.Addresss, Users.Phone, Roles.RolesName FROM Users JOIN Roles ON Users.RolesID = Roles.RolesID; ";
@@ -39,7 +38,14 @@ namespace ASD_Final_Project.Admin
             try
             {
                 var user = _userRepository.GetAllUsers();
-                dataGridView1.DataSource = user.ToList();
+                if (user != null && user.Any())
+                {
+                    dgv.DataSource = user.ToList();
+                }
+                else
+                {
+                    MessageBox.Show("No data retrieved from the database.");
+                }
             }
             catch (Exception ex)
             {
@@ -51,7 +57,7 @@ namespace ASD_Final_Project.Admin
 
 
 
-        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        private void dgv_SelectionChanged(object sender, EventArgs e)
         {
 
         }
@@ -92,9 +98,7 @@ namespace ASD_Final_Project.Admin
 
         private void Admin_Control_Load(object sender, EventArgs e)
         {
-            
-            
-            loaddata();
+            Loaddata();
         }
 
         private void pn_VisibleChanged(object sender, EventArgs e)
