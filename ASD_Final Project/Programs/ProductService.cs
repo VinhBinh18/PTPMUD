@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace ASD_Final_Project.Program
 {
-    public class InventoryService
+    public class ProductService
     {
         private readonly ProductRepository _productRepository;
 
-        public InventoryService(ProductRepository productRepository)
+        public ProductService(ProductRepository productRepository)
         {
             _productRepository = productRepository;
         }
