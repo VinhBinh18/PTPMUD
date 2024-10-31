@@ -40,22 +40,22 @@
       <HintPath>..\packages\Bunifu.UI.WinForms.7.2.0\lib\net472\Bunifu.UI.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.1.5.3">
-      <HintPath>..\..\..\..\Downloads\framework\BunifuCrack-main\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\bunifu_ui_v1.5.3\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuButton">
-      <HintPath>..\..\..\..\Downloads\framework\BunifuCrack-main\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\bunifu_ui_v1.5.3\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
       <HintPath>..\..\..\..\Downloads\framework\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
-      <HintPath>..\..\..\..\Downloads\framework\BunifuCrack-main\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\bunifu_ui_v1.5.3\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar">
-      <HintPath>..\..\..\..\Downloads\framework\BunifuCrack-main\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\bunifu_ui_v1.5.3\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
-      <HintPath>..\..\..\..\Downloads\framework\BunifuCrack-main\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\bunifu_ui_v1.5.3\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>

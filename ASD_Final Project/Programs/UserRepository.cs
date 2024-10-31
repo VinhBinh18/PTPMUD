@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 
-namespace ASD_Final_Project.Programs
+namespace ASD_Final_Project.Program
 {
     public class UserRepository
     {

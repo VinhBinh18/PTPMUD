@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ASD_Final_Project.Programs;
+using ASD_Final_Project.Program;
 
 namespace ASD_Final_Project.Admin
 {
