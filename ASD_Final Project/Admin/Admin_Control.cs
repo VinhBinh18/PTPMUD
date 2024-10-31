@@ -17,7 +17,7 @@ namespace ASD_Final_Project.Admin
         private UserRepository _userRepository;
       /*  SqlConnection connection;
         SqlCommand command;*/
-        string str = @"Data Source=DESKTOP-PGRLH9O;Initial Catalog=WH_MANAGEMENT;Integrated Security=True;Encrypt=False";
+        string str = @"Data Source=PRIN\MAY1;Initial Catalog=WH_MANAGEMENT;Integrated Security=True;Encrypt=False";
         /*SqlDataAdapter adapter = new SqlDataAdapter();*/
         DataTable table = new DataTable();
 
