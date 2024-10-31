@@ -58,7 +58,7 @@
             // btn_del
             // 
             this.btn_del.Location = new System.Drawing.Point(247, 454);
-            this.btn_del.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_del.Margin = new System.Windows.Forms.Padding(4);
             this.btn_del.Name = "btn_del";
             this.btn_del.Size = new System.Drawing.Size(100, 28);
             this.btn_del.TabIndex = 25;
@@ -68,7 +68,7 @@
             // btn_edit
             // 
             this.btn_edit.Location = new System.Drawing.Point(452, 454);
-            this.btn_edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_edit.Margin = new System.Windows.Forms.Padding(4);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(100, 28);
             this.btn_edit.TabIndex = 24;
@@ -78,7 +78,7 @@
             // btn_save
             // 
             this.btn_save.Location = new System.Drawing.Point(693, 454);
-            this.btn_save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_save.Margin = new System.Windows.Forms.Padding(4);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(100, 28);
             this.btn_save.TabIndex = 23;
@@ -91,7 +91,7 @@
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.ColumnHeadersHeight = 29;
             this.dataGridView1.Location = new System.Drawing.Point(55, 228);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
@@ -101,7 +101,7 @@
             // txt_address
             // 
             this.txt_address.Location = new System.Drawing.Point(161, 154);
-            this.txt_address.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_address.Margin = new System.Windows.Forms.Padding(4);
             this.txt_address.Name = "txt_address";
             this.txt_address.Size = new System.Drawing.Size(132, 22);
             this.txt_address.TabIndex = 21;
@@ -119,7 +119,7 @@
             // txt_role
             // 
             this.txt_role.Location = new System.Drawing.Point(516, 154);
-            this.txt_role.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_role.Margin = new System.Windows.Forms.Padding(4);
             this.txt_role.Name = "txt_role";
             this.txt_role.Size = new System.Drawing.Size(132, 22);
             this.txt_role.TabIndex = 19;
@@ -137,7 +137,7 @@
             // txt_phone
             // 
             this.txt_phone.Location = new System.Drawing.Point(516, 73);
-            this.txt_phone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_phone.Margin = new System.Windows.Forms.Padding(4);
             this.txt_phone.Name = "txt_phone";
             this.txt_phone.Size = new System.Drawing.Size(132, 22);
             this.txt_phone.TabIndex = 17;
@@ -155,7 +155,7 @@
             // txt_name
             // 
             this.txt_name.Location = new System.Drawing.Point(161, 73);
-            this.txt_name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_name.Margin = new System.Windows.Forms.Padding(4);
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(132, 22);
             this.txt_name.TabIndex = 15;
@@ -173,7 +173,7 @@
             // btn_add
             // 
             this.btn_add.Location = new System.Drawing.Point(55, 454);
-            this.btn_add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_add.Margin = new System.Windows.Forms.Padding(4);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(100, 28);
             this.btn_add.TabIndex = 13;
@@ -193,16 +193,17 @@
             this.pn.Controls.Add(this.Address);
             this.pn.Controls.Add(this.labe100);
             this.pn.Location = new System.Drawing.Point(766, 28);
-            this.pn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn.Margin = new System.Windows.Forms.Padding(4);
             this.pn.Name = "pn";
             this.pn.Size = new System.Drawing.Size(306, 162);
             this.pn.TabIndex = 26;
             this.pn.Visible = false;
+            this.pn.VisibleChanged += new System.EventHandler(this.pn_VisibleChanged);
             // 
             // pn_btn_submit
             // 
             this.pn_btn_submit.Location = new System.Drawing.Point(437, 341);
-            this.pn_btn_submit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_btn_submit.Margin = new System.Windows.Forms.Padding(4);
             this.pn_btn_submit.Name = "pn_btn_submit";
             this.pn_btn_submit.Size = new System.Drawing.Size(100, 28);
             this.pn_btn_submit.TabIndex = 12;
@@ -224,7 +225,7 @@
             // 
             this.cmb_role.FormattingEnabled = true;
             this.cmb_role.Location = new System.Drawing.Point(484, 204);
-            this.cmb_role.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_role.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_role.Name = "cmb_role";
             this.cmb_role.Size = new System.Drawing.Size(160, 24);
             this.cmb_role.TabIndex = 10;
@@ -232,7 +233,7 @@
             // pn_txt_address
             // 
             this.pn_txt_address.Location = new System.Drawing.Point(484, 111);
-            this.pn_txt_address.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_txt_address.Margin = new System.Windows.Forms.Padding(4);
             this.pn_txt_address.Name = "pn_txt_address";
             this.pn_txt_address.Size = new System.Drawing.Size(132, 22);
             this.pn_txt_address.TabIndex = 9;
@@ -240,7 +241,7 @@
             // pn_txt_phone
             // 
             this.pn_txt_phone.Location = new System.Drawing.Point(484, 158);
-            this.pn_txt_phone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_txt_phone.Margin = new System.Windows.Forms.Padding(4);
             this.pn_txt_phone.Name = "pn_txt_phone";
             this.pn_txt_phone.Size = new System.Drawing.Size(132, 22);
             this.pn_txt_phone.TabIndex = 8;
@@ -248,7 +249,7 @@
             // pn_txt_name
             // 
             this.pn_txt_name.Location = new System.Drawing.Point(484, 68);
-            this.pn_txt_name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_txt_name.Margin = new System.Windows.Forms.Padding(4);
             this.pn_txt_name.Name = "pn_txt_name";
             this.pn_txt_name.Size = new System.Drawing.Size(132, 22);
             this.pn_txt_name.TabIndex = 4;
@@ -302,7 +303,7 @@
             this.Controls.Add(this.txt_name);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_add);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Admin_Control";
             this.Text = "Admin_Control";
             this.Load += new System.EventHandler(this.Admin_Control_Load);

@@ -96,5 +96,10 @@ namespace ASD_Final_Project.Admin
             
             loaddata();
         }
+
+        private void pn_VisibleChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
