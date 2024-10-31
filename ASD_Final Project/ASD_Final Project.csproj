@@ -145,10 +145,10 @@
     <Compile Include="Form_Dashboard.Designer.cs">
       <DependentUpon>Form_Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Programs\InventoryService.cs" />
     <Compile Include="Programs\Product.cs" />
     <Compile Include="Programs\ProductRepository.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Programs\ProductService.cs" />
     <Compile Include="Programs\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -165,6 +165,12 @@
     <Compile Include="Programs\UserRepository.cs" />
     <Compile Include="Programs\UserService.cs" />
     <Compile Include="Programs\WarehouseService.cs" />
+    <Compile Include="test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin\Admin_Control.resx">
       <DependentUpon>Admin_Control.cs</DependentUpon>
     </EmbeddedResource>
