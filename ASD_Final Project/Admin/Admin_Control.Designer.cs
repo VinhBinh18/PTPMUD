@@ -53,6 +53,8 @@
             this.Address = new System.Windows.Forms.Label();
             this.labe100 = new System.Windows.Forms.Label();
             this.wHMANAGEMENTDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lbl_name = new System.Windows.Forms.Label();
+            this.lbl_role = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.pn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wHMANAGEMENTDataSetBindingSource)).BeginInit();
@@ -265,18 +267,31 @@
             this.labe100.TabIndex = 0;
             this.labe100.Text = "Name";
             // 
-            // wH_MANAGEMENTDataSet
+            // lbl_name
             // 
+            this.lbl_name.AutoSize = true;
+            this.lbl_name.Location = new System.Drawing.Point(13, 0);
+            this.lbl_name.Name = "lbl_name";
+            this.lbl_name.Size = new System.Drawing.Size(35, 13);
+            this.lbl_name.TabIndex = 27;
+            this.lbl_name.Text = "label6";
             // 
-            // wHMANAGEMENTDataSetBindingSource
+            // lbl_role
             // 
-            this.wHMANAGEMENTDataSetBindingSource.Position = 0;
+            this.lbl_role.AutoSize = true;
+            this.lbl_role.Location = new System.Drawing.Point(247, 0);
+            this.lbl_role.Name = "lbl_role";
+            this.lbl_role.Size = new System.Drawing.Size(35, 13);
+            this.lbl_role.TabIndex = 28;
+            this.lbl_role.Text = "label8";
             // 
             // Admin_Control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbl_role);
+            this.Controls.Add(this.lbl_name);
             this.Controls.Add(this.pn);
             this.Controls.Add(this.btn_del);
             this.Controls.Add(this.btn_edit);
@@ -329,5 +344,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmb_role;
         private System.Windows.Forms.BindingSource wHMANAGEMENTDataSetBindingSource;
+        private System.Windows.Forms.Label lbl_name;
+        private System.Windows.Forms.Label lbl_role;
     }
 }

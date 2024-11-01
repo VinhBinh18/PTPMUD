@@ -17,7 +17,13 @@ namespace ASD_Final_Project.Program
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_Sign());
+
+            string connectionString = @"Data Source=PRIN\MSSQLSERVER02;Initial Catalog=WH_MANAGEMENT;Integrated Security=True;Encrypt=False";
+
+            var userRepository = new UserRepository(connectionString);
+            var userService = new UserService(userRepository);
+
+            Application.Run(new Form_Sign(userService));
         }
     }
 }

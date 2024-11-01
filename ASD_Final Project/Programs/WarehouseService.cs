@@ -11,7 +11,7 @@ namespace ASD_Final_Project.Program
     public class WarehouseService
     {
         private readonly ProductService  _productService;
-        private Timer _updateTimer;
+        private readonly Timer _updateTimer;
 
         public event Action<List<Product>> OnProductsUpdated;
         private readonly int _warehouseId;
