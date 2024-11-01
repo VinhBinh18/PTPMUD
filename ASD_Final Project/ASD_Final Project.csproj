@@ -133,8 +133,6 @@
     <Compile Include="Admin\Admin_Control.Designer.cs">
       <DependentUpon>Admin_Control.cs</DependentUpon>
     </Compile>
-    <Compile Include="Programs\InventoryService.cs" />
-
     <Compile Include="Programs\Product.cs" />
     <Compile Include="Programs\ProductRepository.cs" />
     <Compile Include="Program.cs" />
@@ -154,7 +152,6 @@
     </Compile>
     <Compile Include="Sign_Form.Designer.cs">
       <DependentUpon>Sign_Form.cs</DependentUpon>
-
     </Compile>
     <EmbeddedResource Include="Admin\Admin_Control.resx">
       <DependentUpon>Admin_Control.cs</DependentUpon>

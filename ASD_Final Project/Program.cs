@@ -17,7 +17,7 @@ namespace ASD_Final_Project.Program
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Signup_Form());
+            Application.Run(new Sign_Form());
         }
     }
 }
