@@ -1,202 +1,190 @@
 ﻿-- 1/ Tạo DB + Sử dụng DB
-	Create Database WarehouseManagement
-	Go
-	Use WarehouseManagement
-	Go
+CREATE DATABASE WarehouseManagement
+GO
+USE WarehouseManagement
+GO
 
--- 2/ Tạo các table + Khoá chính	
-	create table WareHouse
-	(
-		Wh_ID nvarchar(50),
-		Wh_Name nvarchar(50),
-		Wh_Address nvarchar(50),
-		Phone nvarchar(20),
-		primary key (Wh_ID)
-	)
-	go
+-- 2/ Tạo các table + Khóa chính tự tăng
+CREATE TABLE WareHouse
+(
+    Wh_ID INT IDENTITY(1,1),
+    Wh_Name NVARCHAR(50),
+    Wh_Address NVARCHAR(255),
+    Wh_Phone NVARCHAR(20),
+    PRIMARY KEY (Wh_ID)
+)
+GO
 
-	create table Branch
-	(
-		B_ID  nvarchar(50),
-		B_Name nvarchar(50),
-		B_Address nvarchar(50),
-		Phone nvarchar(20),
-		Wh_ID nvarchar(50),
-		primary key (B_ID)
-	)
-	go
+CREATE TABLE Branch
+(
+    B_ID INT IDENTITY(1,1),
+    B_Name NVARCHAR(50),
+    B_Address NVARCHAR(225),
+    B_Phone NVARCHAR(20),
+    Wh_ID INT,
+    PRIMARY KEY (B_ID)
+)
+GO
 
-	create table WH_Transaction
-	(
-		T_ID  nvarchar(50),
-		T_Number nvarchar(50),
-		TotalQuantity float,
-		TotalAmount float,
-		Note nvarchar(50),
-		EntryDate datetime,
-		ExportDate datetime,
-		T_Type nvarchar(20),
-		T_Status bit,
-		B_ID  nvarchar(50),
-		Wh_ID nvarchar(50),
-		primary key (T_ID)
-	)
-	go
+CREATE TABLE WH_Transaction
+(
+    T_ID INT IDENTITY(1,1),
+    T_Number NVARCHAR(50),
+    T_TotalQuantity FLOAT,
+    T_TotalAmount FLOAT,
+    T_Note NVARCHAR(100),
+    T_EntryDate DATETIME,
+    T_ExportDate DATETIME,
+    T_Type NVARCHAR(20),
+    T_Status BIT,
+    B_ID INT,
+    Wh_ID INT,
+    PRIMARY KEY (T_ID)
+)
+GO
 
+CREATE TABLE WH_Transaction_Details
+(
+    TD_ID INT IDENTITY(1,1),
+    TD_Quantity FLOAT,
+    TD_UnitPrice FLOAT,
+    TD_TotalPrice FLOAT,
+    TD_Dates DATETIME,
+    T_ID INT,
+    P_ID INT,
+    PRIMARY KEY (TD_ID)
+)
+GO
 
-	create table WH_Transaction_Details
-	(
-		TD_ID  nvarchar(50),
-		Quantity float,
-		UnitPrice float,
-		TotalPrice float,
-		Dates datetime,
-		T_ID  nvarchar(50),
-		P_ID  nvarchar(20),
-		primary key (TD_ID)
-	)
-	go
+CREATE TABLE Report
+(
+    R_ID INT IDENTITY(1,1),
+    R_Name NVARCHAR(50),
+    R_Descriptions NVARCHAR(50),
+    R_StartDate DATETIME,
+    R_EndDate DATETIME,
+    B_ID INT,
+    Wh_ID INT,
+    PRIMARY KEY (R_ID)
+)
+GO
 
-	/* DROP TABLE WH_Transaction_Details*/
+CREATE TABLE Calculation_Unit
+(
+    Un_ID INT IDENTITY(1,1),
+    Un_Name NVARCHAR(20),
+    PRIMARY KEY (Un_ID)
+)
+GO
 
-	create table Report
-	(
-		R_ID  nvarchar(50),
-		R_Name nvarchar(50),
-		Descriptions nvarchar(50),
-		StartDate datetime,
-		EndDate datetime,
-		B_ID  nvarchar(50),
-		Wh_ID nvarchar(50),
-		primary key (R_ID)
-	)
-	go
+CREATE TABLE Origin
+(
+    O_ID INT IDENTITY(1,1),
+    O_Name NVARCHAR(20),
+    PRIMARY KEY (O_ID)
+)
+GO
 
-	create table Calculation_Unit
-	(
-		Un_ID  nvarchar(20),
-		Un_Name  nvarchar(20),
-		primary key (Un_ID)
-	)
-	go
+CREATE TABLE Suppliers
+(
+    S_ID INT IDENTITY(1,1),
+    S_Name NVARCHAR(20),
+    S_Address NVARCHAR(225),
+    S_Phone NVARCHAR(20),
+    S_Email NVARCHAR(20),
+    PRIMARY KEY (S_ID)
+)
+GO
 
-	create table Origin
-	(
-		O_ID  nvarchar(20),
-		O_Name  nvarchar(20),
-		primary key (O_ID)
-	)
-	go
+CREATE TABLE Products
+(
+    P_ID INT IDENTITY(1,1),
+    P_Name NVARCHAR(20),
+    P_Price FLOAT,
+    S_ID INT,
+    O_ID INT,
+    Un_ID INT,
+    PRIMARY KEY (P_ID)
+)
+GO
 
-	create table Suppliers
-	(
-		Supp_ID  nvarchar(20),
-		Supp_Name  nvarchar(20),
-		Supp_Address  nvarchar(20),
-		Supp_Phone  nvarchar(20),
-		Email nvarchar(20),
-		primary key (Supp_ID)
-	)
-	go
+CREATE TABLE Roles
+(
+    Rl_ID INT IDENTITY(1,1),
+    Rl_Name NVARCHAR(20),
+    PRIMARY KEY (Rl_ID)
+)
+GO
 
-	create table Products
-	(
-		P_ID  nvarchar(20),
-		P_Name  nvarchar(20),
-		Price float,
-		Supp_ID  nvarchar(20),
-		O_ID  nvarchar(20),
-		Un_ID  nvarchar(20)
-		primary key (P_ID)
-	)
-	go
+CREATE TABLE Users
+(
+    U_ID INT IDENTITY(1,1),
+    U_Name NVARCHAR(20),
+    U_Address NVARCHAR(225),
+    U_Phone NVARCHAR(20),
+    Rl_ID INT,
+    PRIMARY KEY (U_ID)
+)
+GO
 
+-- 3/ Tạo khóa ngoại
+-- Khóa ngoại cho bảng Branch
+ALTER TABLE Branch
+    ADD CONSTRAINT FK1_WarehouseID FOREIGN KEY (Wh_ID)
+    REFERENCES WareHouse(Wh_ID)
+GO
 
-	create table Roles
-	(
-		R_ID  nvarchar(20),
-		R_Name  nvarchar(20),
-		primary key (R_ID)
-	)
-	go
+-- Khóa ngoại cho bảng WH_Transaction
+ALTER TABLE WH_Transaction
+    ADD CONSTRAINT FK2_WarehouseID_Trans FOREIGN KEY (Wh_ID)
+    REFERENCES WareHouse(Wh_ID)
+GO
 
-	create table Users
-	(
-		U_ID  nvarchar(50),
-		U_Name  nvarchar(20),
-		Addresss nvarchar(50),
-		R_ID  nvarchar(20),
-		Phone nvarchar(20),
-		primary key (U_ID)
-	)
-	go
+ALTER TABLE WH_Transaction
+    ADD CONSTRAINT FK3_BranchID_Trans FOREIGN KEY (B_ID)
+    REFERENCES Branch(B_ID)
+GO
 
--- 3/ Tạo khoá ngoại
---Tạo khoá ngoại ở bảng Branch
-	Alter table Branch
-		add constraint FK1_WarehouseID
-		foreign key (Wh_ID)
-		references WareHouse(Wh_ID) 
-		go
+-- Khóa ngoại cho bảng Report
+ALTER TABLE Report
+    ADD CONSTRAINT FK4_WarehouseID_Report FOREIGN KEY (Wh_ID)
+    REFERENCES WareHouse(Wh_ID)
+GO
 
---Tạo khoá ngoại ở bảng WH_Transaction
-	Alter table WH_Transaction
-		add constraint FK2_WarehouseID_Trans
-		foreign key (Wh_ID)
-		references WareHouse(Wh_ID) 
-		go
+ALTER TABLE Report
+    ADD CONSTRAINT FK5_BranchID_Report FOREIGN KEY (B_ID)
+    REFERENCES Branch(B_ID)
+GO
 
-	Alter table WH_Transaction
-		add constraint FK3_BranchID_Trans
-		foreign key (B_ID)
-		references Branch(B_ID) 
-		go
+-- Khóa ngoại cho bảng Users
+ALTER TABLE Users
+    ADD CONSTRAINT FK6_RolesID_User FOREIGN KEY (Rl_ID)
+    REFERENCES Roles(Rl_ID)
+GO
 
---Tạo khoá ngoại ở bảng Report
-	Alter table Report
-		add constraint FK4_WarehouseID_Report
-		foreign key (Wh_ID)
-		references WareHouse(Wh_ID) 
-		go
-	Alter table Report
-		add constraint FK5_BranchID_Report
-		foreign key (B_ID)
-		references Branch(B_ID) 
-		go
+-- Khóa ngoại cho bảng WH_Transaction_Details
+ALTER TABLE WH_Transaction_Details
+    ADD CONSTRAINT FK4_TransactionID_Trans_Details FOREIGN KEY (T_ID)
+    REFERENCES WH_Transaction(T_ID)
+GO
 
---Tạo khoá ngoại ở bảng Users
-	Alter table Users
-		add constraint FK6_RolesID_User
-		foreign key (R_ID)
-		references Roles(R_ID) 
-		go
+ALTER TABLE WH_Transaction_Details
+    ADD CONSTRAINT FK5_ProductID_Trans_Details FOREIGN KEY (P_ID)
+    REFERENCES Products(P_ID)
+GO
 
+-- Khóa ngoại cho bảng Products
+ALTER TABLE Products
+    ADD CONSTRAINT FK7_SuppID_Products FOREIGN KEY (S_ID)
+    REFERENCES Suppliers(S_ID)
+GO
 
---Tạo khoá ngoại ở bảng WH_Transaction_Details
-	Alter table WH_Transaction_Details
-		add constraint FK4_TransactionID_Trans_Details
-		foreign key (T_ID)
-		references WH_Transaction(T_ID) 
-		go
-	Alter table WH_Transaction_Details
-		add constraint FK5_ProductID_Trans_Details
-		foreign key (P_ID)
-		references Products(P_ID) 
-		go
+ALTER TABLE Products
+    ADD CONSTRAINT FK8_OriginID_Products FOREIGN KEY (O_ID)
+    REFERENCES Origin(O_ID)
+GO
 
---Tạo khoá ngoại ở bảng Products
-	Alter table Products
-		add constraint FK7_SuppID_Products
-		foreign key (Supp_ID)
-		references Suppliers(Supp_ID) 
-		go
-	Alter table Products
-		add constraint FK8_OriginID_Products
-		foreign key (O_ID)
-		references Origin(O_ID) 
-		go
-	Alter table Products
-		add constraint FK8_UnitID_Products
-		foreign key (Un_ID)
-		references Calculation_Unit(Un_ID) 
-		go
+ALTER TABLE Products
+    ADD CONSTRAINT FK9_UnitID_Products FOREIGN KEY (Un_ID)
+    REFERENCES Calculation_Unit(Un_ID)
+GO
