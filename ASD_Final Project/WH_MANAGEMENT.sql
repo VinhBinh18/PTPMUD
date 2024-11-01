@@ -1,7 +1,7 @@
 ﻿-- 1/ Tạo DB + Sử dụng DB
-CREATE DATABASE WarehouseManagement
+CREATE DATABASE WH_MANAGEMENT
 GO
-USE WarehouseManagement
+USE WH_MANAGEMENT
 GO
 
 -- 2/ Tạo các table + Khóa chính tự tăng
