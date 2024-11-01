@@ -1,6 +1,6 @@
 ﻿namespace ASD_Final_Project
 {
-    partial class Sign_Form
+    partial class Form_Sign
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button3 = new System.Windows.Forms.Button();
             this.pn_register = new System.Windows.Forms.Panel();
             this.pn_lb_login = new System.Windows.Forms.Label();
             this.lable100 = new System.Windows.Forms.Label();
@@ -42,7 +41,6 @@
             this.pn_txt_password = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.txt_name = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -55,24 +53,8 @@
             this.pn_register.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.Color.Red;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(254, -2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(33, 34);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "X";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // pn_register
             // 
-            this.pn_register.Controls.Add(this.button4);
             this.pn_register.Controls.Add(this.pn_lb_login);
             this.pn_register.Controls.Add(this.lable100);
             this.pn_register.Controls.Add(this.pn_btn_clear);
@@ -102,6 +84,7 @@
             this.pn_lb_login.Size = new System.Drawing.Size(97, 17);
             this.pn_lb_login.TabIndex = 27;
             this.pn_lb_login.Text = "Back to LOGIN";
+            this.pn_lb_login.Click += new System.EventHandler(this.pn_lb_login_Click);
             // 
             // lable100
             // 
@@ -228,21 +211,6 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Get Started";
             // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.BackColor = System.Drawing.Color.Red;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(253, -1);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(33, 34);
-            this.button4.TabIndex = 28;
-            this.button4.Text = "X";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // button6
             // 
             this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -333,6 +301,7 @@
             this.label5.Size = new System.Drawing.Size(114, 17);
             this.label5.TabIndex = 41;
             this.label5.Text = "Go to REGISTER";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -344,7 +313,7 @@
             this.label6.TabIndex = 40;
             this.label6.Text = "Forget Account";
             // 
-            // Sign_Form
+            // Form_Sign
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -360,13 +329,12 @@
             this.Controls.Add(this.txt_password);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.button3);
             this.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Sign_Form";
-            this.Text = "Sign_Form";
+            this.Name = "Form_Sign";
+            this.Text = "Sign";
             this.Load += new System.EventHandler(this.Sign_Form_Load);
             this.pn_register.ResumeLayout(false);
             this.pn_register.PerformLayout();
@@ -376,9 +344,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel pn_register;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label pn_lb_login;
         private System.Windows.Forms.Label lable100;
         private System.Windows.Forms.Button pn_btn_clear;
