@@ -147,11 +147,11 @@
     <Compile Include="Programs\UserRepository.cs" />
     <Compile Include="Programs\UserService.cs" />
     <Compile Include="Programs\WarehouseService.cs" />
-    <Compile Include="Sign_Form.cs">
+    <Compile Include="Form_Sign.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sign_Form.Designer.cs">
-      <DependentUpon>Sign_Form.cs</DependentUpon>
+    <Compile Include="Form_Sign.Designer.cs">
+      <DependentUpon>Form_Sign.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Admin\Admin_Control.resx">
       <DependentUpon>Admin_Control.cs</DependentUpon>
@@ -162,8 +162,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sign_Form.resx">
-      <DependentUpon>Sign_Form.cs</DependentUpon>
+    <EmbeddedResource Include="Form_Sign.resx">
+      <DependentUpon>Form_Sign.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

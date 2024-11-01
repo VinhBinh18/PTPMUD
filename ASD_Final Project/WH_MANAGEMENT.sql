@@ -119,7 +119,7 @@ GO
 CREATE TABLE Users
 (
     U_ID INT IDENTITY(1,1),
-    U_Name NVARCHAR(100),
+    U_UserName NVARCHAR(100),
     U_Password NVARCHAR(50),
     U_Address NVARCHAR(225),
     U_Phone NVARCHAR(20),
