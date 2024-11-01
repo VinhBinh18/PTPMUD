@@ -23,7 +23,7 @@ namespace ASD_Final_Project.Program
             try
             {
                 _dbConnection.Open();
-                using (var command = new SqlCommand("SELECT U.U_ID AS UserID, U.U_Name AS UserName, U.U_Addresss AS Address, U.U_Phone AS Phone, R.Rl_Name AS RoleName FROM Users U JOIN Roles R ON U.Rl_ID = R.Rl_ID;", _dbConnection))
+                using (var command = new SqlCommand("SELECT U.U_ID, U.U_UserName, U.U_Address, U.U_Phone, R.Rl_Name FROM Users U JOIN Roles R ON U.Rl_ID = R.Rl_ID;", _dbConnection))
                 {
                     using (var reader = command.ExecuteReader())
                     {
@@ -35,7 +35,8 @@ namespace ASD_Final_Project.Program
                                 Username = reader.GetString(1),
                                 Address = reader.GetString(2),
                                 Phone = reader.GetString(3),
-                                Role = reader.GetString(4)
+                                Role = reader.GetString(4),
+                                Password= "********"
                             };
                             users.Add(user);
                         }
@@ -131,7 +132,7 @@ namespace ASD_Final_Project.Program
             try
             {
                 _dbConnection.Open();
-                using (var command = new SqlCommand("SELECT U.U_ID, U.U_Name, U.U_Address, U.U_Phone, R.Rl_Name FROM Users U JOIN Roles R ON U.Rl_ID = R.Rl_ID WHERE U.U_Name = @Username AND U.U_Password = @Password", _dbConnection))
+                using (var command = new SqlCommand("SELECT U.U_ID, U.U_UserName, U.U_Address, U.U_Phone, R.Rl_Name FROM Users U JOIN Roles R ON U.Rl_ID = R.Rl_ID WHERE U.U_UserName = @Username AND U.U_Password = @Password", _dbConnection))
                 {
                     command.Parameters.AddWithValue("@Username", username);
                     command.Parameters.AddWithValue("@Password", password);
