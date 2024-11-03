@@ -141,7 +141,7 @@ namespace ASD_Final_Project.Admin
             if (dgv.SelectedRows.Count > 0)
             {
                 var seclectRow = dgv.SelectedRows[0];
-                string name = seclectRow.Cells[0].Value.ToString();
+                string name = seclectRow.Cells[1].Value.ToString();
                 string phone = seclectRow.Cells[2].Value.ToString();
                 string address = seclectRow.Cells[4].Value.ToString();
                 string role = seclectRow.Cells[5].Value.ToString();
