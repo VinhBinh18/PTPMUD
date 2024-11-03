@@ -10,21 +10,59 @@ using System.Windows.Forms;
 
 namespace ASD_Final_Project
 {
-    public partial class Form_Dashboard : Form
+    public partial class Form_DashBoard : Form
     {
-        public Form_Dashboard()
+        public Form_DashBoard()
         {
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void btn_logout_Click(object sender, EventArgs e)
         {
-
+            Form_Sign sform = new Form_Sign();
+            sform.Show();
+            this.Hide();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void SidePanel_Paint(object sender, PaintEventArgs e)
         {
+            
+        }
 
+        private void MoveSidePanel(Control C)
+        {
+            SidePanel.Height = C.Height;
+            SidePanel.Top = C.Top;
+        }
+
+        private void btn_home_Click(object sender, EventArgs e)
+        {
+            MoveSidePanel(btn_home);
+        }
+
+        private void btn_product_Click(object sender, EventArgs e)
+        {
+            MoveSidePanel(btn_product);
+        }
+
+        private void btn_Employee_Click(object sender, EventArgs e)
+        {
+            MoveSidePanel(btn_Employee);
+        }
+
+        private void btn_wh1_Click(object sender, EventArgs e)
+        {
+            MoveSidePanel(btn_wh1);
+        }
+
+        private void btn_wh2_Click(object sender, EventArgs e)
+        {
+            MoveSidePanel(btn_wh2);
+        }
+
+        private void btn_wh3_Click(object sender, EventArgs e)
+        {
+            MoveSidePanel(btn_wh3);
         }
     }
 }
