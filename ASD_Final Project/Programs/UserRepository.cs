@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace ASD_Final_Project.Program
 {
@@ -45,7 +46,7 @@ namespace ASD_Final_Project.Program
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                MessageBox.Show($"Error: {ex.Message}");
             }
             finally
             {
@@ -60,19 +61,20 @@ namespace ASD_Final_Project.Program
             try
             {
                 _dbConnection.Open();
-                using (var command = new SqlCommand("INSERT INTO Users (Username, Address, Phone, RolesID) VALUES (@Username, @Address, @Phone, @RolesId)", _dbConnection))
+                using (var command = new SqlCommand("INSERT INTO Users (U_Username,U_Password, U_Address, U_Phone, Rl_ID) VALUES (@Username ,@Password, @Address, @Phone, @RolesId)", _dbConnection))
                 {
                     command.Parameters.AddWithValue("@Username", user.Username);
                     command.Parameters.AddWithValue("@Address", user.Address);
                     command.Parameters.AddWithValue("@Phone", user.Phone);
                     command.Parameters.AddWithValue("@RolesID", GetRoleId(user.Role));
+                    command.Parameters.AddWithValue("@Password", "123");
 
                     command.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                MessageBox.Show($"Error: {ex.Message}");
             }
             finally
             {
@@ -97,7 +99,7 @@ namespace ASD_Final_Project.Program
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                MessageBox.Show($"Error: {ex.Message}");
             }
             finally
             {
@@ -110,7 +112,7 @@ namespace ASD_Final_Project.Program
             try
             {
                 _dbConnection.Open();
-                using (var command = new SqlCommand("DELETE FROM Users WHERE Id = @Id", _dbConnection))
+                using (var command = new SqlCommand("DELETE FROM Users WHERE U_ID = @Id", _dbConnection))
                 {
                     command.Parameters.AddWithValue("@Id", userId);
                     command.ExecuteNonQuery();
@@ -118,7 +120,7 @@ namespace ASD_Final_Project.Program
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                MessageBox.Show($"Error: {ex.Message}");
             }
             finally
             {
@@ -153,7 +155,7 @@ namespace ASD_Final_Project.Program
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                MessageBox.Show($"Error: {ex.Message}");
             }
             finally
             {
@@ -175,7 +177,7 @@ namespace ASD_Final_Project.Program
 
                     if (userExists > 0)
                     {
-                        Console.WriteLine("Username already exists.");
+                        MessageBox.Show("Username already exists.");
                         return false;
                     }
                 }
@@ -193,7 +195,7 @@ namespace ASD_Final_Project.Program
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                MessageBox.Show($"Error: {ex.Message}");
             }
             finally
             {
