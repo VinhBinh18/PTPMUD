@@ -67,7 +67,7 @@
             this.pn_register.Controls.Add(this.pn_txt_password);
             this.pn_register.Controls.Add(this.label3);
             this.pn_register.Controls.Add(this.label1);
-            this.pn_register.Location = new System.Drawing.Point(260, 0);
+            this.pn_register.Location = new System.Drawing.Point(12, 12);
             this.pn_register.Name = "pn_register";
             this.pn_register.Size = new System.Drawing.Size(285, 544);
             this.pn_register.TabIndex = 17;
@@ -154,6 +154,7 @@
             this.pn_txt_confirm.Location = new System.Drawing.Point(36, 246);
             this.pn_txt_confirm.Multiline = true;
             this.pn_txt_confirm.Name = "pn_txt_confirm";
+            this.pn_txt_confirm.PasswordChar = '*';
             this.pn_txt_confirm.Size = new System.Drawing.Size(218, 26);
             this.pn_txt_confirm.TabIndex = 21;
             // 
@@ -178,6 +179,7 @@
             this.pn_cb.TabIndex = 19;
             this.pn_cb.Text = "Show Password";
             this.pn_cb.UseVisualStyleBackColor = true;
+            this.pn_cb.CheckedChanged += new System.EventHandler(this.pn_cb_CheckedChanged);
             // 
             // pn_txt_password
             // 
@@ -187,6 +189,7 @@
             this.pn_txt_password.Location = new System.Drawing.Point(36, 191);
             this.pn_txt_password.Multiline = true;
             this.pn_txt_password.Name = "pn_txt_password";
+            this.pn_txt_password.PasswordChar = '*';
             this.pn_txt_password.Size = new System.Drawing.Size(218, 26);
             this.pn_txt_password.TabIndex = 18;
             // 
@@ -259,6 +262,7 @@
             this.cb.TabIndex = 31;
             this.cb.Text = "Show Password";
             this.cb.UseVisualStyleBackColor = true;
+            this.cb.CheckedChanged += new System.EventHandler(this.cb_CheckedChanged);
             // 
             // txt_password
             // 
@@ -268,6 +272,7 @@
             this.txt_password.Location = new System.Drawing.Point(36, 210);
             this.txt_password.Multiline = true;
             this.txt_password.Name = "txt_password";
+            this.txt_password.PasswordChar = '*';
             this.txt_password.Size = new System.Drawing.Size(218, 26);
             this.txt_password.TabIndex = 30;
             // 

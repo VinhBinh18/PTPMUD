@@ -22,7 +22,6 @@ namespace ASD_Final_Project.Program
 
             var userRepository = new UserRepository(connectionString);
             var userService = new UserService(userRepository);
-
             Application.Run(new Form_Sign(userService));
         }
     }

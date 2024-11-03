@@ -48,6 +48,7 @@ namespace ASD_Final_Project
             {
                 Admin_Control admin_Control = new Admin_Control(_userService, userLog);
                 admin_Control.ShowDialog();
+                this.Close();
             }
             if(userLog.Role == "Manager")
             {
@@ -58,6 +59,41 @@ namespace ASD_Final_Project
             {
                 Admin_Control admin_Control = new Admin_Control(_userService, userLog);
                 admin_Control.ShowDialog();
+            }
+        }
+
+        private void pn_cb_CheckedChanged(object sender, EventArgs e)
+        {
+            if (pn_txt_password.PasswordChar == '*')
+            {
+                // Show password
+                pn_txt_confirm.PasswordChar = '\0';
+                pn_txt_password.PasswordChar = '\0';
+                pn_cb.Text = "Hide Password";
+            }
+            else
+            {
+                // Hide password
+                pn_txt_confirm.PasswordChar = '*';
+                pn_txt_password.PasswordChar = '*';
+                pn_cb.Text = "Show Password";
+            }
+        }
+
+        private void cb_CheckedChanged(object sender, EventArgs e)
+        {
+            if (txt_password.PasswordChar == '*')
+            {
+                // Show password
+                
+                txt_password.PasswordChar = '\0';
+                cb.Text = "Hide Password";
+            }
+            else
+            {
+                // Hide password
+                txt_password.PasswordChar = '*';
+                cb.Text = "Show Password";
             }
         }
     }
