@@ -47,7 +47,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cmb_role = new System.Windows.Forms.ComboBox();
             this.rolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.wH_MANAGEMENTDataSet = new ASD_Final_Project.WH_MANAGEMENTDataSet();
             this.pn_add_txt_address = new System.Windows.Forms.TextBox();
             this.pn_add_txt_phone = new System.Windows.Forms.TextBox();
             this.pn_add_txt_name = new System.Windows.Forms.TextBox();
@@ -56,19 +55,16 @@
             this.labe100 = new System.Windows.Forms.Label();
             this.lbl_name = new System.Windows.Forms.Label();
             this.lbl_role = new System.Windows.Forms.Label();
-            this.rolesTableAdapter = new ASD_Final_Project.WH_MANAGEMENTDataSetTableAdapters.RolesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.pn_add.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rolesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wH_MANAGEMENTDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_del
             // 
-            this.btn_del.Location = new System.Drawing.Point(247, 454);
-            this.btn_del.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_del.Location = new System.Drawing.Point(185, 369);
             this.btn_del.Name = "btn_del";
-            this.btn_del.Size = new System.Drawing.Size(100, 28);
+            this.btn_del.Size = new System.Drawing.Size(75, 23);
             this.btn_del.TabIndex = 25;
             this.btn_del.Text = "Xóa";
             this.btn_del.UseVisualStyleBackColor = true;
@@ -76,20 +72,18 @@
             // 
             // btn_edit
             // 
-            this.btn_edit.Location = new System.Drawing.Point(452, 454);
-            this.btn_edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_edit.Location = new System.Drawing.Point(339, 369);
             this.btn_edit.Name = "btn_edit";
-            this.btn_edit.Size = new System.Drawing.Size(100, 28);
+            this.btn_edit.Size = new System.Drawing.Size(75, 23);
             this.btn_edit.TabIndex = 24;
             this.btn_edit.Text = "Sửa";
             this.btn_edit.UseVisualStyleBackColor = true;
             // 
             // btn_save
             // 
-            this.btn_save.Location = new System.Drawing.Point(693, 454);
-            this.btn_save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_save.Location = new System.Drawing.Point(520, 369);
             this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(100, 28);
+            this.btn_save.Size = new System.Drawing.Size(75, 23);
             this.btn_save.TabIndex = 23;
             this.btn_save.Text = "Lưu";
             this.btn_save.UseVisualStyleBackColor = true;
@@ -100,99 +94,88 @@
             this.dgv.AllowUserToDeleteRows = false;
             this.dgv.AllowUserToResizeColumns = false;
             this.dgv.ColumnHeadersHeight = 29;
-            this.dgv.Location = new System.Drawing.Point(55, 228);
-            this.dgv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv.Location = new System.Drawing.Point(41, 185);
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
             this.dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgv.Size = new System.Drawing.Size(961, 185);
+            this.dgv.Size = new System.Drawing.Size(721, 150);
             this.dgv.TabIndex = 22;
             this.dgv.SelectionChanged += new System.EventHandler(this.dgv_SelectionChanged);
             // 
             // txt_address
             // 
-            this.txt_address.Location = new System.Drawing.Point(161, 154);
-            this.txt_address.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_address.Location = new System.Drawing.Point(121, 125);
             this.txt_address.Name = "txt_address";
-            this.txt_address.Size = new System.Drawing.Size(132, 22);
+            this.txt_address.Size = new System.Drawing.Size(100, 20);
             this.txt_address.TabIndex = 21;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(51, 158);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(38, 128);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 16);
+            this.label4.Size = new System.Drawing.Size(45, 13);
             this.label4.TabIndex = 20;
             this.label4.Text = "Address";
             // 
             // txt_role
             // 
-            this.txt_role.Location = new System.Drawing.Point(516, 154);
-            this.txt_role.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_role.Location = new System.Drawing.Point(387, 125);
             this.txt_role.Name = "txt_role";
-            this.txt_role.Size = new System.Drawing.Size(132, 22);
+            this.txt_role.Size = new System.Drawing.Size(100, 20);
             this.txt_role.TabIndex = 19;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(405, 158);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(304, 128);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 16);
+            this.label3.Size = new System.Drawing.Size(29, 13);
             this.label3.TabIndex = 18;
             this.label3.Text = "Role";
             // 
             // txt_phone
             // 
-            this.txt_phone.Location = new System.Drawing.Point(516, 73);
-            this.txt_phone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_phone.Location = new System.Drawing.Point(387, 59);
             this.txt_phone.Name = "txt_phone";
-            this.txt_phone.Size = new System.Drawing.Size(132, 22);
+            this.txt_phone.Size = new System.Drawing.Size(100, 20);
             this.txt_phone.TabIndex = 17;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(405, 76);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(304, 62);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 16);
+            this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 16;
             this.label2.Text = "Phone";
             // 
             // txt_name
             // 
-            this.txt_name.Location = new System.Drawing.Point(161, 73);
-            this.txt_name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_name.Location = new System.Drawing.Point(121, 59);
             this.txt_name.Name = "txt_name";
-            this.txt_name.Size = new System.Drawing.Size(132, 22);
+            this.txt_name.Size = new System.Drawing.Size(100, 20);
             this.txt_name.TabIndex = 15;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(51, 76);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(38, 62);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 16);
+            this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 14;
             this.label1.Text = "User name";
             // 
             // btn_add
             // 
-            this.btn_add.Location = new System.Drawing.Point(55, 454);
-            this.btn_add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_add.Location = new System.Drawing.Point(41, 369);
             this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(100, 28);
+            this.btn_add.Size = new System.Drawing.Size(75, 23);
             this.btn_add.TabIndex = 13;
             this.btn_add.Text = "Thêm";
             this.btn_add.UseVisualStyleBackColor = true;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
-
             // pn_add
             // 
             this.pn_add.Controls.Add(this.pn_btn_submit);
@@ -205,9 +188,10 @@
             this.pn_add.Controls.Add(this.Address);
             this.pn_add.Controls.Add(this.labe100);
             this.pn_add.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pn_add.Location = new System.Drawing.Point(570, 0);
+            this.pn_add.Location = new System.Drawing.Point(484, 0);
+            this.pn_add.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pn_add.Name = "pn_add";
-            this.pn_add.Size = new System.Drawing.Size(230, 450);
+            this.pn_add.Size = new System.Drawing.Size(172, 452);
             this.pn_add.TabIndex = 26;
             this.pn_add.Visible = false;
             this.pn_add.VisibleChanged += new System.EventHandler(this.pn_VisibleChanged);
@@ -215,9 +199,10 @@
             // 
             // pn_btn_submit
             // 
-            this.pn_btn_submit.Location = new System.Drawing.Point(67, 265);
+            this.pn_btn_submit.Location = new System.Drawing.Point(50, 215);
+            this.pn_btn_submit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pn_btn_submit.Name = "pn_btn_submit";
-            this.pn_btn_submit.Size = new System.Drawing.Size(100, 28);
+            this.pn_btn_submit.Size = new System.Drawing.Size(75, 23);
             this.pn_btn_submit.TabIndex = 12;
             this.pn_btn_submit.Text = "Submit";
             this.pn_btn_submit.UseVisualStyleBackColor = true;
@@ -226,11 +211,9 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(55, 208);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-
+            this.label5.Location = new System.Drawing.Point(41, 169);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 16);
+            this.label5.Size = new System.Drawing.Size(29, 13);
             this.label5.TabIndex = 11;
             this.label5.Text = "Role";
             // 
@@ -238,95 +221,78 @@
             // 
             this.cmb_role.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.rolesBindingSource, "Rl_Name", true));
             this.cmb_role.FormattingEnabled = true;
-
             this.cmb_role.Items.AddRange(new object[] {
             "Admin",
             "Manager",
             "Staff"});
-            this.cmb_role.Location = new System.Drawing.Point(102, 154);
+            this.cmb_role.Location = new System.Drawing.Point(76, 125);
+            this.cmb_role.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmb_role.Name = "cmb_role";
-            this.cmb_role.Size = new System.Drawing.Size(160, 24);
+            this.cmb_role.Size = new System.Drawing.Size(121, 21);
             this.cmb_role.TabIndex = 10;
-            // 
-            // rolesBindingSource
-            // 
-            this.pn_txt_address.Location = new System.Drawing.Point(484, 111);
-            this.pn_txt_address.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pn_txt_address.Name = "pn_txt_address";
-            this.pn_txt_address.Size = new System.Drawing.Size(132, 22);
-            this.pn_txt_address.TabIndex = 9;
-
-            // 
-            // wH_MANAGEMENTDataSet
-            // 
-            this.wH_MANAGEMENTDataSet.DataSetName = "WH_MANAGEMENTDataSet";
-            this.wH_MANAGEMENTDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pn_add_txt_address
             // 
-            this.pn_add_txt_address.Location = new System.Drawing.Point(102, 78);
+            this.pn_add_txt_address.Location = new System.Drawing.Point(76, 63);
+            this.pn_add_txt_address.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pn_add_txt_address.Multiline = true;
             this.pn_add_txt_address.Name = "pn_add_txt_address";
-            this.pn_add_txt_address.Size = new System.Drawing.Size(100, 20);
+            this.pn_add_txt_address.Size = new System.Drawing.Size(76, 17);
             this.pn_add_txt_address.TabIndex = 9;
             // 
-            this.pn_txt_phone.Location = new System.Drawing.Point(484, 158);
-            this.pn_txt_phone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pn_txt_phone.Name = "pn_txt_phone";
-            this.pn_txt_phone.Size = new System.Drawing.Size(132, 22);
-            this.pn_txt_phone.TabIndex = 8;
-
+            // pn_add_txt_phone
             // 
-            this.pn_add_txt_phone.Location = new System.Drawing.Point(102, 116);
+            this.pn_add_txt_phone.Location = new System.Drawing.Point(76, 94);
+            this.pn_add_txt_phone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pn_add_txt_phone.Multiline = true;
             this.pn_add_txt_phone.Name = "pn_add_txt_phone";
-            this.pn_add_txt_phone.Size = new System.Drawing.Size(100, 20);
+            this.pn_add_txt_phone.Size = new System.Drawing.Size(76, 17);
             this.pn_add_txt_phone.TabIndex = 8;
             // 
-
             // pn_add_txt_name
             // 
-            this.pn_add_txt_name.Location = new System.Drawing.Point(102, 43);
+            this.pn_add_txt_name.Location = new System.Drawing.Point(76, 35);
+            this.pn_add_txt_name.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pn_add_txt_name.Multiline = true;
             this.pn_add_txt_name.Name = "pn_add_txt_name";
-            this.pn_add_txt_name.Size = new System.Drawing.Size(100, 20);
+            this.pn_add_txt_name.Size = new System.Drawing.Size(76, 17);
             this.pn_add_txt_name.TabIndex = 4;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-
-            this.label7.Location = new System.Drawing.Point(16, 122);
+            this.label7.Location = new System.Drawing.Point(12, 99);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 16);
+            this.label7.Size = new System.Drawing.Size(38, 13);
             this.label7.TabIndex = 2;
             this.label7.Text = "Phone";
             // 
             // Address
             // 
             this.Address.AutoSize = true;
-
-            this.Address.Location = new System.Drawing.Point(16, 87);
+            this.Address.Location = new System.Drawing.Point(12, 71);
+            this.Address.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Address.Name = "Address";
-            this.Address.Size = new System.Drawing.Size(58, 16);
+            this.Address.Size = new System.Drawing.Size(45, 13);
             this.Address.TabIndex = 1;
             this.Address.Text = "Address";
             // 
             // labe100
             // 
             this.labe100.AutoSize = true;
-
-            this.labe100.Location = new System.Drawing.Point(16, 43);
+            this.labe100.Location = new System.Drawing.Point(12, 35);
+            this.labe100.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labe100.Name = "labe100";
-            this.labe100.Size = new System.Drawing.Size(44, 16);
+            this.labe100.Size = new System.Drawing.Size(35, 13);
             this.labe100.TabIndex = 0;
             this.labe100.Text = "Name";
             // 
-
             // lbl_name
             // 
             this.lbl_name.AutoSize = true;
-            this.lbl_name.Location = new System.Drawing.Point(38, 0);
+            this.lbl_name.Location = new System.Drawing.Point(28, 0);
+            this.lbl_name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_name.Name = "lbl_name";
             this.lbl_name.Size = new System.Drawing.Size(35, 13);
             this.lbl_name.TabIndex = 27;
@@ -335,23 +301,18 @@
             // lbl_role
             // 
             this.lbl_role.AutoSize = true;
-            this.lbl_role.Location = new System.Drawing.Point(247, 0);
+            this.lbl_role.Location = new System.Drawing.Point(185, 0);
+            this.lbl_role.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_role.Name = "lbl_role";
             this.lbl_role.Size = new System.Drawing.Size(35, 13);
             this.lbl_role.TabIndex = 28;
             this.lbl_role.Text = "label8";
             // 
-            // rolesTableAdapter
-            // 
-            this.rolesTableAdapter.ClearBeforeFill = true;
-            // 
-
             // Admin_Control
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(656, 452);
             this.Controls.Add(this.pn_add);
             this.Controls.Add(this.lbl_role);
             this.Controls.Add(this.lbl_name);
@@ -368,7 +329,6 @@
             this.Controls.Add(this.txt_name);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_add);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Admin_Control";
             this.Text = "Admin_Control";
             this.Load += new System.EventHandler(this.Admin_Control_Load);
@@ -376,7 +336,6 @@
             this.pn_add.ResumeLayout(false);
             this.pn_add.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rolesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wH_MANAGEMENTDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -409,8 +368,6 @@
         private System.Windows.Forms.ComboBox cmb_role;
         private System.Windows.Forms.Label lbl_name;
         private System.Windows.Forms.Label lbl_role;
-        private WH_MANAGEMENTDataSet wH_MANAGEMENTDataSet;
         private System.Windows.Forms.BindingSource rolesBindingSource;
-        private WH_MANAGEMENTDataSetTableAdapters.RolesTableAdapter rolesTableAdapter;
     }
 }
