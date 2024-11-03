@@ -188,10 +188,10 @@
             this.pn_add.Controls.Add(this.Address);
             this.pn_add.Controls.Add(this.labe100);
             this.pn_add.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pn_add.Location = new System.Drawing.Point(484, 0);
-            this.pn_add.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pn_add.Location = new System.Drawing.Point(442, 0);
+            this.pn_add.Margin = new System.Windows.Forms.Padding(2);
             this.pn_add.Name = "pn_add";
-            this.pn_add.Size = new System.Drawing.Size(172, 452);
+            this.pn_add.Size = new System.Drawing.Size(214, 452);
             this.pn_add.TabIndex = 26;
             this.pn_add.Visible = false;
             this.pn_add.VisibleChanged += new System.EventHandler(this.pn_VisibleChanged);
@@ -200,7 +200,7 @@
             // pn_btn_submit
             // 
             this.pn_btn_submit.Location = new System.Drawing.Point(50, 215);
-            this.pn_btn_submit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pn_btn_submit.Margin = new System.Windows.Forms.Padding(2);
             this.pn_btn_submit.Name = "pn_btn_submit";
             this.pn_btn_submit.Size = new System.Drawing.Size(75, 23);
             this.pn_btn_submit.TabIndex = 12;
@@ -226,7 +226,7 @@
             "Manager",
             "Staff"});
             this.cmb_role.Location = new System.Drawing.Point(76, 125);
-            this.cmb_role.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_role.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_role.Name = "cmb_role";
             this.cmb_role.Size = new System.Drawing.Size(121, 21);
             this.cmb_role.TabIndex = 10;
@@ -234,7 +234,7 @@
             // pn_add_txt_address
             // 
             this.pn_add_txt_address.Location = new System.Drawing.Point(76, 63);
-            this.pn_add_txt_address.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pn_add_txt_address.Margin = new System.Windows.Forms.Padding(2);
             this.pn_add_txt_address.Multiline = true;
             this.pn_add_txt_address.Name = "pn_add_txt_address";
             this.pn_add_txt_address.Size = new System.Drawing.Size(76, 17);
@@ -243,7 +243,7 @@
             // pn_add_txt_phone
             // 
             this.pn_add_txt_phone.Location = new System.Drawing.Point(76, 94);
-            this.pn_add_txt_phone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pn_add_txt_phone.Margin = new System.Windows.Forms.Padding(2);
             this.pn_add_txt_phone.Multiline = true;
             this.pn_add_txt_phone.Name = "pn_add_txt_phone";
             this.pn_add_txt_phone.Size = new System.Drawing.Size(76, 17);
@@ -252,7 +252,7 @@
             // pn_add_txt_name
             // 
             this.pn_add_txt_name.Location = new System.Drawing.Point(76, 35);
-            this.pn_add_txt_name.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pn_add_txt_name.Margin = new System.Windows.Forms.Padding(2);
             this.pn_add_txt_name.Multiline = true;
             this.pn_add_txt_name.Name = "pn_add_txt_name";
             this.pn_add_txt_name.Size = new System.Drawing.Size(76, 17);

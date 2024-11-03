@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ASD_Final_Project.Program;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,16 +13,11 @@ namespace ASD_Final_Project
 {
     public partial class Form_DashBoard : Form
     {
-        public Form_DashBoard()
+        UserService _userService;
+        public Form_DashBoard(UserService userService)
         {
             InitializeComponent();
-        }
-
-        private void btn_logout_Click(object sender, EventArgs e)
-        {
-            Form_Sign sform = new Form_Sign();
-            sform.Show();
-            this.Hide();
+            _userService = userService;
         }
 
         private void SidePanel_Paint(object sender, PaintEventArgs e)
