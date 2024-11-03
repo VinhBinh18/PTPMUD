@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace ASD_Final_Project.Program
 {
@@ -23,7 +24,7 @@ namespace ASD_Final_Project.Program
             try
             {
                 _dbConnection.Open();
-                using (var command = new SqlCommand("SELECT U.U_ID AS UserID, U.U_Name AS UserName, U.U_Addresss AS Address, U.U_Phone AS Phone, R.Rl_Name AS RoleName FROM Users U JOIN Roles R ON U.Rl_ID = R.Rl_ID;", _dbConnection))
+                using (var command = new SqlCommand("SELECT U.U_ID, U.U_UserName, U.U_Address, U.U_Phone, R.Rl_Name FROM Users U JOIN Roles R ON U.Rl_ID = R.Rl_ID;", _dbConnection))
                 {
                     using (var reader = command.ExecuteReader())
                     {
@@ -35,7 +36,8 @@ namespace ASD_Final_Project.Program
                                 Username = reader.GetString(1),
                                 Address = reader.GetString(2),
                                 Phone = reader.GetString(3),
-                                Role = reader.GetString(4)
+                                Role = reader.GetString(4),
+                                Password= "********"
                             };
                             users.Add(user);
                         }
@@ -44,7 +46,7 @@ namespace ASD_Final_Project.Program
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                MessageBox.Show($"Error: {ex.Message}");
             }
             finally
             {
@@ -59,19 +61,20 @@ namespace ASD_Final_Project.Program
             try
             {
                 _dbConnection.Open();
-                using (var command = new SqlCommand("INSERT INTO Users (Username, Address, Phone, RolesID) VALUES (@Username, @Address, @Phone, @RolesId)", _dbConnection))
+                using (var command = new SqlCommand("INSERT INTO Users (U_Username,U_Password, U_Address, U_Phone, Rl_ID) VALUES (@Username ,@Password, @Address, @Phone, @RolesId)", _dbConnection))
                 {
                     command.Parameters.AddWithValue("@Username", user.Username);
                     command.Parameters.AddWithValue("@Address", user.Address);
                     command.Parameters.AddWithValue("@Phone", user.Phone);
                     command.Parameters.AddWithValue("@RolesID", GetRoleId(user.Role));
+                    command.Parameters.AddWithValue("@Password", "123");
 
                     command.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                MessageBox.Show($"Error: {ex.Message}");
             }
             finally
             {
@@ -96,7 +99,7 @@ namespace ASD_Final_Project.Program
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                MessageBox.Show($"Error: {ex.Message}");
             }
             finally
             {
@@ -109,7 +112,7 @@ namespace ASD_Final_Project.Program
             try
             {
                 _dbConnection.Open();
-                using (var command = new SqlCommand("DELETE FROM Users WHERE Id = @Id", _dbConnection))
+                using (var command = new SqlCommand("DELETE FROM Users WHERE U_ID = @Id", _dbConnection))
                 {
                     command.Parameters.AddWithValue("@Id", userId);
                     command.ExecuteNonQuery();
@@ -117,7 +120,7 @@ namespace ASD_Final_Project.Program
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                MessageBox.Show($"Error: {ex.Message}");
             }
             finally
             {
@@ -131,7 +134,7 @@ namespace ASD_Final_Project.Program
             try
             {
                 _dbConnection.Open();
-                using (var command = new SqlCommand("SELECT U.U_ID, U.U_Name, U.U_Address, U.U_Phone, R.Rl_Name FROM Users U JOIN Roles R ON U.Rl_ID = R.Rl_ID WHERE U.U_Name = @Username AND U.U_Password = @Password", _dbConnection))
+                using (var command = new SqlCommand("SELECT U.U_ID, U.U_UserName, U.U_Address, U.U_Phone, R.Rl_Name FROM Users U JOIN Roles R ON U.Rl_ID = R.Rl_ID WHERE U.U_UserName = @Username AND U.U_Password = @Password", _dbConnection))
                 {
                     command.Parameters.AddWithValue("@Username", username);
                     command.Parameters.AddWithValue("@Password", password);
@@ -152,7 +155,7 @@ namespace ASD_Final_Project.Program
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                MessageBox.Show($"Error: {ex.Message}");
             }
             finally
             {
@@ -174,7 +177,7 @@ namespace ASD_Final_Project.Program
 
                     if (userExists > 0)
                     {
-                        Console.WriteLine("Username already exists.");
+                        MessageBox.Show("Username already exists.");
                         return false;
                     }
                 }
@@ -192,7 +195,7 @@ namespace ASD_Final_Project.Program
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                MessageBox.Show($"Error: {ex.Message}");
             }
             finally
             {

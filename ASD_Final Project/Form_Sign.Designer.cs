@@ -41,7 +41,7 @@
             this.pn_txt_password = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btn_login_submit = new System.Windows.Forms.Button();
             this.txt_name = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cb = new System.Windows.Forms.CheckBox();
@@ -67,8 +67,7 @@
             this.pn_register.Controls.Add(this.pn_txt_password);
             this.pn_register.Controls.Add(this.label3);
             this.pn_register.Controls.Add(this.label1);
-            this.pn_register.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pn_register.Location = new System.Drawing.Point(0, 0);
+            this.pn_register.Location = new System.Drawing.Point(12, 12);
             this.pn_register.Name = "pn_register";
             this.pn_register.Size = new System.Drawing.Size(285, 544);
             this.pn_register.TabIndex = 17;
@@ -143,7 +142,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(31, 110);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 23);
+            this.label4.Size = new System.Drawing.Size(76, 19);
             this.label4.TabIndex = 22;
             this.label4.Text = "Username";
             // 
@@ -155,6 +154,7 @@
             this.pn_txt_confirm.Location = new System.Drawing.Point(36, 246);
             this.pn_txt_confirm.Multiline = true;
             this.pn_txt_confirm.Name = "pn_txt_confirm";
+            this.pn_txt_confirm.PasswordChar = '*';
             this.pn_txt_confirm.Size = new System.Drawing.Size(218, 26);
             this.pn_txt_confirm.TabIndex = 21;
             // 
@@ -163,7 +163,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(32, 220);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 23);
+            this.label2.Size = new System.Drawing.Size(131, 19);
             this.label2.TabIndex = 20;
             this.label2.Text = "Confirm password";
             // 
@@ -175,10 +175,11 @@
             this.pn_cb.Font = new System.Drawing.Font("Nirmala UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pn_cb.Location = new System.Drawing.Point(133, 278);
             this.pn_cb.Name = "pn_cb";
-            this.pn_cb.Size = new System.Drawing.Size(121, 21);
+            this.pn_cb.Size = new System.Drawing.Size(105, 17);
             this.pn_cb.TabIndex = 19;
             this.pn_cb.Text = "Show Password";
             this.pn_cb.UseVisualStyleBackColor = true;
+            this.pn_cb.CheckedChanged += new System.EventHandler(this.pn_cb_CheckedChanged);
             // 
             // pn_txt_password
             // 
@@ -188,6 +189,7 @@
             this.pn_txt_password.Location = new System.Drawing.Point(36, 191);
             this.pn_txt_password.Multiline = true;
             this.pn_txt_password.Name = "pn_txt_password";
+            this.pn_txt_password.PasswordChar = '*';
             this.pn_txt_password.Size = new System.Drawing.Size(218, 26);
             this.pn_txt_password.TabIndex = 18;
             // 
@@ -196,7 +198,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(32, 165);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 23);
+            this.label3.Size = new System.Drawing.Size(73, 19);
             this.label3.TabIndex = 17;
             this.label3.Text = "Password";
             // 
@@ -207,25 +209,26 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
             this.label1.Location = new System.Drawing.Point(30, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 30);
+            this.label1.Size = new System.Drawing.Size(137, 24);
             this.label1.TabIndex = 16;
             this.label1.Text = "Get Started";
             // 
-            // button6
+            // btn_login_submit
             // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(35, 301);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(219, 44);
-            this.button6.TabIndex = 36;
-            this.button6.Text = "LOGIN";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btn_login_submit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_login_submit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.btn_login_submit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_login_submit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.btn_login_submit.FlatAppearance.BorderSize = 0;
+            this.btn_login_submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_login_submit.ForeColor = System.Drawing.Color.White;
+            this.btn_login_submit.Location = new System.Drawing.Point(35, 301);
+            this.btn_login_submit.Name = "btn_login_submit";
+            this.btn_login_submit.Size = new System.Drawing.Size(219, 44);
+            this.btn_login_submit.TabIndex = 36;
+            this.btn_login_submit.Text = "LOGIN";
+            this.btn_login_submit.UseVisualStyleBackColor = false;
+            this.btn_login_submit.Click += new System.EventHandler(this.btn_login_submit_Click);
             // 
             // txt_name
             // 
@@ -243,7 +246,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(31, 129);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(89, 23);
+            this.label9.Size = new System.Drawing.Size(76, 19);
             this.label9.TabIndex = 34;
             this.label9.Text = "Username";
             // 
@@ -255,10 +258,11 @@
             this.cb.Font = new System.Drawing.Font("Nirmala UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb.Location = new System.Drawing.Point(133, 241);
             this.cb.Name = "cb";
-            this.cb.Size = new System.Drawing.Size(121, 21);
+            this.cb.Size = new System.Drawing.Size(105, 17);
             this.cb.TabIndex = 31;
             this.cb.Text = "Show Password";
             this.cb.UseVisualStyleBackColor = true;
+            this.cb.CheckedChanged += new System.EventHandler(this.cb_CheckedChanged);
             // 
             // txt_password
             // 
@@ -268,6 +272,7 @@
             this.txt_password.Location = new System.Drawing.Point(36, 210);
             this.txt_password.Multiline = true;
             this.txt_password.Name = "txt_password";
+            this.txt_password.PasswordChar = '*';
             this.txt_password.Size = new System.Drawing.Size(218, 26);
             this.txt_password.TabIndex = 30;
             // 
@@ -276,7 +281,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(32, 184);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(84, 23);
+            this.label11.Size = new System.Drawing.Size(73, 19);
             this.label11.TabIndex = 29;
             this.label11.Text = "Password";
             // 
@@ -287,7 +292,7 @@
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
             this.label12.Location = new System.Drawing.Point(30, 58);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(173, 30);
+            this.label12.Size = new System.Drawing.Size(137, 24);
             this.label12.TabIndex = 28;
             this.label12.Text = "Get Started";
             // 
@@ -315,14 +320,14 @@
             // 
             // Form_Sign
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(285, 544);
             this.Controls.Add(this.pn_register);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.btn_login_submit);
             this.Controls.Add(this.txt_name);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.cb);
@@ -357,7 +362,7 @@
         private System.Windows.Forms.TextBox pn_txt_password;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btn_login_submit;
         private System.Windows.Forms.TextBox txt_name;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.CheckBox cb;

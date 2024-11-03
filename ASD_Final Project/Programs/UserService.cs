@@ -34,5 +34,10 @@ namespace ASD_Final_Project.Program
         {
             _userRepository.DeleteUser(userId);
         }
+        public User LoginUser(string username, string password)
+        {
+            return _userRepository.LoginUser(username, password);
+        }
+        
     }
 }

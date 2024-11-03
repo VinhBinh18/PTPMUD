@@ -14,30 +14,22 @@ namespace ASD_Final_Project.Admin
 {
     public partial class Admin_Control : Form
     {
-        private readonly UserRepository _userRepository;
-      /*  SqlConnection connection;
-        SqlCommand command;*/
-        string str = @"Data Source=PRIN\MSSQLSERVER02;Initial Catalog=WH_MANAGEMENT;Integrated Security=True;Encrypt=False";
-        /*SqlDataAdapter adapter = new SqlDataAdapter();*/
+        private readonly UserService _userService;
+        private readonly User _admin;
 
-        public Admin_Control()
+        public Admin_Control(UserService userService, User Admin)
         {
             InitializeComponent();
-            _userRepository = new UserRepository(str);
+            _userService = userService;
+            _admin = Admin;
         }
 
 
         void Loaddata()
         {
-            /*command = connection.CreateCommand();
-            //command.CommandText = "SELECT Users.UserID, Users.UserName, Users.Addresss, Users.Phone, Roles.RolesName FROM Users JOIN Roles ON Users.RolesID = Roles.RolesID; ";
-            adapter.SelectCommand = command;
-            adapter.Fill(table);
-            table.Clear();
-            dataGridView1.DataSource = table;*/
             try
             {
-                var user = _userRepository.GetAllUsers();
+                var user = _userService.GetAllUsers();
                 if (user != null && user.Any())
                 {
                     dgv.DataSource = user.ToList();
@@ -55,13 +47,6 @@ namespace ASD_Final_Project.Admin
 
         }
 
-
-
-        private void dgv_SelectionChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void label8_Click(object sender, EventArgs e)
         {
 
@@ -69,41 +54,102 @@ namespace ASD_Final_Project.Admin
 
         private void pn_btn_submit_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(pn_txt_name.Text) || string.IsNullOrWhiteSpace(pn_txt_address.Text) || string.IsNullOrWhiteSpace(pn_txt_phone.Text))
+            if (string.IsNullOrWhiteSpace(pn_add_txt_name.Text) || string.IsNullOrWhiteSpace(pn_add_txt_address.Text) || string.IsNullOrWhiteSpace(pn_add_txt_phone.Text))
             {
-                MessageBox.Show("Please fill full infor User");
+                MessageBox.Show("Please fill full user information");
                 return;
             }
             {
                 User U = new User()
                 {
-                    Username = pn_txt_name.Text,
-                    Address = pn_txt_address.Text,
-                    Phone = pn_txt_phone.Text,
-                    Role = cmb_role.SelectedItem?.ToString()
+                    Username = pn_add_txt_name.Text,
+                    Address = pn_add_txt_address.Text,
+                    Phone = pn_add_txt_phone.Text,
+                    Role = GetRoleName(cmb_role.SelectedIndex + 1)
                 };
-                _userRepository.AddUser(U);
+                _userService.AddUser(U);
             }
             
-            /* command = connection.CreateCommand();
-            command.CommandText = "insert into User values('" + txt_name.Text + "','" + txt_phone.Text + "')";
-            command.ExecuteNonQuery();*/
+
         }
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            pn.Visible = true;
-            pn.Dock = DockStyle.Fill;
+            pn_add.Visible = true;
+            pn_add.Dock = DockStyle.Right;
         }
 
         private void Admin_Control_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'wH_MANAGEMENTDataSet.Roles' table. You can move, or remove it, as needed.
             Loaddata();
+            lbl_name.Text = _admin.Username.ToString();
+            lbl_role.Text = _admin.Role.ToString();
         }
 
         private void pn_VisibleChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void pn_add_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private string GetRoleName(int role)
+        {
+            switch (role)
+            {
+                case 1: return "Admin";
+                case 2: return "Manager";
+                case 3: return "Staff";
+                default: throw new ArgumentException("Invalid role name");
+            }
+        }
+
+        private void btn_del_Click(object sender, EventArgs e)
+        {
+            if (dgv.SelectedRows.Count > 0)
+            {
+                var selectRow = dgv.SelectedRows[0];
+                var cellValue = selectRow.Cells[0].Value;
+                if (cellValue != null && int.TryParse(cellValue.ToString(), out int userDelete))
+                {
+                    _userService.DeleteUser(userDelete);
+                    MessageBox.Show("User deleted successfully!");
+                    Loaddata();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid value for deletion.");
+                }
+
+
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một dòng để xóa.");
+            }
+
+
+        }
+       
+
+        private void dgv_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgv.SelectedRows.Count > 0)
+            {
+                var seclectRow = dgv.SelectedRows[0];
+                string name = seclectRow.Cells[1].Value.ToString();
+                string phone = seclectRow.Cells[2].Value.ToString();
+                string address = seclectRow.Cells[4].Value.ToString();
+                string role = seclectRow.Cells[5].Value.ToString();
+                txt_name.Text = name;
+                txt_phone.Text = phone;
+                txt_address.Text = address;
+                txt_role.Text = role;
+            }
         }
     }
 }
