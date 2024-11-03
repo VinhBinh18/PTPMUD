@@ -45,6 +45,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -268,15 +269,16 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox1.Location = new System.Drawing.Point(477, 31);
+            this.textBox1.Location = new System.Drawing.Point(465, 31);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(291, 26);
+            this.textBox1.Size = new System.Drawing.Size(269, 26);
             this.textBox1.TabIndex = 5;
             this.textBox1.Text = "Search...";
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel6);
             this.panel3.Controls.Add(this.panel4);
@@ -288,13 +290,22 @@
             this.panel3.Size = new System.Drawing.Size(834, 633);
             this.panel3.TabIndex = 6;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(740, 31);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(28, 26);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.pictureBox3);
             this.panel5.Controls.Add(this.label7);
             this.panel5.Controls.Add(this.label8);
             this.panel5.Controls.Add(this.label9);
-            this.panel5.Location = new System.Drawing.Point(465, 100);
+            this.panel5.Location = new System.Drawing.Point(465, 88);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(303, 149);
             this.panel5.TabIndex = 7;
@@ -341,7 +352,7 @@
             // 
             // panel6
             // 
-            this.panel6.Location = new System.Drawing.Point(74, 264);
+            this.panel6.Location = new System.Drawing.Point(74, 252);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(303, 352);
             this.panel6.TabIndex = 7;
@@ -352,7 +363,7 @@
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(74, 100);
+            this.panel4.Location = new System.Drawing.Point(74, 88);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(303, 149);
             this.panel4.TabIndex = 6;
@@ -452,5 +463,6 @@
         private System.Windows.Forms.Panel SidePanel;
         private System.Windows.Forms.Button btn_wh3;
         private System.Windows.Forms.Button btn_wh2;
+        private System.Windows.Forms.Button button1;
     }
 }
