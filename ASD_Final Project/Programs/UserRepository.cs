@@ -17,6 +17,46 @@ namespace ASD_Final_Project.Program
             _dbConnection = new SqlConnection(connectionString);
         }
 
+        public IEnumerable<User> GetAllUsers(int WhID)
+        {
+            var users = new List<User>();
+
+            try
+            {
+                _dbConnection.Open();
+                using (var command = new SqlCommand("SELECT U.U_ID, U.U_UserName, U.U_Address, U.U_Phone, R.Rl_Name, U.Wh_ID FROM Users U, Roles R WHERE U.Wh_ID = @Wh_ID and U.Rl_ID = R.Rl_ID;", _dbConnection))
+                {   
+                    command.Parameters.AddWithValue("@Wh_ID", WhID);
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            var user = new User
+                            {
+                                Id = reader.GetInt32(0),
+                                Username = reader.GetString(1),
+                                Address = reader.GetString(2),
+                                Phone = reader.GetString(3),
+                                Role = reader.GetString(4),
+                                Password = reader.GetString(5),
+                            };
+                            users.Add(user);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+            finally
+            {
+                _dbConnection.Close();
+            }
+
+            return users;
+        }
+
         public IEnumerable<User> GetAllUsers()
         {
             var users = new List<User>();
@@ -37,7 +77,7 @@ namespace ASD_Final_Project.Program
                                 Address = reader.GetString(2),
                                 Phone = reader.GetString(3),
                                 Role = reader.GetString(4),
-                                Password= "********"
+                                Password = reader.GetString(5),
                             };
                             users.Add(user);
                         }
@@ -61,13 +101,14 @@ namespace ASD_Final_Project.Program
             try
             {
                 _dbConnection.Open();
-                using (var command = new SqlCommand("INSERT INTO Users (U_Username,U_Password, U_Address, U_Phone, Rl_ID) VALUES (@Username ,@Password, @Address, @Phone, @RolesId)", _dbConnection))
+                using (var command = new SqlCommand("INSERT INTO Users (U_Username,U_Password, U_Address, U_Phone, Rl_ID, Wh_ID) VALUES (@Username ,@Password, @Address, @Phone, @RolesId, @Wh_ID)", _dbConnection))
                 {
                     command.Parameters.AddWithValue("@Username", user.Username);
                     command.Parameters.AddWithValue("@Address", user.Address);
                     command.Parameters.AddWithValue("@Phone", user.Phone);
                     command.Parameters.AddWithValue("@RolesID", GetRoleId(user.Role));
                     command.Parameters.AddWithValue("@Password", "123");
+                    command.Parameters.AddWithValue("@Wh_ID", user.Warehouse);
 
                     command.ExecuteNonQuery();
                 }
@@ -87,13 +128,14 @@ namespace ASD_Final_Project.Program
             try
             {
                 _dbConnection.Open();
-                using (var command = new SqlCommand("UPDATE Users SET Username = @Username, Address = @Address, Phone = @Phone, RolesId = @RolesID WHERE Id = @Id", _dbConnection))
+                using (var command = new SqlCommand("UPDATE Users SET U_Username = @Username, U_Address = @Address, U_Phone = @Phone, R_ID = @RolesID , Wh_ID = @Wh_ID WHERE Id = @Id", _dbConnection))
                 {
                     command.Parameters.AddWithValue("@Id", user.Id);
                     command.Parameters.AddWithValue("@Username", user.Username);
                     command.Parameters.AddWithValue("@Address", user.Address);
                     command.Parameters.AddWithValue("@Phone", user.Phone);
                     command.Parameters.AddWithValue("@RolesID", GetRoleId(user.Role));
+                    command.Parameters.AddWithValue("@Wh_ID" , user.Warehouse);
                     command.ExecuteNonQuery();
                 }
             }
@@ -221,5 +263,27 @@ namespace ASD_Final_Project.Program
             }
         }
 
+        public int CountUsers (int Wh_ID)
+        {
+            try
+            {
+                _dbConnection.Open();
+                using (var countUserCommand = new SqlCommand("SELECT COUNT(*) FROM Users WHERE Wh_ID = @Wh_ID;", _dbConnection))
+                {
+                    countUserCommand.Parameters.AddWithValue("@Wh_ID", Wh_ID);
+                    int userCount = (int)countUserCommand.ExecuteScalar();
+                    return userCount;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errol: " + ex.Message );
+                return 0;
+            }
+            finally
+            {
+                _dbConnection.Close();
+            }
+        }
     }
 }
