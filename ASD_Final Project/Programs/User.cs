@@ -14,6 +14,6 @@ namespace ASD_Final_Project.Program
         public string Password { get; set; }
         public string Phone { get; set; }
         public string Role { get; set; }
-        public int Warehouse { get; set; }
+        public string Warehouse { get; set; }
     }
 }

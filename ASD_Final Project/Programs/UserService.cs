@@ -15,6 +15,11 @@ namespace ASD_Final_Project.Program
             _userRepository = userRepository;
         }
 
+        public User GetUser(int UserID)
+        {
+            return _userRepository.GetUser(UserID);
+        }
+
         public IEnumerable<User> GetAllUsers()
         {
             return _userRepository.GetAllUsers();
