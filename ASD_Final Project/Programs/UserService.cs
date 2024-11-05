@@ -47,7 +47,5 @@ namespace ASD_Final_Project.Program
         {
             return _userRepository.CountUsers(Wh_ID);
         }
-
-
     }
 }
