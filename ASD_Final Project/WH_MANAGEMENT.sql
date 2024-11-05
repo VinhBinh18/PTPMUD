@@ -162,6 +162,10 @@ ALTER TABLE Users
     ADD CONSTRAINT FK6_RolesID_User FOREIGN KEY (Rl_ID)
     REFERENCES Roles(Rl_ID)
 GO
+ALTER TABLE Users
+    ADD CONSTRAINT FK10_Wh_ID_User FOREIGN KEY (Wh_ID)
+    REFERENCES WareHouse(Wh_ID)
+GO
 
 -- Khóa ngoại cho bảng WH_Transaction_Details
 ALTER TABLE WH_Transaction_Details
