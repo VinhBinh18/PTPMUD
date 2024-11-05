@@ -42,11 +42,11 @@
             this.pn_user_btn_add = new System.Windows.Forms.Button();
             this.pn_user_add = new System.Windows.Forms.Panel();
             this.lable1000 = new System.Windows.Forms.Label();
-            this.pn_user_cmb_wh = new System.Windows.Forms.ComboBox();
+            this.pn_user_add_cmb_wh = new System.Windows.Forms.ComboBox();
             this.pn_user_add_btn_close = new System.Windows.Forms.Button();
-            this.pn_user_btn_submit = new System.Windows.Forms.Button();
+            this.pn_user_add_btn_submit = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.pn_user_cmb_role = new System.Windows.Forms.ComboBox();
+            this.pn_user_add_cmb_role = new System.Windows.Forms.ComboBox();
             this.pn_user_add_txt_address = new System.Windows.Forms.TextBox();
             this.pn_user_add_txt_phone = new System.Windows.Forms.TextBox();
             this.pn_user_add_txt_name = new System.Windows.Forms.TextBox();
@@ -55,7 +55,7 @@
             this.labe100 = new System.Windows.Forms.Label();
             this.pn_user = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pn_user_txt_wh = new System.Windows.Forms.TextBox();
             this.btn_user = new System.Windows.Forms.Button();
             this.btn_warehouse = new System.Windows.Forms.Button();
             this.pn_wh = new System.Windows.Forms.Panel();
@@ -67,6 +67,21 @@
             this.lbl_role = new System.Windows.Forms.Label();
             this.lbl_name = new System.Windows.Forms.Label();
             this.pn_home = new System.Windows.Forms.Panel();
+            this.pn_user_edit = new System.Windows.Forms.Panel();
+            this.pn_user_edit_btn_close = new System.Windows.Forms.Button();
+            this.pn_user_edit_txt_name = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.pn_user_edit_txt_phone = new System.Windows.Forms.TextBox();
+            this.pn_user_edit_txt_address = new System.Windows.Forms.TextBox();
+            this.pn_user_edit_cmb_role = new System.Windows.Forms.ComboBox();
+            this.pn_user_edit_btn_submit = new System.Windows.Forms.Button();
+            this.pn_user_edit_cmb_wh = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.pn_user_edit_txt_id = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pn_user_dgv)).BeginInit();
             this.pn_user_add.SuspendLayout();
             this.pn_user.SuspendLayout();
@@ -74,6 +89,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pn_dgv_product)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.pn_user_edit.SuspendLayout();
             this.SuspendLayout();
             // 
             // pn_user_btn_del
@@ -94,6 +110,7 @@
             this.pn_user_btn_edit.TabIndex = 24;
             this.pn_user_btn_edit.Text = "Sửa";
             this.pn_user_btn_edit.UseVisualStyleBackColor = true;
+            this.pn_user_btn_edit.Click += new System.EventHandler(this.pn_user_btn_edit_Click);
             // 
             // pn_user_dgv
             // 
@@ -187,11 +204,11 @@
             // 
             this.pn_user_add.BackColor = System.Drawing.Color.MistyRose;
             this.pn_user_add.Controls.Add(this.lable1000);
-            this.pn_user_add.Controls.Add(this.pn_user_cmb_wh);
+            this.pn_user_add.Controls.Add(this.pn_user_add_cmb_wh);
             this.pn_user_add.Controls.Add(this.pn_user_add_btn_close);
-            this.pn_user_add.Controls.Add(this.pn_user_btn_submit);
+            this.pn_user_add.Controls.Add(this.pn_user_add_btn_submit);
             this.pn_user_add.Controls.Add(this.label5);
-            this.pn_user_add.Controls.Add(this.pn_user_cmb_role);
+            this.pn_user_add.Controls.Add(this.pn_user_add_cmb_role);
             this.pn_user_add.Controls.Add(this.pn_user_add_txt_address);
             this.pn_user_add.Controls.Add(this.pn_user_add_txt_phone);
             this.pn_user_add.Controls.Add(this.pn_user_add_txt_name);
@@ -199,7 +216,7 @@
             this.pn_user_add.Controls.Add(this.Address);
             this.pn_user_add.Controls.Add(this.labe100);
             this.pn_user_add.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pn_user_add.Location = new System.Drawing.Point(642, 0);
+            this.pn_user_add.Location = new System.Drawing.Point(439, 0);
             this.pn_user_add.Margin = new System.Windows.Forms.Padding(2);
             this.pn_user_add.Name = "pn_user_add";
             this.pn_user_add.Size = new System.Drawing.Size(203, 596);
@@ -215,18 +232,18 @@
             this.lable1000.TabIndex = 15;
             this.lable1000.Text = "Warehouse";
             // 
-            // pn_user_cmb_wh
+            // pn_user_add_cmb_wh
             // 
-            this.pn_user_cmb_wh.FormattingEnabled = true;
-            this.pn_user_cmb_wh.Items.AddRange(new object[] {
+            this.pn_user_add_cmb_wh.FormattingEnabled = true;
+            this.pn_user_add_cmb_wh.Items.AddRange(new object[] {
             "Bắc",
             "Nam",
             "Trung"});
-            this.pn_user_cmb_wh.Location = new System.Drawing.Point(76, 161);
-            this.pn_user_cmb_wh.Margin = new System.Windows.Forms.Padding(2);
-            this.pn_user_cmb_wh.Name = "pn_user_cmb_wh";
-            this.pn_user_cmb_wh.Size = new System.Drawing.Size(121, 21);
-            this.pn_user_cmb_wh.TabIndex = 14;
+            this.pn_user_add_cmb_wh.Location = new System.Drawing.Point(76, 161);
+            this.pn_user_add_cmb_wh.Margin = new System.Windows.Forms.Padding(2);
+            this.pn_user_add_cmb_wh.Name = "pn_user_add_cmb_wh";
+            this.pn_user_add_cmb_wh.Size = new System.Drawing.Size(121, 21);
+            this.pn_user_add_cmb_wh.TabIndex = 14;
             // 
             // pn_user_add_btn_close
             // 
@@ -240,16 +257,16 @@
             this.pn_user_add_btn_close.UseVisualStyleBackColor = false;
             this.pn_user_add_btn_close.Click += new System.EventHandler(this.pn_user_add_btn_close_Click);
             // 
-            // pn_user_btn_submit
+            // pn_user_add_btn_submit
             // 
-            this.pn_user_btn_submit.Location = new System.Drawing.Point(50, 193);
-            this.pn_user_btn_submit.Margin = new System.Windows.Forms.Padding(2);
-            this.pn_user_btn_submit.Name = "pn_user_btn_submit";
-            this.pn_user_btn_submit.Size = new System.Drawing.Size(122, 45);
-            this.pn_user_btn_submit.TabIndex = 12;
-            this.pn_user_btn_submit.Text = "Submit";
-            this.pn_user_btn_submit.UseVisualStyleBackColor = true;
-            this.pn_user_btn_submit.Click += new System.EventHandler(this.pn_btn_submit_Click);
+            this.pn_user_add_btn_submit.Location = new System.Drawing.Point(49, 204);
+            this.pn_user_add_btn_submit.Margin = new System.Windows.Forms.Padding(2);
+            this.pn_user_add_btn_submit.Name = "pn_user_add_btn_submit";
+            this.pn_user_add_btn_submit.Size = new System.Drawing.Size(122, 45);
+            this.pn_user_add_btn_submit.TabIndex = 12;
+            this.pn_user_add_btn_submit.Text = "Submit";
+            this.pn_user_add_btn_submit.UseVisualStyleBackColor = true;
+            this.pn_user_add_btn_submit.Click += new System.EventHandler(this.pn_btn_add_submit_Click);
             // 
             // label5
             // 
@@ -260,18 +277,18 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Role";
             // 
-            // pn_user_cmb_role
+            // pn_user_add_cmb_role
             // 
-            this.pn_user_cmb_role.FormattingEnabled = true;
-            this.pn_user_cmb_role.Items.AddRange(new object[] {
+            this.pn_user_add_cmb_role.FormattingEnabled = true;
+            this.pn_user_add_cmb_role.Items.AddRange(new object[] {
             "Admin",
             "Manager",
             "Staff"});
-            this.pn_user_cmb_role.Location = new System.Drawing.Point(76, 125);
-            this.pn_user_cmb_role.Margin = new System.Windows.Forms.Padding(2);
-            this.pn_user_cmb_role.Name = "pn_user_cmb_role";
-            this.pn_user_cmb_role.Size = new System.Drawing.Size(121, 21);
-            this.pn_user_cmb_role.TabIndex = 10;
+            this.pn_user_add_cmb_role.Location = new System.Drawing.Point(76, 125);
+            this.pn_user_add_cmb_role.Margin = new System.Windows.Forms.Padding(2);
+            this.pn_user_add_cmb_role.Name = "pn_user_add_cmb_role";
+            this.pn_user_add_cmb_role.Size = new System.Drawing.Size(121, 21);
+            this.pn_user_add_cmb_role.TabIndex = 10;
             // 
             // pn_user_add_txt_address
             // 
@@ -303,7 +320,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 99);
+            this.label7.Location = new System.Drawing.Point(12, 97);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(38, 13);
@@ -313,7 +330,7 @@
             // Address
             // 
             this.Address.AutoSize = true;
-            this.Address.Location = new System.Drawing.Point(12, 71);
+            this.Address.Location = new System.Drawing.Point(12, 66);
             this.Address.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Address.Name = "Address";
             this.Address.Size = new System.Drawing.Size(45, 13);
@@ -323,7 +340,7 @@
             // labe100
             // 
             this.labe100.AutoSize = true;
-            this.labe100.Location = new System.Drawing.Point(12, 35);
+            this.labe100.Location = new System.Drawing.Point(12, 38);
             this.labe100.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labe100.Name = "labe100";
             this.labe100.Size = new System.Drawing.Size(35, 13);
@@ -334,7 +351,7 @@
             // 
             this.pn_user.BackColor = System.Drawing.Color.DarkOrange;
             this.pn_user.Controls.Add(this.label6);
-            this.pn_user.Controls.Add(this.textBox1);
+            this.pn_user.Controls.Add(this.pn_user_txt_wh);
             this.pn_user.Controls.Add(this.pn_user_txt_phone);
             this.pn_user.Controls.Add(this.label1);
             this.pn_user.Controls.Add(this.pn_user_txt_name);
@@ -350,7 +367,7 @@
             this.pn_user.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_user.Location = new System.Drawing.Point(127, 100);
             this.pn_user.Name = "pn_user";
-            this.pn_user.Size = new System.Drawing.Size(515, 496);
+            this.pn_user.Size = new System.Drawing.Size(312, 496);
             this.pn_user.TabIndex = 29;
             // 
             // label6
@@ -362,12 +379,12 @@
             this.label6.TabIndex = 26;
             this.label6.Text = "Branch";
             // 
-            // textBox1
+            // pn_user_txt_wh
             // 
-            this.textBox1.Location = new System.Drawing.Point(422, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 27;
+            this.pn_user_txt_wh.Location = new System.Drawing.Point(422, 50);
+            this.pn_user_txt_wh.Name = "pn_user_txt_wh";
+            this.pn_user_txt_wh.Size = new System.Drawing.Size(100, 20);
+            this.pn_user_txt_wh.TabIndex = 27;
             // 
             // btn_user
             // 
@@ -396,7 +413,7 @@
             this.pn_wh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_wh.Location = new System.Drawing.Point(127, 100);
             this.pn_wh.Name = "pn_wh";
-            this.pn_wh.Size = new System.Drawing.Size(515, 496);
+            this.pn_wh.Size = new System.Drawing.Size(312, 496);
             this.pn_wh.TabIndex = 32;
             // 
             // pn_dgv_product
@@ -445,7 +462,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(127, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(515, 100);
+            this.panel3.Size = new System.Drawing.Size(312, 100);
             this.panel3.TabIndex = 33;
             // 
             // lbl_role
@@ -473,8 +490,166 @@
             this.pn_home.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_home.Location = new System.Drawing.Point(127, 100);
             this.pn_home.Name = "pn_home";
-            this.pn_home.Size = new System.Drawing.Size(515, 496);
+            this.pn_home.Size = new System.Drawing.Size(312, 496);
             this.pn_home.TabIndex = 0;
+            // 
+            // pn_user_edit
+            // 
+            this.pn_user_edit.Controls.Add(this.label13);
+            this.pn_user_edit.Controls.Add(this.pn_user_edit_txt_id);
+            this.pn_user_edit.Controls.Add(this.pn_user_edit_cmb_wh);
+            this.pn_user_edit.Controls.Add(this.pn_user_edit_btn_submit);
+            this.pn_user_edit.Controls.Add(this.pn_user_edit_cmb_role);
+            this.pn_user_edit.Controls.Add(this.pn_user_edit_txt_address);
+            this.pn_user_edit.Controls.Add(this.pn_user_edit_txt_phone);
+            this.pn_user_edit.Controls.Add(this.label10);
+            this.pn_user_edit.Controls.Add(this.label9);
+            this.pn_user_edit.Controls.Add(this.label11);
+            this.pn_user_edit.Controls.Add(this.label8);
+            this.pn_user_edit.Controls.Add(this.label12);
+            this.pn_user_edit.Controls.Add(this.pn_user_edit_txt_name);
+            this.pn_user_edit.Controls.Add(this.pn_user_edit_btn_close);
+            this.pn_user_edit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pn_user_edit.Location = new System.Drawing.Point(642, 0);
+            this.pn_user_edit.Name = "pn_user_edit";
+            this.pn_user_edit.Size = new System.Drawing.Size(203, 596);
+            this.pn_user_edit.TabIndex = 16;
+            this.pn_user_edit.Visible = false;
+            // 
+            // pn_user_edit_btn_close
+            // 
+            this.pn_user_edit_btn_close.BackColor = System.Drawing.Color.Red;
+            this.pn_user_edit_btn_close.Location = new System.Drawing.Point(2, 0);
+            this.pn_user_edit_btn_close.Margin = new System.Windows.Forms.Padding(0);
+            this.pn_user_edit_btn_close.Name = "pn_user_edit_btn_close";
+            this.pn_user_edit_btn_close.Size = new System.Drawing.Size(25, 25);
+            this.pn_user_edit_btn_close.TabIndex = 16;
+            this.pn_user_edit_btn_close.Text = "X";
+            this.pn_user_edit_btn_close.UseVisualStyleBackColor = false;
+            this.pn_user_edit_btn_close.Click += new System.EventHandler(this.pn_user_edit_btn_close_Click);
+            // 
+            // pn_user_edit_txt_name
+            // 
+            this.pn_user_edit_txt_name.Location = new System.Drawing.Point(75, 61);
+            this.pn_user_edit_txt_name.Name = "pn_user_edit_txt_name";
+            this.pn_user_edit_txt_name.Size = new System.Drawing.Size(120, 20);
+            this.pn_user_edit_txt_name.TabIndex = 17;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(8, 64);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Name";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(8, 95);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(45, 13);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "Address";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(9, 193);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(62, 13);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Warehouse";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(9, 157);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(29, 13);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "Role";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(8, 126);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(38, 13);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "Phone";
+            // 
+            // pn_user_edit_txt_phone
+            // 
+            this.pn_user_edit_txt_phone.Location = new System.Drawing.Point(75, 123);
+            this.pn_user_edit_txt_phone.Name = "pn_user_edit_txt_phone";
+            this.pn_user_edit_txt_phone.Size = new System.Drawing.Size(120, 20);
+            this.pn_user_edit_txt_phone.TabIndex = 21;
+            // 
+            // pn_user_edit_txt_address
+            // 
+            this.pn_user_edit_txt_address.Location = new System.Drawing.Point(75, 92);
+            this.pn_user_edit_txt_address.Name = "pn_user_edit_txt_address";
+            this.pn_user_edit_txt_address.Size = new System.Drawing.Size(120, 20);
+            this.pn_user_edit_txt_address.TabIndex = 22;
+            // 
+            // pn_user_edit_cmb_role
+            // 
+            this.pn_user_edit_cmb_role.FormattingEnabled = true;
+            this.pn_user_edit_cmb_role.Items.AddRange(new object[] {
+            "Admin",
+            "Manager",
+            "Staff"});
+            this.pn_user_edit_cmb_role.Location = new System.Drawing.Point(75, 154);
+            this.pn_user_edit_cmb_role.Margin = new System.Windows.Forms.Padding(2);
+            this.pn_user_edit_cmb_role.Name = "pn_user_edit_cmb_role";
+            this.pn_user_edit_cmb_role.Size = new System.Drawing.Size(121, 21);
+            this.pn_user_edit_cmb_role.TabIndex = 16;
+            // 
+            // pn_user_edit_btn_submit
+            // 
+            this.pn_user_edit_btn_submit.Location = new System.Drawing.Point(55, 233);
+            this.pn_user_edit_btn_submit.Margin = new System.Windows.Forms.Padding(2);
+            this.pn_user_edit_btn_submit.Name = "pn_user_edit_btn_submit";
+            this.pn_user_edit_btn_submit.Size = new System.Drawing.Size(122, 45);
+            this.pn_user_edit_btn_submit.TabIndex = 16;
+            this.pn_user_edit_btn_submit.Text = "Submit";
+            this.pn_user_edit_btn_submit.UseVisualStyleBackColor = true;
+            this.pn_user_edit_btn_submit.Click += new System.EventHandler(this.pn_user_edit_btn_submit_Click);
+            // 
+            // pn_user_edit_cmb_wh
+            // 
+            this.pn_user_edit_cmb_wh.FormattingEnabled = true;
+            this.pn_user_edit_cmb_wh.Items.AddRange(new object[] {
+            "Bắc",
+            "Nam",
+            "Trung"});
+            this.pn_user_edit_cmb_wh.Location = new System.Drawing.Point(75, 190);
+            this.pn_user_edit_cmb_wh.Margin = new System.Windows.Forms.Padding(2);
+            this.pn_user_edit_cmb_wh.Name = "pn_user_edit_cmb_wh";
+            this.pn_user_edit_cmb_wh.Size = new System.Drawing.Size(121, 21);
+            this.pn_user_edit_cmb_wh.TabIndex = 16;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(8, 38);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(18, 13);
+            this.label13.TabIndex = 24;
+            this.label13.Text = "ID";
+            // 
+            // pn_user_edit_txt_id
+            // 
+            this.pn_user_edit_txt_id.Location = new System.Drawing.Point(75, 35);
+            this.pn_user_edit_txt_id.Name = "pn_user_edit_txt_id";
+            this.pn_user_edit_txt_id.Size = new System.Drawing.Size(120, 20);
+            this.pn_user_edit_txt_id.TabIndex = 23;
             // 
             // Admin_Control
             // 
@@ -487,6 +662,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pn_user_add);
+            this.Controls.Add(this.pn_user_edit);
             this.Name = "Admin_Control";
             this.Text = "Admin_Control";
             this.Load += new System.EventHandler(this.Admin_Control_Load);
@@ -500,6 +676,8 @@
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.pn_user_edit.ResumeLayout(false);
+            this.pn_user_edit.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -525,9 +703,9 @@
         private System.Windows.Forms.TextBox pn_user_add_txt_address;
         private System.Windows.Forms.TextBox pn_user_add_txt_phone;
         private System.Windows.Forms.TextBox pn_user_add_txt_name;
-        private System.Windows.Forms.Button pn_user_btn_submit;
+        private System.Windows.Forms.Button pn_user_add_btn_submit;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox pn_user_cmb_role;
+        private System.Windows.Forms.ComboBox pn_user_add_cmb_role;
         private System.Windows.Forms.Panel pn_user;
         private System.Windows.Forms.Button btn_user;
         private System.Windows.Forms.Button btn_warehouse;
@@ -542,8 +720,23 @@
         private System.Windows.Forms.Button pn_user_add_btn_close;
         private System.Windows.Forms.DataGridView pn_dgv_product;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox pn_user_txt_wh;
         private System.Windows.Forms.Label lable1000;
-        private System.Windows.Forms.ComboBox pn_user_cmb_wh;
+        private System.Windows.Forms.ComboBox pn_user_add_cmb_wh;
+        private System.Windows.Forms.Panel pn_user_edit;
+        private System.Windows.Forms.Button pn_user_edit_btn_close;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox pn_user_edit_txt_name;
+        private System.Windows.Forms.ComboBox pn_user_edit_cmb_role;
+        private System.Windows.Forms.TextBox pn_user_edit_txt_address;
+        private System.Windows.Forms.TextBox pn_user_edit_txt_phone;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox pn_user_edit_cmb_wh;
+        private System.Windows.Forms.Button pn_user_edit_btn_submit;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox pn_user_edit_txt_id;
     }
 }
