@@ -65,14 +65,9 @@ namespace ASD_Final_Project.Admin
             }
         } //done
 
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        } //??
-
         private void pn_btn_submit_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(pn_user_add_txt_name.Text) || string.IsNullOrWhiteSpace(pn_user_add_txt_address.Text) || string.IsNullOrWhiteSpace(pn_user_add_txt_phone.Text)|| string.IsNullOrWhiteSpace(pn_user_cmb_role.Text))
+            if (string.IsNullOrWhiteSpace(pn_user_add_txt_name.Text) || string.IsNullOrWhiteSpace(pn_user_add_txt_address.Text) || string.IsNullOrWhiteSpace(pn_user_add_txt_phone.Text)|| string.IsNullOrWhiteSpace(pn_user_cmb_role.Text) || string.IsNullOrEmpty(pn_user_cmb_wh.Text))
             {
                 MessageBox.Show("Please fill full user information");
                 return;
@@ -83,19 +78,33 @@ namespace ASD_Final_Project.Admin
                     Username = pn_user_add_txt_name.Text,
                     Address = pn_user_add_txt_address.Text,
                     Phone = pn_user_add_txt_phone.Text,
-                    Role = GetRoleName(pn_user_cmb_role.SelectedIndex + 1)
-
+                    Role = GetRoleName(pn_user_cmb_role.SelectedIndex + 1),
+                    Warehouse = pn_user_cmb_wh.SelectedIndex + 1
                 };
                 _userService.AddUser(U);
             }
+            MessageBox.Show("Da them user thanh cong");
             Loaddata();
 
         }
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            pn_user_add.Visible = true;
-            pn_user_add.Dock = DockStyle.Right;
+            if (pn_user_add.Visible == false)
+            {
+                pn_user_add.Visible = true;
+                pn_user_add.Dock = DockStyle.Right;
+            }
+            else
+            {
+                pn_user_add.Visible = false;
+                pn_user_add_txt_address.Text = string.Empty;
+                pn_user_add_txt_name.Text = string.Empty;
+                pn_user_add_txt_phone.Text = string.Empty;
+                pn_user_cmb_role.SelectedIndex = -1;
+                pn_user_cmb_wh.SelectedIndex = -1;
+
+            }
         }
 
         private void Admin_Control_Load(object sender, EventArgs e)
@@ -105,16 +114,6 @@ namespace ASD_Final_Project.Admin
             lbl_name.Text = _admin.Username.ToString();
             lbl_role.Text = _admin.Role.ToString();
             btn_home.Select();
-        }
-
-        private void pn_VisibleChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pn_add_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void btn_del_Click(object sender, EventArgs e)
@@ -164,11 +163,6 @@ namespace ASD_Final_Project.Admin
 
         }
 
-        private void pn_wh_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btn_warehouse_Click(object sender, EventArgs e)
         {
             pn_wh.Visible = true;
@@ -202,5 +196,7 @@ namespace ASD_Final_Project.Admin
             pn_user_add_txt_phone.Text = string.Empty;
             pn_user_cmb_role.SelectedIndex = -1;
         }
+
+
     }
 }

@@ -64,7 +64,7 @@ namespace ASD_Final_Project.Program
             try
             {
                 _dbConnection.Open();
-                using (var command = new SqlCommand("SELECT U.U_ID, U.U_UserName, U.U_Address, U.U_Phone, R.Rl_Name FROM Users U JOIN Roles R ON U.Rl_ID = R.Rl_ID;", _dbConnection))
+                using (var command = new SqlCommand("SELECT U.U_ID, U.U_UserName, U.U_Address, U.U_Phone, R.Rl_Name, U.U_Password FROM Users U JOIN Roles R ON U.Rl_ID = R.Rl_ID;", _dbConnection))
                 {
                     using (var reader = command.ExecuteReader())
                     {
@@ -86,7 +86,7 @@ namespace ASD_Final_Project.Program
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}");
+                MessageBox.Show($"Error: {ex.Message} + 1");
             }
             finally
             {
@@ -278,6 +278,28 @@ namespace ASD_Final_Project.Program
             catch (Exception ex)
             {
                 MessageBox.Show("Errol: " + ex.Message );
+                return 0;
+            }
+            finally
+            {
+                _dbConnection.Close();
+            }
+        }
+
+        public int CountUsers()
+        {
+            try
+            {
+                _dbConnection.Open();
+                using (var countUserCommand = new SqlCommand("SELECT COUNT(*) FROM Users;", _dbConnection))
+                {
+                    int userCount = (int)countUserCommand.ExecuteScalar();
+                    return userCount;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errol: " + ex.Message);
                 return 0;
             }
             finally

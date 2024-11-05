@@ -41,6 +41,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pn_user_btn_add = new System.Windows.Forms.Button();
             this.pn_user_add = new System.Windows.Forms.Panel();
+            this.lable1000 = new System.Windows.Forms.Label();
+            this.pn_user_cmb_wh = new System.Windows.Forms.ComboBox();
             this.pn_user_add_btn_close = new System.Windows.Forms.Button();
             this.pn_user_btn_submit = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -52,9 +54,12 @@
             this.Address = new System.Windows.Forms.Label();
             this.labe100 = new System.Windows.Forms.Label();
             this.pn_user = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btn_user = new System.Windows.Forms.Button();
             this.btn_warehouse = new System.Windows.Forms.Button();
             this.pn_wh = new System.Windows.Forms.Panel();
+            this.pn_dgv_product = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_home = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -62,14 +67,13 @@
             this.lbl_role = new System.Windows.Forms.Label();
             this.lbl_name = new System.Windows.Forms.Label();
             this.pn_home = new System.Windows.Forms.Panel();
-            this.pn_dgv_product = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pn_user_dgv)).BeginInit();
             this.pn_user_add.SuspendLayout();
             this.pn_user.SuspendLayout();
             this.pn_wh.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pn_dgv_product)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pn_dgv_product)).BeginInit();
             this.SuspendLayout();
             // 
             // pn_user_btn_del
@@ -182,6 +186,8 @@
             // pn_user_add
             // 
             this.pn_user_add.BackColor = System.Drawing.Color.MistyRose;
+            this.pn_user_add.Controls.Add(this.lable1000);
+            this.pn_user_add.Controls.Add(this.pn_user_cmb_wh);
             this.pn_user_add.Controls.Add(this.pn_user_add_btn_close);
             this.pn_user_add.Controls.Add(this.pn_user_btn_submit);
             this.pn_user_add.Controls.Add(this.label5);
@@ -193,14 +199,34 @@
             this.pn_user_add.Controls.Add(this.Address);
             this.pn_user_add.Controls.Add(this.labe100);
             this.pn_user_add.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pn_user_add.Location = new System.Drawing.Point(807, 0);
+            this.pn_user_add.Location = new System.Drawing.Point(642, 0);
             this.pn_user_add.Margin = new System.Windows.Forms.Padding(2);
             this.pn_user_add.Name = "pn_user_add";
-            this.pn_user_add.Size = new System.Drawing.Size(38, 596);
+            this.pn_user_add.Size = new System.Drawing.Size(203, 596);
             this.pn_user_add.TabIndex = 26;
             this.pn_user_add.Visible = false;
-            this.pn_user_add.VisibleChanged += new System.EventHandler(this.pn_VisibleChanged);
-            this.pn_user_add.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_add_Paint);
+            // 
+            // lable1000
+            // 
+            this.lable1000.AutoSize = true;
+            this.lable1000.Location = new System.Drawing.Point(12, 164);
+            this.lable1000.Name = "lable1000";
+            this.lable1000.Size = new System.Drawing.Size(62, 13);
+            this.lable1000.TabIndex = 15;
+            this.lable1000.Text = "Warehouse";
+            // 
+            // pn_user_cmb_wh
+            // 
+            this.pn_user_cmb_wh.FormattingEnabled = true;
+            this.pn_user_cmb_wh.Items.AddRange(new object[] {
+            "Bắc",
+            "Nam",
+            "Trung"});
+            this.pn_user_cmb_wh.Location = new System.Drawing.Point(76, 161);
+            this.pn_user_cmb_wh.Margin = new System.Windows.Forms.Padding(2);
+            this.pn_user_cmb_wh.Name = "pn_user_cmb_wh";
+            this.pn_user_cmb_wh.Size = new System.Drawing.Size(121, 21);
+            this.pn_user_cmb_wh.TabIndex = 14;
             // 
             // pn_user_add_btn_close
             // 
@@ -307,6 +333,8 @@
             // pn_user
             // 
             this.pn_user.BackColor = System.Drawing.Color.DarkOrange;
+            this.pn_user.Controls.Add(this.label6);
+            this.pn_user.Controls.Add(this.textBox1);
             this.pn_user.Controls.Add(this.pn_user_txt_phone);
             this.pn_user.Controls.Add(this.label1);
             this.pn_user.Controls.Add(this.pn_user_txt_name);
@@ -322,12 +350,28 @@
             this.pn_user.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_user.Location = new System.Drawing.Point(127, 100);
             this.pn_user.Name = "pn_user";
-            this.pn_user.Size = new System.Drawing.Size(680, 496);
+            this.pn_user.Size = new System.Drawing.Size(515, 496);
             this.pn_user.TabIndex = 29;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(375, 54);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(41, 13);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "Branch";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(422, 50);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 27;
             // 
             // btn_user
             // 
-            this.btn_user.Location = new System.Drawing.Point(12, 214);
+            this.btn_user.Location = new System.Drawing.Point(12, 252);
             this.btn_user.Name = "btn_user";
             this.btn_user.Size = new System.Drawing.Size(108, 45);
             this.btn_user.TabIndex = 30;
@@ -337,7 +381,7 @@
             // 
             // btn_warehouse
             // 
-            this.btn_warehouse.Location = new System.Drawing.Point(12, 319);
+            this.btn_warehouse.Location = new System.Drawing.Point(12, 375);
             this.btn_warehouse.Name = "btn_warehouse";
             this.btn_warehouse.Size = new System.Drawing.Size(108, 45);
             this.btn_warehouse.TabIndex = 31;
@@ -352,9 +396,16 @@
             this.pn_wh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_wh.Location = new System.Drawing.Point(127, 100);
             this.pn_wh.Name = "pn_wh";
-            this.pn_wh.Size = new System.Drawing.Size(680, 496);
+            this.pn_wh.Size = new System.Drawing.Size(515, 496);
             this.pn_wh.TabIndex = 32;
-            this.pn_wh.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_wh_Paint);
+            // 
+            // pn_dgv_product
+            // 
+            this.pn_dgv_product.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.pn_dgv_product.Location = new System.Drawing.Point(46, 170);
+            this.pn_dgv_product.Name = "pn_dgv_product";
+            this.pn_dgv_product.Size = new System.Drawing.Size(655, 150);
+            this.pn_dgv_product.TabIndex = 0;
             // 
             // panel1
             // 
@@ -394,7 +445,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(127, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(680, 100);
+            this.panel3.Size = new System.Drawing.Size(515, 100);
             this.panel3.TabIndex = 33;
             // 
             // lbl_role
@@ -422,24 +473,16 @@
             this.pn_home.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_home.Location = new System.Drawing.Point(127, 100);
             this.pn_home.Name = "pn_home";
-            this.pn_home.Size = new System.Drawing.Size(680, 496);
+            this.pn_home.Size = new System.Drawing.Size(515, 496);
             this.pn_home.TabIndex = 0;
-            // 
-            // pn_dgv_product
-            // 
-            this.pn_dgv_product.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.pn_dgv_product.Location = new System.Drawing.Point(46, 170);
-            this.pn_dgv_product.Name = "pn_dgv_product";
-            this.pn_dgv_product.Size = new System.Drawing.Size(655, 150);
-            this.pn_dgv_product.TabIndex = 0;
             // 
             // Admin_Control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(845, 596);
-            this.Controls.Add(this.pn_wh);
             this.Controls.Add(this.pn_user);
+            this.Controls.Add(this.pn_wh);
             this.Controls.Add(this.pn_home);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -453,10 +496,10 @@
             this.pn_user.ResumeLayout(false);
             this.pn_user.PerformLayout();
             this.pn_wh.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pn_dgv_product)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pn_dgv_product)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -498,5 +541,9 @@
         private System.Windows.Forms.Panel pn_home;
         private System.Windows.Forms.Button pn_user_add_btn_close;
         private System.Windows.Forms.DataGridView pn_dgv_product;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lable1000;
+        private System.Windows.Forms.ComboBox pn_user_cmb_wh;
     }
 }
