@@ -121,6 +121,12 @@
     <Compile Include="Form_DashBoard.Designer.cs">
       <DependentUpon>Form_DashBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Manager.Designer.cs">
+      <DependentUpon>Form_Manager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Programs\Product.cs" />
     <Compile Include="Programs\ProductRepository.cs" />
     <Compile Include="Program.cs" />
