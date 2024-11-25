@@ -55,7 +55,7 @@ namespace ASD_Final_Project
                 this.Close();*/
                 Form_DashBoard admin_Dashboard = new Form_DashBoard(_userService);
                 admin_Dashboard.ShowDialog();
-                this.Hide();
+                //this.Hide();
             }
             if(userLog.Role == "Manager")
             {
