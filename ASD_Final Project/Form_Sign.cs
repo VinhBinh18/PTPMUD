@@ -33,7 +33,7 @@ namespace ASD_Final_Project
         private void label5_Click(object sender, EventArgs e)
         {
             pn_login.Visible = false;
-            pn_register.Visible=true;
+            pn_register.Visible = true;
             pn_register.Dock = DockStyle.Fill;
 
         }
@@ -48,7 +48,7 @@ namespace ASD_Final_Project
         private void btn_login_submit_Click(object sender, EventArgs e)
         {
             User userLog = _userService.LoginUser(txt_name.Text, txt_password.Text);
-            if(userLog.Role == "Admin")
+            if (userLog.Role == "Admin")
             {
                 /*Admin_Control admin_Control = new Admin_Control(_userService, userLog);
                 admin_Control.ShowDialog();
@@ -57,7 +57,7 @@ namespace ASD_Final_Project
                 admin_Dashboard.ShowDialog();
                 this.Hide();
             }
-            if(userLog.Role == "Manager")
+            if (userLog.Role == "Manager")
             {
                 Admin_Control admin_Control = new Admin_Control(_userService, userLog);
                 admin_Control.ShowDialog();
@@ -66,6 +66,10 @@ namespace ASD_Final_Project
             {
                 Admin_Control admin_Control = new Admin_Control(_userService, userLog);
                 admin_Control.ShowDialog();
+            }
+            if (userLog.Role == null)
+            {
+                return;
             }
         }
 

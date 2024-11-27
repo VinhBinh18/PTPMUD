@@ -64,7 +64,7 @@ namespace ASD_Final_Project.Program
             try
             {
                 _dbConnection.Open();
-                using (var command = new SqlCommand("SELECT U.U_ID, U.U_UserName, U.U_Address, U.U_Phone, R.Rl_Name, U.Wh_ID FROM Users U, Roles R WHERE U.Wh_ID = @Wh_ID and U.Rl_ID = R.Rl_ID;", _dbConnection))
+                using (var command = new SqlCommand("SELECT U.U_ID, U.U_UserName, U.U_Address, U.U_Phone, R.Rl_Name FROM Users U, Roles R WHERE U.Wh_ID = @Wh_ID and U.Rl_ID = R.Rl_ID;", _dbConnection))
                 {   
                     command.Parameters.AddWithValue("@Wh_ID", WhID);
                     using (var reader = command.ExecuteReader())
@@ -78,7 +78,6 @@ namespace ASD_Final_Project.Program
                                 Address = reader.GetString(2),
                                 Phone = reader.GetString(3),
                                 Role = reader.GetString(4),
-                                Password = reader.GetString(5),
                             };
                             users.Add(user);
                         }
@@ -87,7 +86,7 @@ namespace ASD_Final_Project.Program
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}");
+                MessageBox.Show($"Error 11: {ex.Message}");
             }
             finally
             {

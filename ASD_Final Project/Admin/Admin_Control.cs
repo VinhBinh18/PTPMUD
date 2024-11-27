@@ -28,7 +28,7 @@ namespace ASD_Final_Project.Admin
         void Loaddata()
         {
             try
-            {   
+            {
                 var user = _userService.GetAllUsers();
                 if (user != null && user.Any())
                 {
@@ -64,7 +64,7 @@ namespace ASD_Final_Project.Admin
                 MessageBox.Show("Error loading data: " + ex.Message);
             }
         } //done
-        
+
         private void Admin_Control_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'wH_MANAGEMENTDataSet.Roles' table. You can move, or remove it, as needed.
@@ -89,7 +89,7 @@ namespace ASD_Final_Project.Admin
                 pn_user_txt_address.Text = address;
                 pn_user_txt_role.Text = role;
                 pn_user_txt_wh.Text = warehouse;
-                
+
             }
         } //done
 
@@ -104,7 +104,7 @@ namespace ASD_Final_Project.Admin
         private void btn_user_Click(object sender, EventArgs e)
         {
             pn_user.Visible = true;
-            pn_wh.Visible= false;
+            pn_wh.Visible = false;
             pn_home.Visible = false;
 
         } //done
@@ -139,7 +139,7 @@ namespace ASD_Final_Project.Admin
 
         private void pn_btn_add_submit_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(pn_user_add_txt_name.Text) || string.IsNullOrWhiteSpace(pn_user_add_txt_address.Text) || string.IsNullOrWhiteSpace(pn_user_add_txt_phone.Text)|| string.IsNullOrWhiteSpace(pn_user_add_cmb_role.Text) || string.IsNullOrEmpty(pn_user_add_cmb_wh.Text))
+            if (string.IsNullOrWhiteSpace(pn_user_add_txt_name.Text) || string.IsNullOrWhiteSpace(pn_user_add_txt_address.Text) || string.IsNullOrWhiteSpace(pn_user_add_txt_phone.Text) || string.IsNullOrWhiteSpace(pn_user_add_cmb_role.Text) || string.IsNullOrEmpty(pn_user_add_cmb_wh.Text))
             {
                 MessageBox.Show("Please fill full user information");
                 return;
@@ -196,23 +196,23 @@ namespace ASD_Final_Project.Admin
         //edit action
         private void pn_user_btn_edit_Click(object sender, EventArgs e)
         {
-            if(pn_user_dgv.SelectedRows.Count > 0)
+            if (pn_user_dgv.SelectedRows.Count > 0)
             {
                 var seclectRow = pn_user_dgv.SelectedRows[0];
                 string UserID = seclectRow.Cells[0].Value.ToString();
                 try
                 {
                     var user = _userService.GetUser(int.Parse(UserID));
-                    if(user != null)
+                    if (user != null)
                     {
                         pn_user_edit_txt_id.Text = user.Id.ToString();
-                        pn_user_edit_txt_name.Text= user.Username;
+                        pn_user_edit_txt_name.Text = user.Username;
                         pn_user_edit_txt_address.Text = user.Address;
                         pn_user_edit_txt_phone.Text = user.Phone;
-                        pn_user_edit_cmb_role.SelectedIndex = GetRoleID(user.Role)-1;
-                        pn_user_edit_cmb_wh.SelectedIndex = GetWareHouseID(user.Warehouse)-1;
+                        pn_user_edit_cmb_role.SelectedIndex = GetRoleID(user.Role) - 1;
+                        pn_user_edit_cmb_wh.SelectedIndex = GetWareHouseID(user.Warehouse) - 1;
                     }
-                    if(pn_user_edit.Visible==false)
+                    if (pn_user_edit.Visible == false)
                     {
                         pn_user_add.Visible = false;
                         pn_user_edit.Visible = true;
@@ -229,9 +229,9 @@ namespace ASD_Final_Project.Admin
                         pn_user_edit_cmb_role.SelectedIndex = -1;
                         pn_user_edit_cmb_wh.SelectedIndex = -1;
                     }
-                   
+
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show("Error loading data: " + ex.Message);
                 }
@@ -252,7 +252,8 @@ namespace ASD_Final_Project.Admin
             }
             {
                 User U = new User()
-                {   Id = int.Parse(pn_user_edit_txt_id.Text),
+                {
+                    Id = int.Parse(pn_user_edit_txt_id.Text),
                     Username = pn_user_edit_txt_name.Text,
                     Address = pn_user_edit_txt_address.Text,
                     Phone = pn_user_edit_txt_phone.Text,
@@ -263,7 +264,7 @@ namespace ASD_Final_Project.Admin
             }
             MessageBox.Show("Da chỉnh sửa user thanh cong");
             Loaddata();
-        } 
+        }
 
         private void pn_user_edit_btn_close_Click(object sender, EventArgs e)
         {
@@ -297,7 +298,7 @@ namespace ASD_Final_Project.Admin
         {
             switch (role)
             {
-                case "Admin": return 1 ;
+                case "Admin": return 1;
                 case "Manager": return 2;
                 case "Staff": return 3;
                 default: throw new ArgumentException("Invalid role name");
@@ -314,5 +315,17 @@ namespace ASD_Final_Project.Admin
                 default: throw new ArgumentException("Invalid warehouse name");
             }
         } //done
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == -1)
+            {
+                Loaddata();
+            }
+            else
+            {
+                Loaddata(comboBox1.SelectedIndex+1);
+            }
+        }
     }
 }

@@ -107,7 +107,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(65)))));
             this.label7.Location = new System.Drawing.Point(147, 212);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(98, 35);
+            this.label7.Size = new System.Drawing.Size(120, 43);
             this.label7.TabIndex = 55;
             this.label7.Text = "Login";
             // 
@@ -141,7 +141,7 @@
             this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Location = new System.Drawing.Point(51, 518);
             this.button6.Name = "button6";
@@ -165,11 +165,11 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(65)))));
             this.label9.Location = new System.Drawing.Point(92, 291);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 17);
+            this.label9.Size = new System.Drawing.Size(94, 20);
             this.label9.TabIndex = 50;
             this.label9.Text = "Username";
             // 
@@ -178,11 +178,11 @@
             this.cb.AutoSize = true;
             this.cb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold);
+            this.cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
             this.cb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(65)))));
             this.cb.Location = new System.Drawing.Point(222, 433);
             this.cb.Name = "cb";
-            this.cb.Size = new System.Drawing.Size(106, 19);
+            this.cb.Size = new System.Drawing.Size(134, 20);
             this.cb.TabIndex = 49;
             this.cb.Text = "Show Password";
             this.cb.UseVisualStyleBackColor = true;
@@ -203,11 +203,11 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(65)))));
             this.label11.Location = new System.Drawing.Point(92, 367);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(70, 17);
+            this.label11.Size = new System.Drawing.Size(91, 20);
             this.label11.TabIndex = 47;
             this.label11.Text = "Password";
             // 
@@ -366,7 +366,7 @@
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(65)))));
             this.label12.Location = new System.Drawing.Point(91, 251);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(76, 19);
+            this.label12.Size = new System.Drawing.Size(89, 23);
             this.label12.TabIndex = 34;
             this.label12.Text = "Username";
             // 
@@ -388,7 +388,7 @@
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(65)))));
             this.label13.Location = new System.Drawing.Point(92, 361);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(131, 19);
+            this.label13.Size = new System.Drawing.Size(157, 23);
             this.label13.TabIndex = 32;
             this.label13.Text = "Confirm password";
             // 
@@ -401,7 +401,7 @@
             this.pn_cb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(65)))));
             this.pn_cb.Location = new System.Drawing.Point(224, 418);
             this.pn_cb.Name = "pn_cb";
-            this.pn_cb.Size = new System.Drawing.Size(105, 17);
+            this.pn_cb.Size = new System.Drawing.Size(121, 21);
             this.pn_cb.TabIndex = 31;
             this.pn_cb.Text = "Show Password";
             this.pn_cb.UseVisualStyleBackColor = true;
@@ -425,7 +425,7 @@
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(65)))));
             this.label14.Location = new System.Drawing.Point(92, 306);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(73, 19);
+            this.label14.Size = new System.Drawing.Size(84, 23);
             this.label14.TabIndex = 29;
             this.label14.Text = "Password";
             // 
@@ -436,18 +436,18 @@
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(65)))));
             this.label15.Location = new System.Drawing.Point(119, 195);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(137, 24);
+            this.label15.Size = new System.Drawing.Size(173, 30);
             this.label15.TabIndex = 28;
             this.label15.Text = "Get Started";
             // 
             // Form_Sign
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(389, 653);
-            this.Controls.Add(this.pn_register);
             this.Controls.Add(this.pn_login);
+            this.Controls.Add(this.pn_register);
             this.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
