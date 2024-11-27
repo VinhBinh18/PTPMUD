@@ -126,6 +126,51 @@ namespace ASD_Final_Project.Program
                 _dbConnection.Close();
             }
         }
+
+
+        public IEnumerable<Product> GetProductsByWareHouseName(string warehouseName)
+        {
+            var products = new List<Product>();
+            string query = "SELECT w.Wh_Name AS WarehouseName, p.P_Name AS ProductName, SUM(td.TD_Quantity) AS TotalQuantity FROM  WH_Transaction t JOIN WareHouse w ON t.Wh_ID = w.Wh_ID JOIN WH_Transaction_Details td ON t.T_ID = td.T_ID  JOIN Products p ON td.P_ID = p.P_ID WHERE    w.Wh_Name = @WarehouseName GROUP BY    w.Wh_Name, p.P_Name ORDER BY   p.P_Name";
+
+            try
+            {
+                _dbConnection.Open();
+                using (var command = new SqlCommand(query, _dbConnection))
+                {
+                    command.Parameters.AddWithValue("@WarehouseName", warehouseName);
+
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            var product = new Product
+                            {
+                                Id = reader.GetInt32(0),
+                                Name = reader.GetString(1),
+                                Quantity = reader.GetInt32(2)
+                            };
+                            products.Add(product);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Xử lý lỗi nếu cần
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                _dbConnection.Close();
+            }
+
+            return products;
+        }
+
+
+
+
     }
 }
 

@@ -1,5 +1,6 @@
 ﻿using ASD_Final_Project.Admin;
 using ASD_Final_Project.Program;
+using ASD_Final_Project.Staff;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -64,8 +65,8 @@ namespace ASD_Final_Project
             }
             if (userLog.Role == "Staff")
             {
-                Admin_Control admin_Control = new Admin_Control(_userService, userLog);
-                admin_Control.ShowDialog();
+                Staff_Control staff_Control = new Staff_Control(_userService, userLog);
+                staff_Control.ShowDialog();
             }
         }
 

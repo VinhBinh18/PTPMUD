@@ -20,6 +20,13 @@ namespace ASD_Final_Project.Program
             return _productRepository.GetAllProducts(warehouseId);
         }
 
+        public IEnumerable<Product> GetProductsByWareHouseName(string warehouseName)
+        {
+            return _productRepository.GetProductsByWareHouseName(warehouseName);
+        }
+
+        
+
         public void AddProduct(Product product)
         {
             _productRepository.AddProduct(product);

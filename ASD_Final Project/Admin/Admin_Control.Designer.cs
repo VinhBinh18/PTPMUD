@@ -95,7 +95,7 @@
             // pn_user_btn_del
             // 
             this.pn_user_btn_del.Location = new System.Drawing.Point(60, 476);
-            this.pn_user_btn_del.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_user_btn_del.Margin = new System.Windows.Forms.Padding(4);
             this.pn_user_btn_del.Name = "pn_user_btn_del";
             this.pn_user_btn_del.Size = new System.Drawing.Size(100, 28);
             this.pn_user_btn_del.TabIndex = 25;
@@ -106,7 +106,7 @@
             // pn_user_btn_edit
             // 
             this.pn_user_btn_edit.Location = new System.Drawing.Point(60, 526);
-            this.pn_user_btn_edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_user_btn_edit.Margin = new System.Windows.Forms.Padding(4);
             this.pn_user_btn_edit.Name = "pn_user_btn_edit";
             this.pn_user_btn_edit.Size = new System.Drawing.Size(100, 28);
             this.pn_user_btn_edit.TabIndex = 24;
@@ -121,7 +121,7 @@
             this.pn_user_dgv.AllowUserToResizeColumns = false;
             this.pn_user_dgv.ColumnHeadersHeight = 29;
             this.pn_user_dgv.Location = new System.Drawing.Point(60, 209);
-            this.pn_user_dgv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_user_dgv.Margin = new System.Windows.Forms.Padding(4);
             this.pn_user_dgv.Name = "pn_user_dgv";
             this.pn_user_dgv.ReadOnly = true;
             this.pn_user_dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
@@ -132,7 +132,7 @@
             // pn_user_txt_address
             // 
             this.pn_user_txt_address.Location = new System.Drawing.Point(141, 144);
-            this.pn_user_txt_address.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_user_txt_address.Margin = new System.Windows.Forms.Padding(4);
             this.pn_user_txt_address.Name = "pn_user_txt_address";
             this.pn_user_txt_address.Size = new System.Drawing.Size(132, 22);
             this.pn_user_txt_address.TabIndex = 21;
@@ -150,7 +150,7 @@
             // pn_user_txt_role
             // 
             this.pn_user_txt_role.Location = new System.Drawing.Point(341, 144);
-            this.pn_user_txt_role.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_user_txt_role.Margin = new System.Windows.Forms.Padding(4);
             this.pn_user_txt_role.Name = "pn_user_txt_role";
             this.pn_user_txt_role.Size = new System.Drawing.Size(132, 22);
             this.pn_user_txt_role.TabIndex = 19;
@@ -168,7 +168,7 @@
             // pn_user_txt_phone
             // 
             this.pn_user_txt_phone.Location = new System.Drawing.Point(341, 63);
-            this.pn_user_txt_phone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_user_txt_phone.Margin = new System.Windows.Forms.Padding(4);
             this.pn_user_txt_phone.Name = "pn_user_txt_phone";
             this.pn_user_txt_phone.Size = new System.Drawing.Size(132, 22);
             this.pn_user_txt_phone.TabIndex = 17;
@@ -186,7 +186,7 @@
             // pn_user_txt_name
             // 
             this.pn_user_txt_name.Location = new System.Drawing.Point(141, 63);
-            this.pn_user_txt_name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_user_txt_name.Margin = new System.Windows.Forms.Padding(4);
             this.pn_user_txt_name.Name = "pn_user_txt_name";
             this.pn_user_txt_name.Size = new System.Drawing.Size(132, 22);
             this.pn_user_txt_name.TabIndex = 15;
@@ -204,7 +204,7 @@
             // pn_user_btn_add
             // 
             this.pn_user_btn_add.Location = new System.Drawing.Point(61, 427);
-            this.pn_user_btn_add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_user_btn_add.Margin = new System.Windows.Forms.Padding(4);
             this.pn_user_btn_add.Name = "pn_user_btn_add";
             this.pn_user_btn_add.Size = new System.Drawing.Size(100, 28);
             this.pn_user_btn_add.TabIndex = 13;
@@ -377,7 +377,7 @@
             this.pn_user.Controls.Add(this.pn_user_txt_address);
             this.pn_user.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_user.Location = new System.Drawing.Point(169, 123);
-            this.pn_user.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_user.Margin = new System.Windows.Forms.Padding(4);
             this.pn_user.Name = "pn_user";
             this.pn_user.Size = new System.Drawing.Size(958, 611);
             this.pn_user.TabIndex = 29;
@@ -395,7 +395,7 @@
             // pn_user_txt_wh
             // 
             this.pn_user_txt_wh.Location = new System.Drawing.Point(563, 62);
-            this.pn_user_txt_wh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_user_txt_wh.Margin = new System.Windows.Forms.Padding(4);
             this.pn_user_txt_wh.Name = "pn_user_txt_wh";
             this.pn_user_txt_wh.Size = new System.Drawing.Size(132, 22);
             this.pn_user_txt_wh.TabIndex = 27;
@@ -403,7 +403,7 @@
             // btn_user
             // 
             this.btn_user.Location = new System.Drawing.Point(16, 310);
-            this.btn_user.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_user.Margin = new System.Windows.Forms.Padding(4);
             this.btn_user.Name = "btn_user";
             this.btn_user.Size = new System.Drawing.Size(144, 55);
             this.btn_user.TabIndex = 30;
@@ -414,7 +414,7 @@
             // btn_warehouse
             // 
             this.btn_warehouse.Location = new System.Drawing.Point(16, 462);
-            this.btn_warehouse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_warehouse.Margin = new System.Windows.Forms.Padding(4);
             this.btn_warehouse.Name = "btn_warehouse";
             this.btn_warehouse.Size = new System.Drawing.Size(144, 55);
             this.btn_warehouse.TabIndex = 31;
@@ -428,7 +428,7 @@
             this.pn_wh.Controls.Add(this.pn_dgv_product);
             this.pn_wh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_wh.Location = new System.Drawing.Point(169, 123);
-            this.pn_wh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_wh.Margin = new System.Windows.Forms.Padding(4);
             this.pn_wh.Name = "pn_wh";
             this.pn_wh.Size = new System.Drawing.Size(958, 611);
             this.pn_wh.TabIndex = 32;
@@ -437,7 +437,7 @@
             // 
             this.pn_dgv_product.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.pn_dgv_product.Location = new System.Drawing.Point(61, 209);
-            this.pn_dgv_product.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_dgv_product.Margin = new System.Windows.Forms.Padding(4);
             this.pn_dgv_product.Name = "pn_dgv_product";
             this.pn_dgv_product.RowHeadersWidth = 51;
             this.pn_dgv_product.Size = new System.Drawing.Size(873, 185);
@@ -452,7 +452,7 @@
             this.panel1.Controls.Add(this.btn_warehouse);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(169, 734);
             this.panel1.TabIndex = 0;
@@ -460,7 +460,7 @@
             // btn_home
             // 
             this.btn_home.Location = new System.Drawing.Point(16, 169);
-            this.btn_home.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_home.Margin = new System.Windows.Forms.Padding(4);
             this.btn_home.Name = "btn_home";
             this.btn_home.Size = new System.Drawing.Size(144, 55);
             this.btn_home.TabIndex = 34;
@@ -471,7 +471,7 @@
             // panel2
             // 
             this.panel2.Location = new System.Drawing.Point(192, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1761, 124);
             this.panel2.TabIndex = 33;
@@ -483,7 +483,7 @@
             this.panel3.Controls.Add(this.lbl_name);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(169, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(958, 123);
             this.panel3.TabIndex = 33;
@@ -510,7 +510,7 @@
             // 
             this.pn_home.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_home.Location = new System.Drawing.Point(169, 123);
-            this.pn_home.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_home.Margin = new System.Windows.Forms.Padding(4);
             this.pn_home.Name = "pn_home";
             this.pn_home.Size = new System.Drawing.Size(958, 611);
             this.pn_home.TabIndex = 0;
@@ -533,7 +533,7 @@
             this.pn_user_edit.Controls.Add(this.pn_user_edit_btn_close);
             this.pn_user_edit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_user_edit.Location = new System.Drawing.Point(0, 0);
-            this.pn_user_edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_user_edit.Margin = new System.Windows.Forms.Padding(4);
             this.pn_user_edit.Name = "pn_user_edit";
             this.pn_user_edit.Size = new System.Drawing.Size(1127, 734);
             this.pn_user_edit.TabIndex = 16;
@@ -551,7 +551,7 @@
             // pn_user_edit_txt_id
             // 
             this.pn_user_edit_txt_id.Location = new System.Drawing.Point(100, 43);
-            this.pn_user_edit_txt_id.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_user_edit_txt_id.Margin = new System.Windows.Forms.Padding(4);
             this.pn_user_edit_txt_id.Name = "pn_user_edit_txt_id";
             this.pn_user_edit_txt_id.Size = new System.Drawing.Size(159, 22);
             this.pn_user_edit_txt_id.TabIndex = 23;
@@ -596,7 +596,7 @@
             // pn_user_edit_txt_address
             // 
             this.pn_user_edit_txt_address.Location = new System.Drawing.Point(100, 113);
-            this.pn_user_edit_txt_address.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_user_edit_txt_address.Margin = new System.Windows.Forms.Padding(4);
             this.pn_user_edit_txt_address.Name = "pn_user_edit_txt_address";
             this.pn_user_edit_txt_address.Size = new System.Drawing.Size(159, 22);
             this.pn_user_edit_txt_address.TabIndex = 22;
@@ -604,7 +604,7 @@
             // pn_user_edit_txt_phone
             // 
             this.pn_user_edit_txt_phone.Location = new System.Drawing.Point(100, 151);
-            this.pn_user_edit_txt_phone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_user_edit_txt_phone.Margin = new System.Windows.Forms.Padding(4);
             this.pn_user_edit_txt_phone.Name = "pn_user_edit_txt_phone";
             this.pn_user_edit_txt_phone.Size = new System.Drawing.Size(159, 22);
             this.pn_user_edit_txt_phone.TabIndex = 21;
@@ -659,7 +659,7 @@
             // pn_user_edit_txt_name
             // 
             this.pn_user_edit_txt_name.Location = new System.Drawing.Point(100, 75);
-            this.pn_user_edit_txt_name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_user_edit_txt_name.Margin = new System.Windows.Forms.Padding(4);
             this.pn_user_edit_txt_name.Name = "pn_user_edit_txt_name";
             this.pn_user_edit_txt_name.Size = new System.Drawing.Size(159, 22);
             this.pn_user_edit_txt_name.TabIndex = 17;
@@ -688,7 +688,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pn_user_add);
             this.Controls.Add(this.pn_user_edit);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Admin_Control";
             this.Text = "Admin_Control";
             this.Load += new System.EventHandler(this.Admin_Control_Load);
