@@ -109,7 +109,7 @@
             this.pn_register.Controls.Add(this.pn_txt_password);
             this.pn_register.Controls.Add(this.label14);
             this.pn_register.Controls.Add(this.label15);
-            this.pn_register.Location = new System.Drawing.Point(335, 12);
+            this.pn_register.Location = new System.Drawing.Point(318, 12);
             this.pn_register.Name = "pn_register";
             this.pn_register.Size = new System.Drawing.Size(389, 653);
             this.pn_register.TabIndex = 19;

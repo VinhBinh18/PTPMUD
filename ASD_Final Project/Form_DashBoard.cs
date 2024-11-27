@@ -54,7 +54,7 @@ namespace ASD_Final_Project
         private void btn_wh1_Click(object sender, EventArgs e)
         {
             hideMenu();
-            ShowPanel(pn_Wh1);
+            ShowPanel(pn_Employee);
         }
 
         private void hideMenu()
@@ -86,12 +86,6 @@ namespace ASD_Final_Project
         {
 
         }
-
-        private void lb_GoogWh1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         bool sidepartExpand = true;
         private void Sidepart_Tick(object sender, EventArgs e)
         {
@@ -123,6 +117,41 @@ namespace ASD_Final_Project
         }
 
         private void lb_Wh1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btm_goods_Click(object sender, EventArgs e)
+        {
+            ShowPanel(pn_Good);
+        }
+
+        private void btn_Inventory_Click(object sender, EventArgs e)
+        {
+            ShowPanel(pn_Inventory);
+        }
+
+        private void btn_Employee_Click(object sender, EventArgs e)
+        {
+            ShowPanel(pn_Employee);
+        }
+
+        private void btn_Order_Click(object sender, EventArgs e)
+        {
+            ShowPanel(pn_Order);
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }
