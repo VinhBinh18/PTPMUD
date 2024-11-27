@@ -36,11 +36,19 @@ namespace ASD_Final_Project
             SidePanel.Top = C.Top;
         }
 
+        private void HideAllPanels()
+        {
+            pn_Home.Visible = false;
+            pn_Good.Visible = false;
+            pn_Inventory.Visible = false;
+            pn_Employee.Visible = false;
+            pn_Order.Visible = false;
+        }
 
         private void ShowPanel(Panel panelToShow)
         {
             pn_Home.Visible = false;
-
+            HideAllPanels();
             panelToShow.Visible = true;
             panelToShow.Dock = DockStyle.Fill;
         }
@@ -48,6 +56,13 @@ namespace ASD_Final_Project
         {
             MoveSidePanel(btn_home);
             ShowPanel(pn_Home);
+
+            pn_Sidebar.Width += 5;
+            if (pn_Sidebar.Width >= 180)
+            {
+                sidepartExpand = true;
+                Sidepart.Stop();
+            }
         }
 
 
@@ -80,6 +95,7 @@ namespace ASD_Final_Project
         {
             showMenu(pn_MenuWH);
             MoveSidePanel(btn_Menu);
+           
         }
 
         private void pn_Wh1_Paint(object sender, PaintEventArgs e)
@@ -108,7 +124,7 @@ namespace ASD_Final_Project
                 }
             }
 
-            }
+        }
 
         private void btn_Menuside_Click_1(object sender, EventArgs e)
         {

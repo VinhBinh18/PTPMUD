@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_DashBoard));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,8 +50,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pn_Home = new System.Windows.Forms.Panel();
             this.pn_Employee = new System.Windows.Forms.Panel();
-            this.pn_Good = new System.Windows.Forms.Panel();
-            this.pn_Inventory = new System.Windows.Forms.Panel();
             this.pn_Order = new System.Windows.Forms.Panel();
             this.label30 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -71,6 +69,7 @@
             this.label35 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
+            this.pn_Inventory = new System.Windows.Forms.Panel();
             this.label29 = new System.Windows.Forms.Label();
             this.txt_Status = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
@@ -89,6 +88,7 @@
             this.label26 = new System.Windows.Forms.Label();
             this.txt_PNameInventory = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
+            this.pn_Good = new System.Windows.Forms.Panel();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label22 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -147,11 +147,11 @@
             this.panel3.SuspendLayout();
             this.pn_Home.SuspendLayout();
             this.pn_Employee.SuspendLayout();
-            this.pn_Good.SuspendLayout();
-            this.pn_Inventory.SuspendLayout();
             this.pn_Order.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            this.pn_Inventory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.pn_Good.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel6.SuspendLayout();
@@ -231,10 +231,10 @@
             this.pn_MenuWH.Controls.Add(this.btn_wh3);
             this.pn_MenuWH.Controls.Add(this.btn_wh2);
             this.pn_MenuWH.Controls.Add(this.btn_wh1);
-            this.pn_MenuWH.Location = new System.Drawing.Point(13, 384);
+            this.pn_MenuWH.Location = new System.Drawing.Point(5, 372);
             this.pn_MenuWH.Margin = new System.Windows.Forms.Padding(4);
             this.pn_MenuWH.Name = "pn_MenuWH";
-            this.pn_MenuWH.Size = new System.Drawing.Size(232, 154);
+            this.pn_MenuWH.Size = new System.Drawing.Size(240, 154);
             this.pn_MenuWH.TabIndex = 10;
             // 
             // btn_wh3
@@ -250,9 +250,9 @@
             this.btn_wh3.Margin = new System.Windows.Forms.Padding(0);
             this.btn_wh3.Name = "btn_wh3";
             this.btn_wh3.Padding = new System.Windows.Forms.Padding(60, 0, 20, 0);
-            this.btn_wh3.Size = new System.Drawing.Size(224, 43);
+            this.btn_wh3.Size = new System.Drawing.Size(232, 43);
             this.btn_wh3.TabIndex = 13;
-            this.btn_wh3.Text = "Warehouse 1";
+            this.btn_wh3.Text = "Warehouse 3";
             this.btn_wh3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_wh3.UseVisualStyleBackColor = false;
             // 
@@ -269,9 +269,9 @@
             this.btn_wh2.Margin = new System.Windows.Forms.Padding(0);
             this.btn_wh2.Name = "btn_wh2";
             this.btn_wh2.Padding = new System.Windows.Forms.Padding(60, 0, 20, 0);
-            this.btn_wh2.Size = new System.Drawing.Size(224, 43);
+            this.btn_wh2.Size = new System.Drawing.Size(232, 43);
             this.btn_wh2.TabIndex = 11;
-            this.btn_wh2.Text = "Warehouse 1";
+            this.btn_wh2.Text = "Warehouse 2";
             this.btn_wh2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_wh2.UseVisualStyleBackColor = false;
             // 
@@ -288,7 +288,7 @@
             this.btn_wh1.Margin = new System.Windows.Forms.Padding(0);
             this.btn_wh1.Name = "btn_wh1";
             this.btn_wh1.Padding = new System.Windows.Forms.Padding(60, 0, 20, 0);
-            this.btn_wh1.Size = new System.Drawing.Size(224, 43);
+            this.btn_wh1.Size = new System.Drawing.Size(232, 43);
             this.btn_wh1.TabIndex = 4;
             this.btn_wh1.Text = "Warehouse 1";
             this.btn_wh1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -304,12 +304,14 @@
             this.btn_Menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
             this.btn_Menu.Image = ((System.Drawing.Image)(resources.GetObject("btn_Menu.Image")));
             this.btn_Menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Menu.Location = new System.Drawing.Point(9, 335);
+            this.btn_Menu.Location = new System.Drawing.Point(5, 326);
             this.btn_Menu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Menu.Name = "btn_Menu";
-            this.btn_Menu.Size = new System.Drawing.Size(231, 43);
+            this.btn_Menu.Padding = new System.Windows.Forms.Padding(4, 0, 5, 0);
+            this.btn_Menu.Size = new System.Drawing.Size(235, 43);
             this.btn_Menu.TabIndex = 10;
-            this.btn_Menu.Text = "Menu";
+            this.btn_Menu.Text = "Warehouse Selector";
+            this.btn_Menu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Menu.UseVisualStyleBackColor = false;
             this.btn_Menu.Click += new System.EventHandler(this.btn_Menu_Click);
             // 
@@ -331,10 +333,10 @@
             this.btn_logout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
             this.btn_logout.Image = ((System.Drawing.Image)(resources.GetObject("btn_logout.Image")));
             this.btn_logout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_logout.Location = new System.Drawing.Point(7, 665);
+            this.btn_logout.Location = new System.Drawing.Point(5, 693);
             this.btn_logout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_logout.Name = "btn_logout";
-            this.btn_logout.Size = new System.Drawing.Size(230, 48);
+            this.btn_logout.Size = new System.Drawing.Size(235, 48);
             this.btn_logout.TabIndex = 5;
             this.btn_logout.Text = "Logout";
             this.btn_logout.UseVisualStyleBackColor = true;
@@ -352,12 +354,16 @@
             this.btn_home.Name = "btn_home";
             this.btn_home.Size = new System.Drawing.Size(235, 46);
             this.btn_home.TabIndex = 2;
-            this.btn_home.Text = "Home";
+            this.btn_home.Text = "Statement";
             this.btn_home.UseVisualStyleBackColor = true;
             this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.pn_Order);
+            this.panel3.Controls.Add(this.pn_Inventory);
+            this.panel3.Controls.Add(this.pn_Good);
+            this.panel3.Controls.Add(this.pn_Employee);
             this.panel3.Controls.Add(this.pn_Home);
             this.panel3.Controls.Add(this.panel16);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -370,7 +376,6 @@
             // 
             // pn_Home
             // 
-            this.pn_Home.Controls.Add(this.pn_Employee);
             this.pn_Home.Controls.Add(this.panel6);
             this.pn_Home.Controls.Add(this.panel5);
             this.pn_Home.Controls.Add(this.panel4);
@@ -386,9 +391,6 @@
             // 
             // pn_Employee
             // 
-            this.pn_Employee.Controls.Add(this.pn_Order);
-            this.pn_Employee.Controls.Add(this.pn_Inventory);
-            this.pn_Employee.Controls.Add(this.pn_Good);
             this.pn_Employee.Controls.Add(this.dataGridView1);
             this.pn_Employee.Controls.Add(this.comboBox1);
             this.pn_Employee.Controls.Add(this.label14);
@@ -396,55 +398,12 @@
             this.pn_Employee.Controls.Add(this.textBox1);
             this.pn_Employee.Controls.Add(this.label7);
             this.pn_Employee.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pn_Employee.Location = new System.Drawing.Point(0, 0);
+            this.pn_Employee.Location = new System.Drawing.Point(0, 54);
             this.pn_Employee.Margin = new System.Windows.Forms.Padding(4);
             this.pn_Employee.Name = "pn_Employee";
             this.pn_Employee.Size = new System.Drawing.Size(1022, 689);
             this.pn_Employee.TabIndex = 18;
             this.pn_Employee.Visible = false;
-            // 
-            // pn_Good
-            // 
-            this.pn_Good.Controls.Add(this.dateTimePicker2);
-            this.pn_Good.Controls.Add(this.label22);
-            this.pn_Good.Controls.Add(this.dateTimePicker1);
-            this.pn_Good.Controls.Add(this.label21);
-            this.pn_Good.Controls.Add(this.txt_PCode);
-            this.pn_Good.Controls.Add(this.dataGridView2);
-            this.pn_Good.Controls.Add(this.label18);
-            this.pn_Good.Controls.Add(this.label19);
-            this.pn_Good.Controls.Add(this.txt_PName);
-            this.pn_Good.Controls.Add(this.label20);
-            this.pn_Good.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pn_Good.Location = new System.Drawing.Point(0, 0);
-            this.pn_Good.Margin = new System.Windows.Forms.Padding(4);
-            this.pn_Good.Name = "pn_Good";
-            this.pn_Good.Size = new System.Drawing.Size(1022, 689);
-            this.pn_Good.TabIndex = 19;
-            this.pn_Good.Visible = false;
-            // 
-            // pn_Inventory
-            // 
-            this.pn_Inventory.Controls.Add(this.label29);
-            this.pn_Inventory.Controls.Add(this.txt_Status);
-            this.pn_Inventory.Controls.Add(this.label28);
-            this.pn_Inventory.Controls.Add(this.txt_QInventory);
-            this.pn_Inventory.Controls.Add(this.label23);
-            this.pn_Inventory.Controls.Add(this.dateTimePicker4);
-            this.pn_Inventory.Controls.Add(this.label24);
-            this.pn_Inventory.Controls.Add(this.txt_PCodeInventory);
-            this.pn_Inventory.Controls.Add(this.dataGridView3);
-            this.pn_Inventory.Controls.Add(this.label25);
-            this.pn_Inventory.Controls.Add(this.label26);
-            this.pn_Inventory.Controls.Add(this.txt_PNameInventory);
-            this.pn_Inventory.Controls.Add(this.label27);
-            this.pn_Inventory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pn_Inventory.Location = new System.Drawing.Point(0, 0);
-            this.pn_Inventory.Margin = new System.Windows.Forms.Padding(4);
-            this.pn_Inventory.Name = "pn_Inventory";
-            this.pn_Inventory.Size = new System.Drawing.Size(1022, 689);
-            this.pn_Inventory.TabIndex = 20;
-            this.pn_Inventory.Visible = false;
             // 
             // pn_Order
             // 
@@ -462,7 +421,7 @@
             this.pn_Order.Controls.Add(this.textBox5);
             this.pn_Order.Controls.Add(this.label36);
             this.pn_Order.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pn_Order.Location = new System.Drawing.Point(0, 0);
+            this.pn_Order.Location = new System.Drawing.Point(0, 54);
             this.pn_Order.Margin = new System.Windows.Forms.Padding(4);
             this.pn_Order.Name = "pn_Order";
             this.pn_Order.Size = new System.Drawing.Size(1022, 689);
@@ -556,14 +515,14 @@
             // 
             // dataGridView4
             // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -662,11 +621,34 @@
             this.label36.TabIndex = 0;
             this.label36.Text = "Order";
             // 
+            // pn_Inventory
+            // 
+            this.pn_Inventory.Controls.Add(this.label29);
+            this.pn_Inventory.Controls.Add(this.txt_Status);
+            this.pn_Inventory.Controls.Add(this.label28);
+            this.pn_Inventory.Controls.Add(this.txt_QInventory);
+            this.pn_Inventory.Controls.Add(this.label23);
+            this.pn_Inventory.Controls.Add(this.dateTimePicker4);
+            this.pn_Inventory.Controls.Add(this.label24);
+            this.pn_Inventory.Controls.Add(this.txt_PCodeInventory);
+            this.pn_Inventory.Controls.Add(this.dataGridView3);
+            this.pn_Inventory.Controls.Add(this.label25);
+            this.pn_Inventory.Controls.Add(this.label26);
+            this.pn_Inventory.Controls.Add(this.txt_PNameInventory);
+            this.pn_Inventory.Controls.Add(this.label27);
+            this.pn_Inventory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pn_Inventory.Location = new System.Drawing.Point(0, 54);
+            this.pn_Inventory.Margin = new System.Windows.Forms.Padding(4);
+            this.pn_Inventory.Name = "pn_Inventory";
+            this.pn_Inventory.Size = new System.Drawing.Size(1022, 689);
+            this.pn_Inventory.TabIndex = 20;
+            this.pn_Inventory.Visible = false;
+            // 
             // label29
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(666, 223);
+            this.label29.Location = new System.Drawing.Point(697, 223);
             this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(61, 22);
@@ -678,11 +660,11 @@
             this.txt_Status.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Status.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Status.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txt_Status.Location = new System.Drawing.Point(667, 254);
+            this.txt_Status.Location = new System.Drawing.Point(698, 254);
             this.txt_Status.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Status.Multiline = true;
             this.txt_Status.Name = "txt_Status";
-            this.txt_Status.Size = new System.Drawing.Size(123, 25);
+            this.txt_Status.Size = new System.Drawing.Size(143, 25);
             this.txt_Status.TabIndex = 14;
             this.txt_Status.Text = "Out of Stock";
             // 
@@ -722,7 +704,7 @@
             // 
             this.dateTimePicker4.Location = new System.Drawing.Point(237, 254);
             this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(226, 22);
+            this.dateTimePicker4.Size = new System.Drawing.Size(270, 22);
             this.dateTimePicker4.TabIndex = 10;
             // 
             // label24
@@ -744,19 +726,19 @@
             this.txt_PCodeInventory.Margin = new System.Windows.Forms.Padding(4);
             this.txt_PCodeInventory.Multiline = true;
             this.txt_PCodeInventory.Name = "txt_PCodeInventory";
-            this.txt_PCodeInventory.Size = new System.Drawing.Size(219, 25);
+            this.txt_PCodeInventory.Size = new System.Drawing.Size(270, 25);
             this.txt_PCodeInventory.TabIndex = 8;
             // 
             // dataGridView3
             // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3,
@@ -765,7 +747,7 @@
             this.col_quantity,
             this.dataGridViewTextBoxColumn6});
             this.dataGridView3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dataGridView3.Location = new System.Drawing.Point(210, 329);
+            this.dataGridView3.Location = new System.Drawing.Point(220, 330);
             this.dataGridView3.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -840,7 +822,7 @@
             this.txt_PNameInventory.Margin = new System.Windows.Forms.Padding(4);
             this.txt_PNameInventory.Multiline = true;
             this.txt_PNameInventory.Name = "txt_PNameInventory";
-            this.txt_PNameInventory.Size = new System.Drawing.Size(219, 25);
+            this.txt_PNameInventory.Size = new System.Drawing.Size(270, 25);
             this.txt_PNameInventory.TabIndex = 1;
             // 
             // label27
@@ -855,18 +837,38 @@
             this.label27.TabIndex = 0;
             this.label27.Text = "Inventory";
             // 
+            // pn_Good
+            // 
+            this.pn_Good.Controls.Add(this.dateTimePicker2);
+            this.pn_Good.Controls.Add(this.label22);
+            this.pn_Good.Controls.Add(this.dateTimePicker1);
+            this.pn_Good.Controls.Add(this.label21);
+            this.pn_Good.Controls.Add(this.txt_PCode);
+            this.pn_Good.Controls.Add(this.dataGridView2);
+            this.pn_Good.Controls.Add(this.label18);
+            this.pn_Good.Controls.Add(this.label19);
+            this.pn_Good.Controls.Add(this.txt_PName);
+            this.pn_Good.Controls.Add(this.label20);
+            this.pn_Good.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pn_Good.Location = new System.Drawing.Point(0, 54);
+            this.pn_Good.Margin = new System.Windows.Forms.Padding(4);
+            this.pn_Good.Name = "pn_Good";
+            this.pn_Good.Size = new System.Drawing.Size(1022, 689);
+            this.pn_Good.TabIndex = 19;
+            this.pn_Good.Visible = false;
+            // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(572, 257);
+            this.dateTimePicker2.Location = new System.Drawing.Point(555, 254);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(226, 22);
+            this.dateTimePicker2.Size = new System.Drawing.Size(270, 22);
             this.dateTimePicker2.TabIndex = 12;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(568, 223);
+            this.label22.Location = new System.Drawing.Point(551, 221);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(103, 22);
@@ -875,16 +877,16 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(237, 254);
+            this.dateTimePicker1.Location = new System.Drawing.Point(189, 257);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(226, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(270, 22);
             this.dateTimePicker1.TabIndex = 10;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(232, 223);
+            this.label21.Location = new System.Drawing.Point(185, 226);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(115, 22);
@@ -895,23 +897,23 @@
             // 
             this.txt_PCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_PCode.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txt_PCode.Location = new System.Drawing.Point(571, 153);
+            this.txt_PCode.Location = new System.Drawing.Point(555, 153);
             this.txt_PCode.Margin = new System.Windows.Forms.Padding(4);
             this.txt_PCode.Multiline = true;
             this.txt_PCode.Name = "txt_PCode";
-            this.txt_PCode.Size = new System.Drawing.Size(219, 25);
+            this.txt_PCode.Size = new System.Drawing.Size(270, 25);
             this.txt_PCode.TabIndex = 8;
             // 
             // dataGridView2
             // 
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_PName,
@@ -920,14 +922,14 @@
             this.col_DOExit,
             this.col_QG});
             this.dataGridView2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dataGridView2.Location = new System.Drawing.Point(237, 352);
+            this.dataGridView2.Location = new System.Drawing.Point(189, 352);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowHeadersWidth = 50;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(563, 327);
+            this.dataGridView2.Size = new System.Drawing.Size(636, 327);
             this.dataGridView2.TabIndex = 7;
             // 
             // col_PName
@@ -969,7 +971,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(568, 107);
+            this.label18.Location = new System.Drawing.Point(551, 107);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(120, 22);
@@ -980,7 +982,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(232, 107);
+            this.label19.Location = new System.Drawing.Point(185, 109);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(129, 22);
@@ -991,11 +993,11 @@
             // 
             this.txt_PName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_PName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txt_PName.Location = new System.Drawing.Point(237, 153);
+            this.txt_PName.Location = new System.Drawing.Point(189, 153);
             this.txt_PName.Margin = new System.Windows.Forms.Padding(4);
             this.txt_PName.Multiline = true;
             this.txt_PName.Name = "txt_PName";
-            this.txt_PName.Size = new System.Drawing.Size(219, 25);
+            this.txt_PName.Size = new System.Drawing.Size(270, 25);
             this.txt_PName.TabIndex = 1;
             // 
             // label20
@@ -1012,14 +1014,14 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_name,
@@ -1402,9 +1404,9 @@
             this.lb_Wh1.Location = new System.Drawing.Point(56, 42);
             this.lb_Wh1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_Wh1.Name = "lb_Wh1";
-            this.lb_Wh1.Size = new System.Drawing.Size(96, 36);
+            this.lb_Wh1.Size = new System.Drawing.Size(156, 36);
             this.lb_Wh1.TabIndex = 9;
-            this.lb_Wh1.Text = "Home";
+            this.lb_Wh1.Text = "Statement";
             this.lb_Wh1.Visible = false;
             this.lb_Wh1.Click += new System.EventHandler(this.lb_Wh1_Click);
             // 
@@ -1460,14 +1462,14 @@
             this.pn_Home.PerformLayout();
             this.pn_Employee.ResumeLayout(false);
             this.pn_Employee.PerformLayout();
-            this.pn_Good.ResumeLayout(false);
-            this.pn_Good.PerformLayout();
-            this.pn_Inventory.ResumeLayout(false);
-            this.pn_Inventory.PerformLayout();
             this.pn_Order.ResumeLayout(false);
             this.pn_Order.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            this.pn_Inventory.ResumeLayout(false);
+            this.pn_Inventory.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.pn_Good.ResumeLayout(false);
+            this.pn_Good.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel6.ResumeLayout(false);
