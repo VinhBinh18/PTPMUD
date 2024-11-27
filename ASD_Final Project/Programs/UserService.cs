@@ -15,9 +15,19 @@ namespace ASD_Final_Project.Program
             _userRepository = userRepository;
         }
 
+        public User GetUser(int UserID)
+        {
+            return _userRepository.GetUser(UserID);
+        }
+
         public IEnumerable<User> GetAllUsers()
         {
             return _userRepository.GetAllUsers();
+        }
+
+        public IEnumerable<User> GetAllUsers(int Wh_ID)
+        {
+            return _userRepository.GetAllUsers(Wh_ID);
         }
 
         public void AddUser(User user)
@@ -38,6 +48,9 @@ namespace ASD_Final_Project.Program
         {
             return _userRepository.LoginUser(username, password);
         }
-        
+        public int CountUsers(int Wh_ID)
+        {
+            return _userRepository.CountUsers(Wh_ID);
+        }
     }
 }
