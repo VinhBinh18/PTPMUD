@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ASD_Final_Project.Program
 {
@@ -64,7 +65,7 @@ namespace ASD_Final_Project.Program
             try
             {
                 _dbConnection.Open();
-                using (var command = new SqlCommand("SELECT U.U_ID, U.U_UserName, U.U_Address, U.U_Phone, R.Rl_Name FROM Users U, Roles R WHERE U.Wh_ID = @Wh_ID and U.Rl_ID = R.Rl_ID;", _dbConnection))
+                using (var command = new SqlCommand("SELECT U.U_ID, U.U_UserName, U.U_Address, U.U_Phone, R.Rl_Name, W.Wh_Name FROM Users U, Roles R, WareHouse W WHERE U.Wh_ID = @Wh_ID and U.Rl_ID = R.Rl_ID and W.Wh_ID = U.Wh_ID;", _dbConnection))
                 {   
                     command.Parameters.AddWithValue("@Wh_ID", WhID);
                     using (var reader = command.ExecuteReader())
@@ -78,6 +79,7 @@ namespace ASD_Final_Project.Program
                                 Address = reader.GetString(2),
                                 Phone = reader.GetString(3),
                                 Role = reader.GetString(4),
+                                Warehouse = reader.GetString(5),
                             };
                             users.Add(user);
                         }
@@ -209,42 +211,48 @@ namespace ASD_Final_Project.Program
                 _dbConnection.Close();
             }
         }
+        
         public User LoginUser(string username, string password)
         { 
-            var userSigned = new User();
-
-            try
+            if(checkUser(username) == false)
             {
-                _dbConnection.Open();
-                using (var command = new SqlCommand("SELECT U.U_ID, U.U_UserName, U.U_Address, U.U_Phone, R.Rl_Name FROM Users U JOIN Roles R ON U.Rl_ID = R.Rl_ID WHERE U.U_UserName = @Username AND U.U_Password = @Password", _dbConnection))
+                return null;
+            }
+            else
+            {
+                var userSigned = new User();
+                try
                 {
-                    command.Parameters.AddWithValue("@Username", username);
-                    command.Parameters.AddWithValue("@Password", password);
-
-                    using (var reader = command.ExecuteReader())
+                    _dbConnection.Open();
+                    using (var command = new SqlCommand("SELECT U.U_ID, U.U_UserName, U.U_Address, U.U_Phone, R.Rl_Name FROM Users U JOIN Roles R ON U.Rl_ID = R.Rl_ID WHERE U.U_UserName = @Username AND U.U_Password = @Password", _dbConnection))
                     {
-                        if (reader.Read())
+                        command.Parameters.AddWithValue("@Username", username);
+                        command.Parameters.AddWithValue("@Password", password);
+
+                        using (var reader = command.ExecuteReader())
                         {
-                            userSigned.Id = reader.GetInt32(0);
-                            userSigned.Username = reader.GetString(1);
-                            userSigned.Address = reader.GetString(2);
-                            userSigned.Phone = reader.GetString(3);
-                            userSigned.Role = reader.GetString(4);
-                            return userSigned; // Trả về người dùng nếu đăng nhập thành công
+                            if (reader.Read())
+                            {
+                                userSigned.Id = reader.GetInt32(0);
+                                userSigned.Username = reader.GetString(1);
+                                userSigned.Address = reader.GetString(2);
+                                userSigned.Phone = reader.GetString(3);
+                                userSigned.Role = reader.GetString(4);
+                                return userSigned; // Trả về người dùng nếu đăng nhập thành công
+                            }
                         }
                     }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error: {ex.Message}");
+                }
+                finally
+                {
+                    _dbConnection.Close();
+                }
+                return null;
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error: {ex.Message}");
-            }
-            finally
-            {
-                _dbConnection.Close();
-            }
-
-            return null; // Trả về null nếu đăng nhập thất bại
         }
 
         public bool RegisterUser(User user, string password)
@@ -359,6 +367,29 @@ namespace ASD_Final_Project.Program
             {
                 _dbConnection.Close();
             }
+        }
+        public bool checkUser(string name)
+        {
+            _dbConnection.Open();
+            using (var command = new SqlCommand("SELECT U.U_ID FROM Users U WHERE U.U_UserName = @Username", _dbConnection))
+            {
+                command.Parameters.AddWithValue("@Username", name);
+
+                using (var reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        _dbConnection.Close();
+                        return true;
+                    }
+                }
+            }           
+            MessageBox.Show("Ten nguoi dung khong ton tai");
+           
+            _dbConnection.Close();
+            
+
+            return false;
         }
     }
 }

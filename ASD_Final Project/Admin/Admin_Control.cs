@@ -217,7 +217,6 @@ namespace ASD_Final_Project.Admin
                         pn_user_add.Visible = false;
                         pn_user_edit.Visible = true;
                         pn_user_edit.Dock = DockStyle.Right;
-
                     }
                     else
                     {
@@ -287,9 +286,9 @@ namespace ASD_Final_Project.Admin
         {
             switch (role)
             {
-                case 1: return "Kho Miền Bắc";
-                case 2: return "Kho Miền Nam";
-                case 3: return "Kho Miền Trung";
+                case 1: return "Warehouse North";
+                case 2: return "Warehouse South";
+                case 3: return "Warehouse Central";
                 default: throw new ArgumentException("Invalid warehouse name");
             }
         } //done
@@ -309,9 +308,9 @@ namespace ASD_Final_Project.Admin
         {
             switch (warehouse)
             {
-                case "Kho Miền Bắc": return 1;
-                case "Kho Miền Nam": return 2;
-                case "Kho Miền Trung": return 3;
+                case "Warehouse North": return 1;
+                case "Warehouse South": return 2;
+                case "Warehouse Central": return 3;
                 default: throw new ArgumentException("Invalid warehouse name");
             }
         } //done

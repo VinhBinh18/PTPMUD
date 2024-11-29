@@ -121,12 +121,12 @@
             this.pn_user_dgv.AllowUserToDeleteRows = false;
             this.pn_user_dgv.AllowUserToResizeColumns = false;
             this.pn_user_dgv.ColumnHeadersHeight = 29;
-            this.pn_user_dgv.Location = new System.Drawing.Point(60, 209);
+            this.pn_user_dgv.Location = new System.Drawing.Point(19, 209);
             this.pn_user_dgv.Margin = new System.Windows.Forms.Padding(4);
             this.pn_user_dgv.Name = "pn_user_dgv";
             this.pn_user_dgv.ReadOnly = true;
             this.pn_user_dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.pn_user_dgv.Size = new System.Drawing.Size(875, 185);
+            this.pn_user_dgv.Size = new System.Drawing.Size(916, 185);
             this.pn_user_dgv.TabIndex = 22;
             this.pn_user_dgv.SelectionChanged += new System.EventHandler(this.dgv_SelectionChanged);
             // 
@@ -228,11 +228,11 @@
             this.pn_user_add.Controls.Add(this.label7);
             this.pn_user_add.Controls.Add(this.Address);
             this.pn_user_add.Controls.Add(this.labe100);
-            this.pn_user_add.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pn_user_add.Location = new System.Drawing.Point(0, 0);
+            this.pn_user_add.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pn_user_add.Location = new System.Drawing.Point(685, 0);
             this.pn_user_add.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pn_user_add.Name = "pn_user_add";
-            this.pn_user_add.Size = new System.Drawing.Size(1127, 734);
+            this.pn_user_add.Size = new System.Drawing.Size(273, 611);
             this.pn_user_add.TabIndex = 26;
             this.pn_user_add.Visible = false;
             // 
@@ -362,6 +362,8 @@
             // pn_user
             // 
             this.pn_user.BackColor = System.Drawing.Color.DarkOrange;
+            this.pn_user.Controls.Add(this.pn_user_edit);
+            this.pn_user.Controls.Add(this.pn_user_add);
             this.pn_user.Controls.Add(this.comboBox1);
             this.pn_user.Controls.Add(this.label6);
             this.pn_user.Controls.Add(this.pn_user_txt_wh);
@@ -546,11 +548,11 @@
             this.pn_user_edit.Controls.Add(this.label12);
             this.pn_user_edit.Controls.Add(this.pn_user_edit_txt_name);
             this.pn_user_edit.Controls.Add(this.pn_user_edit_btn_close);
-            this.pn_user_edit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pn_user_edit.Location = new System.Drawing.Point(0, 0);
+            this.pn_user_edit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pn_user_edit.Location = new System.Drawing.Point(412, 0);
             this.pn_user_edit.Margin = new System.Windows.Forms.Padding(4);
             this.pn_user_edit.Name = "pn_user_edit";
-            this.pn_user_edit.Size = new System.Drawing.Size(1127, 734);
+            this.pn_user_edit.Size = new System.Drawing.Size(273, 611);
             this.pn_user_edit.TabIndex = 16;
             this.pn_user_edit.Visible = false;
             // 
@@ -575,9 +577,9 @@
             // 
             this.pn_user_edit_cmb_wh.FormattingEnabled = true;
             this.pn_user_edit_cmb_wh.Items.AddRange(new object[] {
-            "Bắc",
-            "Nam",
-            "Trung"});
+            "Warehouse North",
+            "Warehouse Central",
+            "Warehouse South"});
             this.pn_user_edit_cmb_wh.Location = new System.Drawing.Point(100, 234);
             this.pn_user_edit_cmb_wh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pn_user_edit_cmb_wh.Name = "pn_user_edit_cmb_wh";
@@ -701,8 +703,6 @@
             this.Controls.Add(this.pn_home);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pn_user_add);
-            this.Controls.Add(this.pn_user_edit);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Admin_Control";
             this.Text = "Admin_Control";
