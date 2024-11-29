@@ -36,26 +36,40 @@ namespace ASD_Final_Project
             SidePanel.Top = C.Top;
         }
 
+        private void HideAllPanels()
+        {
+            pn_Home.Visible = false;
+            pn_Good.Visible = false;
+            pn_Inventory.Visible = false;
+            pn_Employee.Visible = false;
+            pn_Order.Visible = false;
+        }
+
+        private void ShowPanel(Panel panelToShow)
+        {
+            pn_Home.Visible = false;
+            HideAllPanels();
+            panelToShow.Visible = true;
+            panelToShow.Dock = DockStyle.Fill;
+        }
         private void btn_home_Click(object sender, EventArgs e)
         {
             MoveSidePanel(btn_home);
+            ShowPanel(pn_Home);
+
+            pn_Sidebar.Width += 5;
+            if (pn_Sidebar.Width >= 180)
+            {
+                sidepartExpand = true;
+                Sidepart.Stop();
+            }
         }
 
 
         private void btn_wh1_Click(object sender, EventArgs e)
         {
             hideMenu();
-
-        }
-
-        private void btn_wh2_Click(object sender, EventArgs e)
-        {
-            hideMenu();
-        }
-
-        private void btn_wh3_Click(object sender, EventArgs e)
-        {
-            hideMenu();
+            ShowPanel(pn_Employee);
         }
 
         private void hideMenu()
@@ -81,25 +95,20 @@ namespace ASD_Final_Project
         {
             showMenu(pn_MenuWH);
             MoveSidePanel(btn_Menu);
+           
         }
 
         private void pn_Wh1_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
-        private void lb_GoogWh1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         bool sidepartExpand = true;
         private void Sidepart_Tick(object sender, EventArgs e)
         {
             if (sidepartExpand)
             {
                 pn_Sidebar.Width -= 5;
-                if (pn_Sidebar.Width <= 57)
+                if (pn_Sidebar.Width <= 50)
                 {
                     sidepartExpand = false;
                     Sidepart.Stop();
@@ -108,14 +117,14 @@ namespace ASD_Final_Project
             else
             {
                 pn_Sidebar.Width += 5;
-                if(pn_Sidebar.Width >= 173)
+                if(pn_Sidebar.Width >= 180)
                 {
                     sidepartExpand = true;
                     Sidepart.Stop();
                 }
             }
 
-            }
+        }
 
         private void btn_Menuside_Click_1(object sender, EventArgs e)
         {
@@ -123,7 +132,42 @@ namespace ASD_Final_Project
 
         }
 
-        private void pn_Sidebar_Paint(object sender, PaintEventArgs e)
+        private void lb_Wh1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btm_goods_Click(object sender, EventArgs e)
+        {
+            ShowPanel(pn_Good);
+        }
+
+        private void btn_Inventory_Click(object sender, EventArgs e)
+        {
+            ShowPanel(pn_Inventory);
+        }
+
+        private void btn_Employee_Click(object sender, EventArgs e)
+        {
+            ShowPanel(pn_Employee);
+        }
+
+        private void btn_Order_Click(object sender, EventArgs e)
+        {
+            ShowPanel(pn_Order);
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }
