@@ -33,7 +33,7 @@ namespace ASD_Final_Project
         private void label5_Click(object sender, EventArgs e)
         {
             pn_login.Visible = false;
-            pn_register.Visible=true;
+            pn_register.Visible = true;
             pn_register.Dock = DockStyle.Fill;
 
         }
@@ -47,26 +47,45 @@ namespace ASD_Final_Project
 
         private void btn_login_submit_Click(object sender, EventArgs e)
         {
-            User userLog = _userService.LoginUser(txt_name.Text, txt_password.Text);
-            if(userLog.Role == "Admin")
+            if(txt_name.Text == "" ||txt_password.Text == "")
             {
-                /*Admin_Control admin_Control = new Admin_Control(_userService, userLog);
-                admin_Control.ShowDialog();
-                this.Close();*/
-                Form_DashBoard admin_Dashboard = new Form_DashBoard(_userService);
-                admin_Dashboard.ShowDialog();
-                this.Hide();
+                MessageBox.Show("vui long dien ten dang nhap hoac mat khau");
+                return;
             }
-            if(userLog.Role == "Manager")
+            else
             {
-                Admin_Control admin_Control = new Admin_Control(_userService, userLog);
-                admin_Control.ShowDialog();
+                var userLog = _userService.LoginUser(txt_name.Text, txt_password.Text);
+                if(userLog == null)
+                {
+                    return;
+                }
+                else
+                {
+                    if (userLog.Role == "Admin")
+                    {
+                        /*Admin_Control admin_Control = new Admin_Control(_userService, userLog);
+                        admin_Control.ShowDialog();
+                        this.Close();*/
+                        Form_DashBoard admin_Dashboard = new Form_DashBoard(_userService);
+                        admin_Dashboard.ShowDialog();
+                        this.Hide();
+                    }
+                    else if (userLog.Role == "Manager")
+                    {
+                        Admin_Control admin_Control = new Admin_Control(_userService, userLog);
+                        admin_Control.ShowDialog();
+                    }
+                    else if (userLog.Role == "Staff")
+                    {
+                        Admin_Control admin_Control = new Admin_Control(_userService, userLog);
+                        admin_Control.ShowDialog();
+                    }
+                }
+                
+               
             }
-            if (userLog.Role == "Staff")
-            {
-                Admin_Control admin_Control = new Admin_Control(_userService, userLog);
-                admin_Control.ShowDialog();
-            }
+            
+            
         }
 
         private void pn_cb_CheckedChanged(object sender, EventArgs e)
@@ -103,7 +122,7 @@ namespace ASD_Final_Project
                 cb.Text = "Show Password";
             }
         }
-
+        
        
     }
 }
