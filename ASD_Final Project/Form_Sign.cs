@@ -21,29 +21,7 @@ namespace ASD_Final_Project
             _userService = userService;
         }
 
-        private void pn_lb_login_Click(object sender, EventArgs e)
-        {
-            pn_register.Visible = false;
-            pn_txt_confirm.Clear();
-            pn_txt_name.Clear();
-            pn_txt_password.Clear();
-            pn_cb.Checked = false;
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-            pn_login.Visible = false;
-            pn_register.Visible = true;
-            pn_register.Dock = DockStyle.Fill;
-
-        }
-        private void label8_Click(object sender, EventArgs e)
-        {
-            pn_login.Visible = true;
-            pn_register.Visible = false;
-            pn_login.Dock = DockStyle.Fill;
-        }
-
+  
 
         private void btn_login_submit_Click(object sender, EventArgs e)
         {
@@ -88,23 +66,6 @@ namespace ASD_Final_Project
             
         }
 
-        private void pn_cb_CheckedChanged(object sender, EventArgs e)
-        {
-            if (pn_txt_password.PasswordChar == '*')
-            {
-                // Show password
-                pn_txt_confirm.PasswordChar = '\0';
-                pn_txt_password.PasswordChar = '\0';
-                pn_cb.Text = "Hide Password";
-            }
-            else
-            {
-                // Hide password
-                pn_txt_confirm.PasswordChar = '*';
-                pn_txt_password.PasswordChar = '*';
-                pn_cb.Text = "Show Password";
-            }
-        }
 
         private void cb_CheckedChanged(object sender, EventArgs e)
         {
