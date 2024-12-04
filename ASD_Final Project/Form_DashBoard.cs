@@ -14,6 +14,7 @@ namespace ASD_Final_Project
     public partial class Form_DashBoard : Form
     {
         UserService _userService;
+        private DataTable dt;
         public Form_DashBoard(UserService userService)
         {
             InitializeComponent();
@@ -54,22 +55,19 @@ namespace ASD_Final_Project
         }
         private void btn_home_Click(object sender, EventArgs e)
         {
+            if (!sidepartExpand)
+            {
+                Sidepart.Start();
+            }
             MoveSidePanel(btn_home);
             ShowPanel(pn_Home);
-
-            pn_Sidebar.Width += 5;
-            if (pn_Sidebar.Width >= 180)
-            {
-                sidepartExpand = true;
-                Sidepart.Stop();
-            }
         }
 
 
         private void btn_wh1_Click(object sender, EventArgs e)
         {
             hideMenu();
-            ShowPanel(pn_Employee);
+            ShowPanel(pn_Wh1);
         }
 
         private void hideMenu()
@@ -93,6 +91,10 @@ namespace ASD_Final_Project
 
         private void btn_Menu_Click(object sender, EventArgs e)
         {
+            if (!sidepartExpand)
+            {
+                Sidepart.Start();
+            }
             showMenu(pn_MenuWH);
             MoveSidePanel(btn_Menu);
            
@@ -170,6 +172,33 @@ namespace ASD_Final_Project
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void txt_Name_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void cb_Role_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_wh2_Click(object sender, EventArgs e)
+        {
+            hideMenu();
+            ShowPanel(pn_Wh2);
+        }
+
+        private void btn_wh3_Click(object sender, EventArgs e)
+        {
+            hideMenu();
+            ShowPanel(pn_Wh3);
         }
     }
 }
