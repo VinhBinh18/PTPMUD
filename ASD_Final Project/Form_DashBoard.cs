@@ -205,6 +205,9 @@ namespace ASD_Final_Project
             ShowPanel(pn_Wh3);
         }
 
-      
+        private void pn_Wh1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
