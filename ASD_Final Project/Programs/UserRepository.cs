@@ -211,49 +211,51 @@ namespace ASD_Final_Project.Program
                 _dbConnection.Close();
             }
         }
-        
+
         public User LoginUser(string username, string password)
-        { 
-            if(checkUser(username) == false)
+        {
+            var (isValid, message) = CheckUser(username, password);
+            if (!isValid)
             {
+                MessageBox.Show(message); // Hiển thị thông báo lỗi
                 return null;
             }
-            else
-            {
-                var userSigned = new User();
-                try
-                {
-                    _dbConnection.Open();
-                    using (var command = new SqlCommand("SELECT U.U_ID, U.U_UserName, U.U_Address, U.U_Phone, R.Rl_Name FROM Users U JOIN Roles R ON U.Rl_ID = R.Rl_ID WHERE U.U_UserName = @Username AND U.U_Password = @Password", _dbConnection))
-                    {
-                        command.Parameters.AddWithValue("@Username", username);
-                        command.Parameters.AddWithValue("@Password", password);
 
-                        using (var reader = command.ExecuteReader())
+            var userSigned = new User();
+            try
+            {
+                _dbConnection.Open();
+                using (var command = new SqlCommand("SELECT U.U_ID, U.U_UserName, U.U_Address, U.U_Phone, R.Rl_Name FROM Users U JOIN Roles R ON U.Rl_ID = R.Rl_ID WHERE U.U_UserName = @Username AND U.U_Password = @Password", _dbConnection))
+                {
+                    command.Parameters.AddWithValue("@Username", username);
+                    command.Parameters.AddWithValue("@Password", password);
+
+                    using (var reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
                         {
-                            if (reader.Read())
-                            {
-                                userSigned.Id = reader.GetInt32(0);
-                                userSigned.Username = reader.GetString(1);
-                                userSigned.Address = reader.GetString(2);
-                                userSigned.Phone = reader.GetString(3);
-                                userSigned.Role = reader.GetString(4);
-                                return userSigned; // Trả về người dùng nếu đăng nhập thành công
-                            }
+                            userSigned.Id = reader.GetInt32(0);
+                            userSigned.Username = reader.GetString(1);
+                            userSigned.Address = reader.GetString(2);
+                            userSigned.Phone = reader.GetString(3);
+                            userSigned.Role = reader.GetString(4);
+                            return userSigned; // Trả về người dùng nếu đăng nhập thành công
                         }
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error: {ex.Message}");
-                }
-                finally
-                {
-                    _dbConnection.Close();
-                }
-                return null;
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+            finally
+            {
+                _dbConnection.Close();
+            }
+
+            return null;
         }
+
 
         public bool RegisterUser(User user, string password)
         {
@@ -368,28 +370,42 @@ namespace ASD_Final_Project.Program
                 _dbConnection.Close();
             }
         }
-        public bool checkUser(string name)
+        public (bool isValid, string message) CheckUser(string username, string password)
         {
-            _dbConnection.Open();
-            using (var command = new SqlCommand("SELECT U.U_ID FROM Users U WHERE U.U_UserName = @Username", _dbConnection))
+            try
             {
-                command.Parameters.AddWithValue("@Username", name);
-
-                using (var reader = command.ExecuteReader())
+                _dbConnection.Open();
+                using (var command = new SqlCommand("SELECT U.U_Password FROM Users U WHERE U.U_UserName = @Username", _dbConnection))
                 {
-                    if (reader.Read())
+                    command.Parameters.AddWithValue("@Username", username);
+
+                    using (var reader = command.ExecuteReader())
                     {
-                        _dbConnection.Close();
-                        return true;
+                        if (reader.Read())
+                        {
+                            string storedPassword = reader.GetString(0); // Lấy mật khẩu từ cơ sở dữ liệu
+                            if (storedPassword == password)
+                            {
+                                return (true, "Đăng nhập thành công");
+                            }
+                            else
+                            {
+                                return (false, "Mật khẩu không chính xác");
+                            }
+                        }
                     }
                 }
-            }           
-            MessageBox.Show("Ten nguoi dung khong ton tai");
-           
-            _dbConnection.Close();
-            
-
-            return false;
+                return (false, "Tên người dùng không tồn tại");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+                return (false, "Lỗi hệ thống");
+            }
+            finally
+            {
+                _dbConnection.Close();
+            }
         }
     }
 }
