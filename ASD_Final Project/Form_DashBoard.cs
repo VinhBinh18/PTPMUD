@@ -44,6 +44,10 @@ namespace ASD_Final_Project
             pn_Inventory.Visible = false;
             pn_Employee.Visible = false;
             pn_Order.Visible = false;
+            pn_Wh1.Visible = false;
+            pn_Wh2.Visible = false;
+            pn_Wh3.Visible = false;
+
         }
 
         private void ShowPanel(Panel panelToShow)
@@ -200,5 +204,7 @@ namespace ASD_Final_Project
             hideMenu();
             ShowPanel(pn_Wh3);
         }
+
+      
     }
 }
