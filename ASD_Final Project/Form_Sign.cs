@@ -21,11 +21,11 @@ namespace ASD_Final_Project
             _userService = userService;
         }
 
-  
+
 
         private void btn_login_submit_Click(object sender, EventArgs e)
         {
-            if(txt_name.Text == "" ||txt_password.Text == "")
+            if (txt_name.Text == "" || txt_password.Text == "")
             {
                 MessageBox.Show("vui long dien ten dang nhap hoac mat khau");
                 return;
@@ -33,7 +33,7 @@ namespace ASD_Final_Project
             else
             {
                 var userLog = _userService.LoginUser(txt_name.Text, txt_password.Text);
-                if(userLog == null)
+                if (userLog == null)
                 {
                     return;
                 }
@@ -59,12 +59,12 @@ namespace ASD_Final_Project
                         admin_Control.ShowDialog();
                     }
                 }
-                
-               
+
+
             }
-            
-            
         }
+            
+          
 
 
         private void cb_CheckedChanged(object sender, EventArgs e)
@@ -83,7 +83,14 @@ namespace ASD_Final_Project
                 cb.Text = "Show Password";
             }
         }
-        
-       
+
+        private void txt_password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btn_login_submit.PerformClick(); // Kích hoạt sự kiện Click của nút Submit
+                e.SuppressKeyPress = true;       // Ngăn không cho xuống dòng
+            }
+        }
     }
 }
