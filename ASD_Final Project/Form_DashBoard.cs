@@ -14,12 +14,14 @@ namespace ASD_Final_Project
     public partial class Form_DashBoard : Form
     {
         UserService _userService;
-        private DataTable dt;
-        public Form_DashBoard(UserService userService)
+        private readonly User _admin;
+
+        public Form_DashBoard(UserService userService, User Admin)
         {
             InitializeComponent();
             Customize();
             _userService = userService;
+            _admin = Admin;
         }
 
         private void SidePanel_Paint(object sender, PaintEventArgs e)
@@ -208,6 +210,12 @@ namespace ASD_Final_Project
         private void pn_Wh1_Paint_1(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Form_DashBoard_Load(object sender, EventArgs e)
+        {
+            label1.Text = _admin.Username;
+            label2.Text = _admin.Role;
         }
     }
 }
