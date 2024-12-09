@@ -32,7 +32,7 @@
             this.pn_login = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btn_login_submit = new System.Windows.Forms.Button();
             this.txt_name = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cb = new System.Windows.Forms.CheckBox();
@@ -50,7 +50,7 @@
             // 
             this.pn_login.Controls.Add(this.pictureBox2);
             this.pn_login.Controls.Add(this.label7);
-            this.pn_login.Controls.Add(this.button6);
+            this.pn_login.Controls.Add(this.btn_login_submit);
             this.pn_login.Controls.Add(this.txt_name);
             this.pn_login.Controls.Add(this.label9);
             this.pn_login.Controls.Add(this.cb);
@@ -85,23 +85,23 @@
             this.label7.TabIndex = 55;
             this.label7.Text = "Login";
             // 
-            // button6
+            // btn_login_submit
             // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(200)))), ((int)(((byte)(113)))));
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(51, 518);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(279, 38);
-            this.button6.TabIndex = 51;
-            this.button6.Text = "LOGIN";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.btn_login_submit_Click);
+            this.btn_login_submit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_login_submit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(200)))), ((int)(((byte)(113)))));
+            this.btn_login_submit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_login_submit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.btn_login_submit.FlatAppearance.BorderSize = 0;
+            this.btn_login_submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_login_submit.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btn_login_submit.ForeColor = System.Drawing.Color.White;
+            this.btn_login_submit.Location = new System.Drawing.Point(51, 518);
+            this.btn_login_submit.Name = "btn_login_submit";
+            this.btn_login_submit.Size = new System.Drawing.Size(279, 38);
+            this.btn_login_submit.TabIndex = 51;
+            this.btn_login_submit.Text = "LOGIN";
+            this.btn_login_submit.UseVisualStyleBackColor = false;
+            this.btn_login_submit.Click += new System.EventHandler(this.btn_login_submit_Click);
             // 
             // txt_name
             // 
@@ -151,6 +151,7 @@
             this.txt_password.PasswordChar = '*';
             this.txt_password.Size = new System.Drawing.Size(233, 25);
             this.txt_password.TabIndex = 48;
+            this.txt_password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_password_KeyDown);
             // 
             // label11
             // 
@@ -210,7 +211,7 @@
         private System.Windows.Forms.Panel pn_login;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btn_login_submit;
         private System.Windows.Forms.TextBox txt_name;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.CheckBox cb;
