@@ -19,7 +19,7 @@ namespace ASD_Final_Project.Program
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            string connectionString = @"Data Source=DESKTOP-PGRLH9O;Initial Catalog=WH_MANAGEMENT;Integrated Security=True;Encrypt=False";
+            string connectionString = @"Data Source=PRIN\MSSQLSERVER02;Initial Catalog=WH_MANAGEMENT;Integrated Security=True;Encrypt=False";
 
             var userRepository = new UserRepository(connectionString);
             var userService = new UserService(userRepository);

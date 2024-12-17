@@ -13,13 +13,16 @@ namespace ASD_Final_Project
 {
     public partial class Form_DashBoard : Form
     {
-        UserService _userService;
-        private DataTable dt;
-        public Form_DashBoard(UserService userService)
+        private readonly UserService _userService;
+        private readonly User _user;
+        private int wh_id;
+
+        public Form_DashBoard(UserService userService, User user)
         {
+            _userService = userService;
+            _user = user;
             InitializeComponent();
             Customize();
-            _userService = userService;
         }
 
         private void SidePanel_Paint(object sender, PaintEventArgs e)
@@ -31,6 +34,7 @@ namespace ASD_Final_Project
         {
             pn_MenuWH.Visible = false;
         }
+
         private void MoveSidePanel(Control C)
         {
             SidePanel.Height = C.Height;
@@ -57,21 +61,16 @@ namespace ASD_Final_Project
             panelToShow.Visible = true;
             panelToShow.Dock = DockStyle.Fill;
         }
+
         private void btn_home_Click(object sender, EventArgs e)
         {
             if (!sidepartExpand)
             {
                 Sidepart.Start();
             }
+            wh_id = 0;
             MoveSidePanel(btn_home);
             ShowPanel(pn_Home);
-        }
-
-
-        private void btn_wh1_Click(object sender, EventArgs e)
-        {
-            hideMenu();
-            ShowPanel(pn_Wh1);
         }
 
         private void hideMenu()
@@ -196,18 +195,186 @@ namespace ASD_Final_Project
         private void btn_wh2_Click(object sender, EventArgs e)
         {
             hideMenu();
+            wh_id = 2;
             ShowPanel(pn_Wh2);
         }
 
         private void btn_wh3_Click(object sender, EventArgs e)
         {
             hideMenu();
+            wh_id = 3;
             ShowPanel(pn_Wh3);
+        }
+
+        private void btn_wh1_Click(object sender, EventArgs e)
+        {
+            hideMenu();
+            wh_id = 1;
+            ShowPanel(pn_Wh1);
         }
 
         private void pn_Wh1_Paint_1(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Form_DashBoard_Load(object sender, EventArgs e)
+        {
+            lb_name.Text = _user.Username.ToString();
+            lb_role.Text = _user.Role.ToString();
+            checkRole(_user.Role, _user.Warehouse);
+        }
+
+        private void checkRole(string role, string wh)
+        {
+            if(role == "Admin")
+            {
+                btn_wh1.Visible = true;
+                btn_wh2.Visible = true;
+                btn_wh3.Visible = true;
+            }
+            else
+            {
+                if (wh == "Warehouse North")
+                {
+                    btn_wh2.Visible = false;
+                    btn_wh3.Visible = false;
+                }
+                else if (wh == "Warehouse Central")
+                {
+                    btn_wh1.Visible = false;
+                    btn_wh3.Visible = false;
+                }
+                else
+                {
+                    btn_wh2.Visible = false;
+                    btn_wh3.Visible = false;
+                }
+            }
+            
+        }
+
+        // admin view
+        private void dgv_employee_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgv_employee.SelectedRows.Count > 0)
+            {
+                var seclectRow = dgv_employee.SelectedRows[0];
+                string name = seclectRow.Cells[1].Value.ToString();
+                string phone = seclectRow.Cells[2].Value.ToString();
+                string address = seclectRow.Cells[4].Value.ToString();
+                string role = seclectRow.Cells[5].Value.ToString();
+                string warehouse = seclectRow.Cells[6].Value.ToString();
+               /* pn_user_txt_name.Text = name;
+                pn_user_txt_phone.Text = phone;
+                pn_user_txt_address.Text = address;
+                pn_user_txt_role.Text = role;
+                pn_user_txt_wh.Text = warehouse;*/
+
+            }
+        }
+
+        void Loaddata()
+        {
+            try
+            {
+                var user = _userService.GetAllUsers();
+                if (user != null && user.Any())
+                {
+                    dgv_employee.DataSource = user.ToList();
+                }
+                else
+                {
+                    MessageBox.Show("No data retrieved from the database.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading data: " + ex.Message);
+            }
+        } // done
+
+        void Loaddata(int Wh_ID)
+        {
+            try
+            {
+                var user = _userService.GetAllUsers(Wh_ID);
+                if (user != null && user.Any())
+                {
+                    dgv_employee.DataSource = user.ToList();
+                }
+                else
+                {
+                    MessageBox.Show("No data retrieved from the database.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading data: " + ex.Message);
+            }
+        } //done
+
+
+
+
+        //transfer function
+        private string GetRoleName(int role)
+        {
+            switch (role)
+            {
+                case 1: return "Admin";
+                case 2: return "Manager";
+                case 3: return "Staff";
+                default: throw new ArgumentException("Invalid role name");
+            }
+        } //done
+
+        private string GetWareHouseName(int role)
+        {
+            switch (role)
+            {
+                case 1: return "Warehouse North";
+                case 2: return "Warehouse South";
+                case 3: return "Warehouse Central";
+                default: throw new ArgumentException("Invalid warehouse name");
+            }
+        } //done
+
+        private int GetRoleID(string role)
+        {
+            switch (role)
+            {
+                case "Admin": return 1;
+                case "Manager": return 2;
+                case "Staff": return 3;
+                default: throw new ArgumentException("Invalid role name");
+            }
+        } //done
+
+        private int GetWareHouseID(string warehouse)
+        {
+            switch (warehouse)
+            {
+                case "Warehouse North": return 1;
+                case "Warehouse South": return 2;
+                case "Warehouse Central": return 3;
+                default: throw new ArgumentException("Invalid warehouse name");
+            }
+        } //done
+
+        private void pn_Employee_VisibleChanged(object sender, EventArgs e)
+        {
+            if(pn_Employee.Visible)
+            {   
+                if(wh_id != 0)
+                {
+                    Loaddata(wh_id); 
+                }
+                else
+                {
+                    Loaddata();
+                }
+            }
         }
     }
 }

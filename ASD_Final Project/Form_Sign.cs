@@ -39,25 +39,9 @@ namespace ASD_Final_Project
                 }
                 else
                 {
-                    if (userLog.Role == "Admin")
-                    {
-                        /*Admin_Control admin_Control = new Admin_Control(_userService, userLog);
-                        admin_Control.ShowDialog();
-                        this.Close();*/
-                        Form_DashBoard admin_Dashboard = new Form_DashBoard(_userService);
-                        admin_Dashboard.ShowDialog();
-                        this.Hide();
-                    }
-                    else if (userLog.Role == "Manager")
-                    {
-                        Admin_Control admin_Control = new Admin_Control(_userService, userLog);
-                        admin_Control.ShowDialog();
-                    }
-                    else if (userLog.Role == "Staff")
-                    {
-                        Admin_Control admin_Control = new Admin_Control(_userService, userLog);
-                        admin_Control.ShowDialog();
-                    }
+                    Form_DashBoard admin_Dashboard = new Form_DashBoard(_userService, userLog);
+                    admin_Dashboard.ShowDialog();
+                    this.Hide();
                 }
 
 

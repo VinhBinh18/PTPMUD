@@ -225,7 +225,7 @@ namespace ASD_Final_Project.Program
             try
             {
                 _dbConnection.Open();
-                using (var command = new SqlCommand("SELECT U.U_ID, U.U_UserName, U.U_Address, U.U_Phone, R.Rl_Name FROM Users U JOIN Roles R ON U.Rl_ID = R.Rl_ID WHERE U.U_UserName = @Username AND U.U_Password = @Password", _dbConnection))
+                using (var command = new SqlCommand("SELECT U.U_ID, U.U_UserName, U.U_Address, U.U_Phone, R.Rl_Name, W.Wh_Name FROM Users U JOIN Roles R ON U.Rl_ID = R.Rl_ID JOIN WareHouse W ON U.Wh_ID = W.Wh_ID WHERE U.U_UserName = @Username AND U.U_Password = @Password", _dbConnection))
                 {
                     command.Parameters.AddWithValue("@Username", username);
                     command.Parameters.AddWithValue("@Password", password);
@@ -239,6 +239,7 @@ namespace ASD_Final_Project.Program
                             userSigned.Address = reader.GetString(2);
                             userSigned.Phone = reader.GetString(3);
                             userSigned.Role = reader.GetString(4);
+                            userSigned.Warehouse = reader.GetString(5);
                             return userSigned; // Trả về người dùng nếu đăng nhập thành công
                         }
                     }
