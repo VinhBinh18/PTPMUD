@@ -196,6 +196,7 @@ namespace ASD_Final_Project
         {
             hideMenu();
             wh_id = 2;
+            label54.Text = _userService.CountUser(wh_id).ToString();
             ShowPanel(pn_Wh2);
         }
 
@@ -203,6 +204,7 @@ namespace ASD_Final_Project
         {
             hideMenu();
             wh_id = 3;
+            label43.Text = _userService.CountUser(wh_id).ToString();
             ShowPanel(pn_Wh3);
         }
 
@@ -210,6 +212,7 @@ namespace ASD_Final_Project
         {
             hideMenu();
             wh_id = 1;
+            label41.Text = _userService.CountUser(wh_id).ToString();
             ShowPanel(pn_Wh1);
         }
 

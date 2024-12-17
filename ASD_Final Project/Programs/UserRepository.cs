@@ -327,7 +327,7 @@ namespace ASD_Final_Project.Program
 
 
 
-        public int CountUsers (int Wh_ID)
+        public int CountUser (int Wh_ID)
         {
             try
             {

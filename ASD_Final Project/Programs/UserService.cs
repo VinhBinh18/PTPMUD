@@ -48,9 +48,13 @@ namespace ASD_Final_Project.Program
         {
             return _userRepository.LoginUser(username, password);
         }
-        public int CountUsers(int Wh_ID)
+        public int CountUser(int Wh_ID)
         {
-            return _userRepository.CountUsers(Wh_ID);
+            return _userRepository.CountUser(Wh_ID);
+        }
+        public int CountUsers()
+        {
+            return _userRepository.CountUsers();
         }
  
     }
