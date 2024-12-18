@@ -25,10 +25,7 @@ namespace ASD_Final_Project
             Customize();
         }
 
-        private void SidePanel_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
+
 
         private void Customize()
         {
@@ -103,10 +100,7 @@ namespace ASD_Final_Project
            
         }
 
-        private void pn_Wh1_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
         bool sidepartExpand = true;
         private void Sidepart_Tick(object sender, EventArgs e)
         {
@@ -137,20 +131,6 @@ namespace ASD_Final_Project
 
         }
 
-        private void lb_Wh1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btm_goods_Click(object sender, EventArgs e)
         {
@@ -172,25 +152,6 @@ namespace ASD_Final_Project
             ShowPanel(pn_Order);
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void txt_Name_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void cb_Role_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void btn_wh2_Click(object sender, EventArgs e)
         {
@@ -216,10 +177,7 @@ namespace ASD_Final_Project
             ShowPanel(pn_Wh1);
         }
 
-        private void pn_Wh1_Paint_1(object sender, PaintEventArgs e)
-        {
 
-        }
 
         private void Form_DashBoard_Load(object sender, EventArgs e)
         {

@@ -415,7 +415,6 @@
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(4, 37);
             this.SidePanel.TabIndex = 8;
-            this.SidePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.SidePanel_Paint);
             // 
             // btn_logout
             // 
@@ -466,7 +465,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(754, 560);
             this.panel3.TabIndex = 6;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // pn_Employee
             // 
@@ -534,7 +532,6 @@
             this.cb_Role.Name = "cb_Role";
             this.cb_Role.Size = new System.Drawing.Size(202, 21);
             this.cb_Role.TabIndex = 6;
-            this.cb_Role.SelectedIndexChanged += new System.EventHandler(this.cb_Role_SelectedIndexChanged);
             // 
             // label14
             // 
@@ -566,7 +563,6 @@
             this.txt_Name.Name = "txt_Name";
             this.txt_Name.Size = new System.Drawing.Size(188, 24);
             this.txt_Name.TabIndex = 1;
-            this.txt_Name.TextChanged += new System.EventHandler(this.txt_Name_TextChanged);
             // 
             // label7
             // 
@@ -591,7 +587,6 @@
             this.pn_Home.Name = "pn_Home";
             this.pn_Home.Size = new System.Drawing.Size(754, 560);
             this.pn_Home.TabIndex = 9;
-            this.pn_Home.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_Wh1_Paint);
             // 
             // label62
             // 
@@ -1065,7 +1060,6 @@
             this.pn_Wh1.Size = new System.Drawing.Size(754, 560);
             this.pn_Wh1.TabIndex = 23;
             this.pn_Wh1.Visible = false;
-            this.pn_Wh1.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_Wh1_Paint_1);
             // 
             // label75
             // 
