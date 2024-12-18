@@ -48,12 +48,12 @@ namespace ASD_Final_Project
             pn_Wh1.Visible = false;
             pn_Wh2.Visible = false;
             pn_Wh3.Visible = false;
+            pn_Welcome.Visible = false;
 
         }
 
         private void ShowPanel(Panel panelToShow)
         {
-            pn_Home.Visible = false;
             HideAllPanels();
             panelToShow.Visible = true;
             panelToShow.Dock = DockStyle.Fill;
@@ -65,9 +65,24 @@ namespace ASD_Final_Project
             {
                 Sidepart.Start();
             }
-            wh_id = 0;
-            MoveSidePanel(btn_home);
-            ShowPanel(pn_Home);
+            if(_user.Role == "Admin")
+            {
+                wh_id = 0;
+                MoveSidePanel(btn_home);
+                ShowPanel(pn_Home);
+            }else if(_user.Role == "Manager")
+            {
+                wh_id = GetWareHouseID(_user.Warehouse);
+                MoveSidePanel(btn_home);
+                ShowPanel(pn_Home);
+            }
+            else
+            {
+                wh_id = GetWareHouseID(_user.Warehouse);
+                MoveSidePanel(btn_home);
+                ShowPanel(pn_Welcome);
+            }
+           
         }
 
         private void hideMenu()
