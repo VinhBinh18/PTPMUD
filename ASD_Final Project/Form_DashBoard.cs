@@ -30,13 +30,13 @@ namespace ASD_Final_Project
         private void Customize()
         {
             pn_MenuWH.Visible = false;
-        }
+        }//done
 
         private void MoveSidePanel(Control C)
         {
             SidePanel.Height = C.Height;
             SidePanel.Top = C.Top;
-        }
+        }//done
 
         private void HideAllPanels()
         {
@@ -50,14 +50,14 @@ namespace ASD_Final_Project
             pn_Wh3.Visible = false;
             pn_Welcome.Visible = false;
 
-        }
+        }//done
 
         private void ShowPanel(Panel panelToShow)
         {
             HideAllPanels();
             panelToShow.Visible = true;
             panelToShow.Dock = DockStyle.Fill;
-        }
+        }//done
 
         private void btn_home_Click(object sender, EventArgs e)
         {
@@ -82,14 +82,14 @@ namespace ASD_Final_Project
                 MoveSidePanel(btn_home);
                 ShowPanel(pn_Welcome);
             }
-           
-        }
+
+        }//done
 
         private void hideMenu()
         {
             if (pn_MenuWH.Visible == true)
                 pn_MenuWH.Visible = false;
-        }
+        }//done
 
         private void showMenu(Panel Menu)
         {
@@ -102,7 +102,7 @@ namespace ASD_Final_Project
             {
                 Menu.Visible = false;
             }
-        }
+        }//done
 
         private void btn_Menu_Click(object sender, EventArgs e)
         {
@@ -112,8 +112,8 @@ namespace ASD_Final_Project
             }
             showMenu(pn_MenuWH);
             MoveSidePanel(btn_Menu);
-           
-        }
+
+        }//done
 
         bool sidepartExpand = true;
         private void Sidepart_Tick(object sender, EventArgs e)
@@ -137,34 +137,34 @@ namespace ASD_Final_Project
                 }
             }
 
-        }
+        }//done
 
         // link
         private void btn_Menuside_Click_1(object sender, EventArgs e)
         {
             Sidepart.Start();
 
-        }
+        }//done
 
         private void btm_goods_Click(object sender, EventArgs e)
         {
             ShowPanel(pn_Good);
-        }
+        }//done
 
         private void btn_Inventory_Click(object sender, EventArgs e)
         {
             ShowPanel(pn_Inventory);
-        }
+        }//done
 
         private void btn_Employee_Click(object sender, EventArgs e)
         {
             ShowPanel(pn_Employee);
-        }
+        }//done
 
         private void btn_Order_Click(object sender, EventArgs e)
         {
             ShowPanel(pn_Order);
-        }
+        }//done
 
         //wh link
         private void btn_wh2_Click(object sender, EventArgs e)
@@ -173,7 +173,7 @@ namespace ASD_Final_Project
             wh_id = 2;
             label54.Text = _userService.CountUser(wh_id).ToString();
             ShowPanel(pn_Wh2);
-        }
+        }//done
 
         private void btn_wh3_Click(object sender, EventArgs e)
         {
@@ -181,7 +181,7 @@ namespace ASD_Final_Project
             wh_id = 3;
             label43.Text = _userService.CountUser(wh_id).ToString();
             ShowPanel(pn_Wh3);
-        }
+        }//done
 
         private void btn_wh1_Click(object sender, EventArgs e)
         {
@@ -189,14 +189,14 @@ namespace ASD_Final_Project
             wh_id = 1;
             label41.Text = _userService.CountUser(wh_id).ToString();
             ShowPanel(pn_Wh1);
-        }
+        }//done
 
         private void Form_DashBoard_Load(object sender, EventArgs e)
         {
             lb_name.Text = _user.Username.ToString();
             lb_role.Text = _user.Role.ToString();
             checkRole(_user.Role, _user.Warehouse);
-        }
+        }//done
 
         // Employee loading
         private void dgv_employee_SelectionChanged(object sender, EventArgs e)
@@ -216,9 +216,9 @@ namespace ASD_Final_Project
                 pn_user_txt_wh.Text = warehouse;*/
 
             }
-        }
+        }//done
 
-        void LoaddataUsers()
+        void LoadDataUsers()
         {
             try
             {
@@ -238,7 +238,7 @@ namespace ASD_Final_Project
             }
         } // done
 
-        void LoaddataUsers(int Wh_ID)
+        void LoadDataUsers(int Wh_ID)
         {
             try
             {
@@ -257,21 +257,21 @@ namespace ASD_Final_Project
                 MessageBox.Show("Error loading data: " + ex.Message);
             }
         } //done
-
+        
         private void pn_Employee_VisibleChanged(object sender, EventArgs e)
         {
             if(pn_Employee.Visible)
             {   
                 if(wh_id != 0)
                 {
-                    LoaddataUsers(wh_id); 
+                    LoadDataUsers(wh_id); 
                 }
                 else
                 {
-                    LoaddataUsers();
+                    LoadDataUsers();
                 }
             }
-        }
+        }//done
         
         //Inventory loading
         void LoadDataInventory()
@@ -292,7 +292,7 @@ namespace ASD_Final_Project
             {
                 MessageBox.Show("Error loading data: " + ex.Message);
             }
-        }
+        }//done
 
         void LoadDataInventory(int Wh_ID)
         {
@@ -312,7 +312,7 @@ namespace ASD_Final_Project
             {
                 MessageBox.Show("Error loading data: " + ex.Message);
             }
-        }
+        }//done
 
         private void pn_Inventory_VisibleChanged(object sender, EventArgs e)
         {
@@ -327,7 +327,7 @@ namespace ASD_Final_Project
                     LoadDataInventory();
                 }
             }
-        }
+        }//done
        
         //transfer function
         private void checkRole(string role, string wh)
@@ -357,7 +357,7 @@ namespace ASD_Final_Project
                 }
             }
             
-        }
+        }//done
         
         private int GetWareHouseID(string warehouse)
         {
