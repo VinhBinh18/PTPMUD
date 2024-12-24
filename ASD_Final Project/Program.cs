@@ -22,8 +22,10 @@ namespace ASD_Final_Project.Program
             string connectionString = @"Data Source=PRIN\MSSQLSERVER02;Initial Catalog=WH_MANAGEMENT;Integrated Security=True;Encrypt=False";
 
             var userRepository = new UserRepository(connectionString);
+            var productRepository = new ProductRepository(connectionString);
             var userService = new UserService(userRepository);
-            Application.Run(new Form_Sign(userService)); 
+            var productService = new ProductService(productRepository);
+            Application.Run(new Form_Sign(userService, productService)); 
         }
     }
 }

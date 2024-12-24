@@ -10,7 +10,10 @@ namespace ASD_Final_Project.Program
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public int Quantity { get; set; }
-        public string WarehouseId { get; set; }
+        public double Price { get; set; }
+        public string Origin { get; set; }
+        public string Unit { get; set; }
+        public string Supplier { get; set; }
+        public string Warehouse { get; set; }
     }
 }

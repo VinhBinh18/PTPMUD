@@ -19,20 +19,25 @@ namespace ASD_Final_Project.Program
         {
             return _productRepository.GetAllProducts(warehouseId);
         }
-
-        public void AddProduct(Product product)
+        
+        public IEnumerable<Product> GetAllProducts()
         {
-            _productRepository.AddProduct(product);
+            return _productRepository.GetAllProducts();
         }
 
-        public void UpdateProduct(Product product)
-        {
-            _productRepository.UpdateProduct(product);
-        }
+        /*        public void AddProduct(Product product)
+                {
+                    _productRepository.AddProduct(product);
+                }
 
-        public void DeleteProduct(int productId)
-        {
-            _productRepository.DeleteProduct(productId);
-        }
+                public void UpdateProduct(Product product)
+                {
+                    _productRepository.UpdateProduct(product);
+                }
+
+                public void DeleteProduct(int productId)
+                {
+                    _productRepository.DeleteProduct(productId);
+                }*/
     }
 }
