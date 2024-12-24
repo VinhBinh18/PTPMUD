@@ -25,8 +25,6 @@ namespace ASD_Final_Project
             Customize();
         }
 
-
-
         private void Customize()
         {
             pn_MenuWH.Visible = false;
@@ -115,7 +113,6 @@ namespace ASD_Final_Project
            
         }
 
-
         bool sidepartExpand = true;
         private void Sidepart_Tick(object sender, EventArgs e)
         {
@@ -146,7 +143,6 @@ namespace ASD_Final_Project
 
         }
 
-
         private void btm_goods_Click(object sender, EventArgs e)
         {
             ShowPanel(pn_Good);
@@ -166,7 +162,6 @@ namespace ASD_Final_Project
         {
             ShowPanel(pn_Order);
         }
-
 
         private void btn_wh2_Click(object sender, EventArgs e)
         {
@@ -191,8 +186,6 @@ namespace ASD_Final_Project
             label41.Text = _userService.CountUser(wh_id).ToString();
             ShowPanel(pn_Wh1);
         }
-
-
 
         private void Form_DashBoard_Load(object sender, EventArgs e)
         {
@@ -289,9 +282,6 @@ namespace ASD_Final_Project
                 MessageBox.Show("Error loading data: " + ex.Message);
             }
         } //done
-
-
-
 
         //transfer function
         private string GetRoleName(int role)
