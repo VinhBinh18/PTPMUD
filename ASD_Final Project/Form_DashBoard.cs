@@ -14,13 +14,15 @@ namespace ASD_Final_Project
     public partial class Form_DashBoard : Form
     {
         private readonly UserService _userService;
+        private readonly ProductService _productService;
         private readonly User _user;
         private int wh_id;
 
-        public Form_DashBoard(UserService userService, User user)
+        public Form_DashBoard(UserService userService,ProductService productService, User user)
         {
             _userService = userService;
             _user = user;
+            _productService = productService;
             InitializeComponent();
             Customize();
         }
@@ -137,6 +139,7 @@ namespace ASD_Final_Project
 
         }
 
+        // link
         private void btn_Menuside_Click_1(object sender, EventArgs e)
         {
             Sidepart.Start();
@@ -163,6 +166,7 @@ namespace ASD_Final_Project
             ShowPanel(pn_Order);
         }
 
+        //wh link
         private void btn_wh2_Click(object sender, EventArgs e)
         {
             hideMenu();
@@ -194,6 +198,138 @@ namespace ASD_Final_Project
             checkRole(_user.Role, _user.Warehouse);
         }
 
+        // Employee loading
+        private void dgv_employee_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgv_employee.SelectedRows.Count > 0)
+            {
+                var seclectRow = dgv_employee.SelectedRows[0];
+                string name = seclectRow.Cells[1].Value.ToString();
+                string phone = seclectRow.Cells[2].Value.ToString();
+                string address = seclectRow.Cells[4].Value.ToString();
+                string role = seclectRow.Cells[5].Value.ToString();
+                string warehouse = seclectRow.Cells[6].Value.ToString();
+               /* pn_user_txt_name.Text = name;
+                pn_user_txt_phone.Text = phone;
+                pn_user_txt_address.Text = address;
+                pn_user_txt_role.Text = role;
+                pn_user_txt_wh.Text = warehouse;*/
+
+            }
+        }
+
+        void LoaddataUsers()
+        {
+            try
+            {
+                var user = _userService.GetAllUsers();
+                if (user != null && user.Any())
+                {
+                    dgv_employee.DataSource = user.ToList();
+                }
+                else
+                {
+                    MessageBox.Show("No data retrieved from the database.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading data: " + ex.Message);
+            }
+        } // done
+
+        void LoaddataUsers(int Wh_ID)
+        {
+            try
+            {
+                var user = _userService.GetAllUsers(Wh_ID);
+                if (user != null && user.Any())
+                {
+                    dgv_employee.DataSource = user.ToList();
+                }
+                else
+                {
+                    MessageBox.Show("No data retrieved from the database.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading data: " + ex.Message);
+            }
+        } //done
+
+        private void pn_Employee_VisibleChanged(object sender, EventArgs e)
+        {
+            if(pn_Employee.Visible)
+            {   
+                if(wh_id != 0)
+                {
+                    LoaddataUsers(wh_id); 
+                }
+                else
+                {
+                    LoaddataUsers();
+                }
+            }
+        }
+        
+        //Inventory loading
+        void LoadDataInventory()
+        {
+            try
+            {
+                var product = _productService.GetAllProducts();
+                if (product != null && product.Any())
+                {
+                    dgv_inventory.DataSource = product.ToList();
+                }
+                else
+                {
+                    MessageBox.Show("No data retrieved from the database.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading data: " + ex.Message);
+            }
+        }
+
+        void LoadDataInventory(int Wh_ID)
+        {
+            try
+            {
+                var product = _productService.GetAllProducts(Wh_ID);
+                if (product != null && product.Any())
+                {
+                    dgv_inventory.DataSource = product.ToList();
+                }
+                else
+                {
+                    MessageBox.Show("No data retrieved from the database int.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading data: " + ex.Message);
+            }
+        }
+
+        private void pn_Inventory_VisibleChanged(object sender, EventArgs e)
+        {
+            if(pn_Inventory.Visible)
+            {
+                if(wh_id != 0)
+                {
+                    LoadDataInventory(wh_id);
+                }
+                else
+                {
+                    LoadDataInventory();
+                }
+            }
+        }
+       
+        //transfer function
         private void checkRole(string role, string wh)
         {
             if(role == "Admin")
@@ -222,68 +358,18 @@ namespace ASD_Final_Project
             }
             
         }
-
-        // admin view
-        private void dgv_employee_SelectionChanged(object sender, EventArgs e)
+        
+        private int GetWareHouseID(string warehouse)
         {
-            if (dgv_employee.SelectedRows.Count > 0)
+            switch (warehouse)
             {
-                var seclectRow = dgv_employee.SelectedRows[0];
-                string name = seclectRow.Cells[1].Value.ToString();
-                string phone = seclectRow.Cells[2].Value.ToString();
-                string address = seclectRow.Cells[4].Value.ToString();
-                string role = seclectRow.Cells[5].Value.ToString();
-                string warehouse = seclectRow.Cells[6].Value.ToString();
-               /* pn_user_txt_name.Text = name;
-                pn_user_txt_phone.Text = phone;
-                pn_user_txt_address.Text = address;
-                pn_user_txt_role.Text = role;
-                pn_user_txt_wh.Text = warehouse;*/
-
-            }
-        }
-
-        void Loaddata()
-        {
-            try
-            {
-                var user = _userService.GetAllUsers();
-                if (user != null && user.Any())
-                {
-                    dgv_employee.DataSource = user.ToList();
-                }
-                else
-                {
-                    MessageBox.Show("No data retrieved from the database.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error loading data: " + ex.Message);
-            }
-        } // done
-
-        void Loaddata(int Wh_ID)
-        {
-            try
-            {
-                var user = _userService.GetAllUsers(Wh_ID);
-                if (user != null && user.Any())
-                {
-                    dgv_employee.DataSource = user.ToList();
-                }
-                else
-                {
-                    MessageBox.Show("No data retrieved from the database.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error loading data: " + ex.Message);
+                case "Warehouse North": return 1;
+                case "Warehouse South": return 2;
+                case "Warehouse Central": return 3;
+                default: throw new ArgumentException("Invalid warehouse name");
             }
         } //done
-
-        //transfer function
+        
         private string GetRoleName(int role)
         {
             switch (role)
@@ -316,31 +402,5 @@ namespace ASD_Final_Project
                 default: throw new ArgumentException("Invalid role name");
             }
         } //done
-
-        private int GetWareHouseID(string warehouse)
-        {
-            switch (warehouse)
-            {
-                case "Warehouse North": return 1;
-                case "Warehouse South": return 2;
-                case "Warehouse Central": return 3;
-                default: throw new ArgumentException("Invalid warehouse name");
-            }
-        } //done
-
-        private void pn_Employee_VisibleChanged(object sender, EventArgs e)
-        {
-            if(pn_Employee.Visible)
-            {   
-                if(wh_id != 0)
-                {
-                    Loaddata(wh_id); 
-                }
-                else
-                {
-                    Loaddata();
-                }
-            }
-        }
     }
 }

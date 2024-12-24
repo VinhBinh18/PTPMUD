@@ -15,10 +15,12 @@ namespace ASD_Final_Project
     public partial class Form_Sign : Form
     {
         private readonly UserService _userService;
-        public Form_Sign(UserService userService)
+        private readonly ProductService _productService;
+        public Form_Sign(UserService userService, ProductService productService)
         {
             InitializeComponent();
             _userService = userService;
+            _productService = productService;
         }
 
 
@@ -39,7 +41,7 @@ namespace ASD_Final_Project
                 }
                 else
                 {
-                    Form_DashBoard admin_Dashboard = new Form_DashBoard(_userService, userLog);
+                    Form_DashBoard admin_Dashboard = new Form_DashBoard(_userService, _productService, userLog);
                     admin_Dashboard.ShowDialog();
                     this.Hide();
                 }

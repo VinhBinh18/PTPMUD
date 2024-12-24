@@ -17,7 +17,7 @@ namespace ASD_Final_Project.Program
         {
             _dbConnection = new SqlConnection(connectionString);
         }
-
+        
         public User GetUser(int UserID)
         {
             User user = null;
@@ -27,7 +27,6 @@ namespace ASD_Final_Project.Program
                 _dbConnection.Open();
                 using (var command = new SqlCommand("SELECT U.U_ID, U.U_UserName, U.U_Address, U.U_Phone, R.Rl_Name, W.Wh_Name  FROM Users U, Roles R, WareHouse W WHERE U.U_ID = @U_ID and U.Rl_ID = R.Rl_ID and W.Wh_ID = U.Wh_ID;", _dbConnection))
                 {
-                    command.Parameters.AddWithValue("@U_ID", UserID);
                     using (var reader = command.ExecuteReader())
                     {
                         while (reader.Read())
@@ -371,6 +370,7 @@ namespace ASD_Final_Project.Program
                 _dbConnection.Close();
             }
         }
+
         public (bool isValid, string message) CheckUser(string username, string password)
         {
             try
