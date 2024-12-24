@@ -324,8 +324,6 @@ namespace ASD_Final_Project.Program
             }
         } //done
 
-
-
         public int CountUser (int Wh_ID)
         {
             try
