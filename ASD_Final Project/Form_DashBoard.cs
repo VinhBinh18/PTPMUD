@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -25,6 +26,7 @@ namespace ASD_Final_Project
             _productService = productService;
             InitializeComponent();
             Customize();
+            
         }
 
         private void Customize()
@@ -68,17 +70,20 @@ namespace ASD_Final_Project
             if(_user.Role == "Admin")
             {
                 wh_id = 0;
+                quantity(wh_id);
                 MoveSidePanel(btn_home);
                 ShowPanel(pn_Home);
             }else if(_user.Role == "Manager")
             {
                 wh_id = GetWareHouseID(_user.Warehouse);
+                quantity(wh_id);
                 MoveSidePanel(btn_home);
                 ShowPanel(pn_Home);
             }
             else
             {
                 wh_id = GetWareHouseID(_user.Warehouse);
+                quantity(wh_id);
                 MoveSidePanel(btn_home);
                 ShowPanel(pn_Welcome);
             }
@@ -167,11 +172,19 @@ namespace ASD_Final_Project
         }//done
 
         //wh link
+        private void btn_wh1_Click(object sender, EventArgs e)
+        {
+            hideMenu();
+            wh_id = 1;
+            quantity(wh_id);
+            ShowPanel(pn_Wh1);
+        }//done
+
         private void btn_wh2_Click(object sender, EventArgs e)
         {
             hideMenu();
             wh_id = 2;
-            label54.Text = _userService.CountUser(wh_id).ToString();
+            quantity(wh_id);
             ShowPanel(pn_Wh2);
         }//done
 
@@ -179,16 +192,8 @@ namespace ASD_Final_Project
         {
             hideMenu();
             wh_id = 3;
-            label43.Text = _userService.CountUser(wh_id).ToString();
+            quantity(wh_id);
             ShowPanel(pn_Wh3);
-        }//done
-
-        private void btn_wh1_Click(object sender, EventArgs e)
-        {
-            hideMenu();
-            wh_id = 1;
-            label41.Text = _userService.CountUser(wh_id).ToString();
-            ShowPanel(pn_Wh1);
         }//done
 
         private void Form_DashBoard_Load(object sender, EventArgs e)
@@ -278,15 +283,7 @@ namespace ASD_Final_Project
         {
             try
             {
-                var product = _productService.GetAllProducts();
-                if (product != null && product.Any())
-                {
-                    dgv_inventory.DataSource = product.ToList();
-                }
-                else
-                {
-                    MessageBox.Show("No data retrieved from the database.");
-                }
+                _productService.InventoryProduct(dgv_inventory);
             }
             catch (Exception ex)
             {
@@ -298,15 +295,7 @@ namespace ASD_Final_Project
         {
             try
             {
-                var product = _productService.GetAllProducts(Wh_ID);
-                if (product != null && product.Any())
-                {
-                    dgv_inventory.DataSource = product.ToList();
-                }
-                else
-                {
-                    MessageBox.Show("No data retrieved from the database int.");
-                }
+                _productService.InventoryProduct(dgv_inventory, Wh_ID);
             }
             catch (Exception ex)
             {
@@ -328,7 +317,128 @@ namespace ASD_Final_Project
                 }
             }
         }//done
-       
+
+        //Goods Loading
+        void LoadDataGoods()
+        {
+            try
+            {
+                var product = _productService.GetAllProducts();
+                if (product != null && product.Any())
+                {
+                    dgv_good.DataSource = product.ToList();
+                }
+                else
+                {
+                    MessageBox.Show("No data retrieved from the database.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading data: " + ex.Message);
+            }
+        }//done
+
+        void LoadDataGoods(int Wh_ID)
+        {
+            try
+            {
+                var product = _productService.GetAllProducts(Wh_ID);
+                if (product != null && product.Any())
+                {
+                    dgv_good.DataSource = product.ToList();
+                }
+                else
+                {
+                    MessageBox.Show("No data retrieved from the database int.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading data: " + ex.Message);
+            }
+        }//done
+
+        private void pn_Good_VisibleChanged(object sender, EventArgs e)
+        {
+            if (pn_Good.Visible)
+            {
+                if (wh_id != 0)
+                {
+                    LoadDataGoods(wh_id);
+                }
+                else
+                {
+                    LoadDataGoods();
+                }
+            }
+        }
+        
+        //Order Loading
+        void LoadDataOrders()
+        {
+            try
+            {
+                _productService.OrderProduct(dgv_order);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading data: " + ex.Message);
+            }
+        }
+
+        void LoadDataOrders(int Wh_ID)
+        {
+            try
+            {
+                _productService.OrderProduct(dgv_order, Wh_ID);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading data: " + ex.Message);
+            }
+        }
+
+        private void pn_Order_VisibleChanged(object sender, EventArgs e)
+        {
+            if (pn_Order.Visible)
+            {
+                if (wh_id != 0)
+                {
+                    LoadDataOrders(wh_id);
+                }
+                else
+                {
+                    LoadDataOrders();
+                }
+            }
+        }
+
+        //count label
+        private void quantity(int wh_id)
+        {
+            if(wh_id == 1) 
+            { 
+                label41.Text = _userService.CountUser(wh_id).ToString();
+                label47.Text = _productService.CountProduct(wh_id).ToString();
+            }
+            else if(wh_id == 2)
+            {
+                label54.Text = _userService.CountUser(wh_id).ToString();
+                label60.Text = _productService.CountProduct(wh_id).ToString();
+            }
+            else if (wh_id == 3)
+            {
+                label43.Text = _userService.CountUser(wh_id).ToString();
+                label53.Text = _productService.CountProduct(wh_id).ToString();
+            }
+            else
+            {
+                label11.Text = _userService.CountUsers().ToString();
+                label3.Text = _productService.CountProducts().ToString();
+            }
+        }
+
         //transfer function
         private void checkRole(string role, string wh)
         {
@@ -402,5 +512,6 @@ namespace ASD_Final_Project
                 default: throw new ArgumentException("Invalid role name");
             }
         } //done
+
     }
 }
