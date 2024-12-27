@@ -55,6 +55,11 @@ namespace ASD_Final_Project.Program
             _productRepository.OrderProduct(dgv,wh_id);
         }
 
+        public int CountOrder()
+        {
+            return CountOrder();
+        }
+
         /*        public void AddProduct(Product product)
                 {
                     _productRepository.AddProduct(product);
