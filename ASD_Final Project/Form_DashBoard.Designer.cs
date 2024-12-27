@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_DashBoard));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lb_role = new System.Windows.Forms.Label();
             this.lb_name = new System.Windows.Forms.Label();
@@ -48,50 +48,25 @@
             this.btn_logout = new System.Windows.Forms.Button();
             this.btn_home = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pn_Home = new System.Windows.Forms.Panel();
-            this.label62 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.btn_Order = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.btn_Employee = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btn_Inventory = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.btm_goods = new System.Windows.Forms.Button();
-            this.pn_Wh2 = new System.Windows.Forms.Panel();
-            this.label31 = new System.Windows.Forms.Label();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.label50 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label52 = new System.Windows.Forms.Label();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label54 = new System.Windows.Forms.Label();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.label55 = new System.Windows.Forms.Label();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.label57 = new System.Windows.Forms.Label();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.label58 = new System.Windows.Forms.Label();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.label60 = new System.Windows.Forms.Label();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.label61 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
+            this.pn_Employee = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.rolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btn_el_edit = new System.Windows.Forms.Button();
+            this.btn_el_delete = new System.Windows.Forms.Button();
+            this.btn_el_add = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.dgv_employee = new System.Windows.Forms.DataGridView();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txt_Name = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.pn_Wh3 = new System.Windows.Forms.Panel();
             this.label37 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -136,31 +111,28 @@
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label48 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.pn_Inventory = new System.Windows.Forms.Panel();
-            this.button14 = new System.Windows.Forms.Button();
-            this.label29 = new System.Windows.Forms.Label();
-            this.txt_Status = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.txt_QInventory = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
-            this.label24 = new System.Windows.Forms.Label();
-            this.txt_PCodeInventory = new System.Windows.Forms.TextBox();
-            this.dgv_inventory = new System.Windows.Forms.DataGridView();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.txt_PNameInventory = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.pn_Welcome = new System.Windows.Forms.Panel();
-            this.lb_welcome = new System.Windows.Forms.Label();
-            this.pn_Employee = new System.Windows.Forms.Panel();
-            this.button13 = new System.Windows.Forms.Button();
-            this.dgv_employee = new System.Windows.Forms.DataGridView();
-            this.cb_Role = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txt_Name = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.pn_Home = new System.Windows.Forms.Panel();
+            this.label62 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.btn_Order = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btn_Employee = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_Inventory = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.btm_goods = new System.Windows.Forms.Button();
             this.pn_Order = new System.Windows.Forms.Panel();
             this.button15 = new System.Windows.Forms.Button();
             this.lbl_status = new System.Windows.Forms.Label();
@@ -185,6 +157,45 @@
             this.label19 = new System.Windows.Forms.Label();
             this.txt_PName = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
+            this.pn_Wh2 = new System.Windows.Forms.Panel();
+            this.label31 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.label50 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label52 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label54 = new System.Windows.Forms.Label();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.label55 = new System.Windows.Forms.Label();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.label57 = new System.Windows.Forms.Label();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.label58 = new System.Windows.Forms.Label();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.label60 = new System.Windows.Forms.Label();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.label61 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
+            this.pn_Inventory = new System.Windows.Forms.Panel();
+            this.button14 = new System.Windows.Forms.Button();
+            this.label29 = new System.Windows.Forms.Label();
+            this.txt_Status = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.txt_QInventory = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.label24 = new System.Windows.Forms.Label();
+            this.txt_PCodeInventory = new System.Windows.Forms.TextBox();
+            this.dgv_inventory = new System.Windows.Forms.DataGridView();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.txt_PNameInventory = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.pn_Welcome = new System.Windows.Forms.Panel();
+            this.lb_welcome = new System.Windows.Forms.Label();
             this.pn_Header = new System.Windows.Forms.Panel();
             this.btn_Menuside = new System.Windows.Forms.Button();
             this.Sidepart = new System.Windows.Forms.Timer(this.components);
@@ -193,24 +204,10 @@
             this.pn_Sidebar.SuspendLayout();
             this.pn_MenuWH.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.pn_Home.SuspendLayout();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.pn_Wh2.SuspendLayout();
-            this.panel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            this.panel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            this.panel15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            this.panel17.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            this.pn_Employee.SuspendLayout();
+            this.panel19.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rolesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_employee)).BeginInit();
             this.pn_Wh3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -229,15 +226,31 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            this.pn_Inventory.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_inventory)).BeginInit();
-            this.pn_Welcome.SuspendLayout();
-            this.pn_Employee.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_employee)).BeginInit();
+            this.pn_Home.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.pn_Order.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_order)).BeginInit();
             this.pn_Good.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_good)).BeginInit();
+            this.pn_Wh2.SuspendLayout();
+            this.panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            this.panel14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            this.panel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            this.panel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            this.pn_Inventory.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_inventory)).BeginInit();
+            this.pn_Welcome.SuspendLayout();
             this.pn_Header.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -439,6 +452,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.pn_Employee);
             this.panel3.Controls.Add(this.pn_Wh3);
             this.panel3.Controls.Add(this.pn_Wh1);
             this.panel3.Controls.Add(this.pn_Home);
@@ -447,7 +461,6 @@
             this.panel3.Controls.Add(this.pn_Wh2);
             this.panel3.Controls.Add(this.pn_Inventory);
             this.panel3.Controls.Add(this.pn_Welcome);
-            this.panel3.Controls.Add(this.pn_Employee);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(192, 44);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
@@ -455,508 +468,238 @@
             this.panel3.Size = new System.Drawing.Size(754, 560);
             this.panel3.TabIndex = 6;
             // 
-            // pn_Home
-            // 
-            this.pn_Home.Controls.Add(this.label62);
-            this.pn_Home.Controls.Add(this.panel6);
-            this.pn_Home.Controls.Add(this.panel5);
-            this.pn_Home.Controls.Add(this.panel4);
-            this.pn_Home.Controls.Add(this.panel10);
-            this.pn_Home.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pn_Home.Location = new System.Drawing.Point(0, 0);
-            this.pn_Home.Name = "pn_Home";
-            this.pn_Home.Size = new System.Drawing.Size(754, 560);
-            this.pn_Home.TabIndex = 9;
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label62.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
-            this.label62.Location = new System.Drawing.Point(88, 32);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(130, 29);
-            this.label62.TabIndex = 26;
-            this.label62.Text = "Statement";
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.label17);
-            this.panel6.Controls.Add(this.btn_Order);
-            this.panel6.Controls.Add(this.label16);
-            this.panel6.Controls.Add(this.pictureBox4);
-            this.panel6.Location = new System.Drawing.Point(440, 334);
-            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(303, 180);
-            this.panel6.TabIndex = 17;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(7, 16);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(54, 20);
-            this.label17.TabIndex = 21;
-            this.label17.Text = "Order";
-            // 
-            // btn_Order
-            // 
-            this.btn_Order.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(224)))), ((int)(((byte)(186)))));
-            this.btn_Order.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Order.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Order.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
-            this.btn_Order.Location = new System.Drawing.Point(181, 132);
-            this.btn_Order.Name = "btn_Order";
-            this.btn_Order.Size = new System.Drawing.Size(100, 28);
-            this.btn_Order.TabIndex = 4;
-            this.btn_Order.Text = "Details...";
-            this.btn_Order.UseVisualStyleBackColor = false;
-            this.btn_Order.Click += new System.EventHandler(this.btn_Order_Click);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
-            this.label16.Location = new System.Drawing.Point(170, 44);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(69, 29);
-            this.label16.TabIndex = 21;
-            this.label16.Text = "1234";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(10, 57);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(75, 81);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 5;
-            this.pictureBox4.TabStop = false;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.btn_Employee);
-            this.panel5.Controls.Add(this.label11);
-            this.panel5.Controls.Add(this.pictureBox3);
-            this.panel5.Controls.Add(this.label8);
-            this.panel5.Location = new System.Drawing.Point(52, 334);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(303, 180);
-            this.panel5.TabIndex = 16;
-            // 
-            // btn_Employee
-            // 
-            this.btn_Employee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(224)))), ((int)(((byte)(186)))));
-            this.btn_Employee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Employee.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Employee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
-            this.btn_Employee.Location = new System.Drawing.Point(181, 132);
-            this.btn_Employee.Name = "btn_Employee";
-            this.btn_Employee.Size = new System.Drawing.Size(100, 28);
-            this.btn_Employee.TabIndex = 4;
-            this.btn_Employee.Text = "Details...";
-            this.btn_Employee.UseVisualStyleBackColor = false;
-            this.btn_Employee.Click += new System.EventHandler(this.btn_Employee_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
-            this.label11.Location = new System.Drawing.Point(174, 44);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 29);
-            this.label11.TabIndex = 19;
-            this.label11.Text = "1234";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(8, 56);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(75, 81);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(7, 16);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(87, 20);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Employee";
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.btn_Inventory);
-            this.panel4.Controls.Add(this.label9);
-            this.panel4.Controls.Add(this.pictureBox2);
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Location = new System.Drawing.Point(440, 98);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(303, 180);
-            this.panel4.TabIndex = 15;
-            // 
-            // btn_Inventory
-            // 
-            this.btn_Inventory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(224)))), ((int)(((byte)(186)))));
-            this.btn_Inventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Inventory.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Inventory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
-            this.btn_Inventory.Location = new System.Drawing.Point(181, 132);
-            this.btn_Inventory.Name = "btn_Inventory";
-            this.btn_Inventory.Size = new System.Drawing.Size(100, 28);
-            this.btn_Inventory.TabIndex = 4;
-            this.btn_Inventory.Text = "Details...";
-            this.btn_Inventory.UseVisualStyleBackColor = false;
-            this.btn_Inventory.Click += new System.EventHandler(this.btn_Inventory_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
-            this.label9.Location = new System.Drawing.Point(170, 54);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(69, 29);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "1234";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(10, 53);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(75, 81);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 23);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 20);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Inventory";
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.label3);
-            this.panel10.Controls.Add(this.pictureBox5);
-            this.panel10.Controls.Add(this.label15);
-            this.panel10.Controls.Add(this.btm_goods);
-            this.panel10.Location = new System.Drawing.Point(50, 98);
-            this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(303, 180);
-            this.panel10.TabIndex = 11;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
-            this.label3.Location = new System.Drawing.Point(176, 58);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 29);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "1234";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(12, 53);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(75, 81);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(14, 16);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(62, 20);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Goods";
-            // 
-            // btm_goods
-            // 
-            this.btm_goods.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(224)))), ((int)(((byte)(186)))));
-            this.btm_goods.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btm_goods.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btm_goods.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
-            this.btm_goods.Location = new System.Drawing.Point(181, 132);
-            this.btm_goods.Name = "btm_goods";
-            this.btm_goods.Size = new System.Drawing.Size(100, 28);
-            this.btm_goods.TabIndex = 4;
-            this.btm_goods.Text = "Details...";
-            this.btm_goods.UseVisualStyleBackColor = false;
-            this.btm_goods.Click += new System.EventHandler(this.btm_goods_Click);
-            // 
-            // pn_Wh2
-            // 
-            this.pn_Wh2.Controls.Add(this.label31);
-            this.pn_Wh2.Controls.Add(this.panel13);
-            this.pn_Wh2.Controls.Add(this.panel14);
-            this.pn_Wh2.Controls.Add(this.panel15);
-            this.pn_Wh2.Controls.Add(this.panel17);
-            this.pn_Wh2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pn_Wh2.Location = new System.Drawing.Point(0, 0);
-            this.pn_Wh2.Name = "pn_Wh2";
-            this.pn_Wh2.Size = new System.Drawing.Size(754, 560);
-            this.pn_Wh2.TabIndex = 25;
-            this.pn_Wh2.Visible = false;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
-            this.label31.Location = new System.Drawing.Point(88, 28);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(166, 29);
-            this.label31.TabIndex = 26;
-            this.label31.Text = "Warehouse 2";
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.label50);
-            this.panel13.Controls.Add(this.button5);
-            this.panel13.Controls.Add(this.label52);
-            this.panel13.Controls.Add(this.pictureBox10);
-            this.panel13.Location = new System.Drawing.Point(418, 327);
-            this.panel13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(303, 180);
-            this.panel13.TabIndex = 23;
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.Location = new System.Drawing.Point(234, 16);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(54, 20);
-            this.label50.TabIndex = 21;
-            this.label50.Text = "Order";
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(224)))), ((int)(((byte)(186)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
-            this.button5.Location = new System.Drawing.Point(16, 132);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 28);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Details...";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
-            this.label52.Location = new System.Drawing.Point(30, 51);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(70, 32);
-            this.label52.TabIndex = 21;
-            this.label52.Text = "1234";
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(215, 62);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(75, 81);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 5;
-            this.pictureBox10.TabStop = false;
-            // 
-            // panel14
-            // 
-            this.panel14.Controls.Add(this.button6);
-            this.panel14.Controls.Add(this.label54);
-            this.panel14.Controls.Add(this.pictureBox11);
-            this.panel14.Controls.Add(this.label55);
-            this.panel14.Location = new System.Drawing.Point(36, 327);
-            this.panel14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(303, 180);
-            this.panel14.TabIndex = 22;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(224)))), ((int)(((byte)(186)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
-            this.button6.Location = new System.Drawing.Point(185, 132);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(100, 28);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "Details...";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.btn_Employee_Click);
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
-            this.label54.Location = new System.Drawing.Point(198, 52);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(70, 32);
-            this.label54.TabIndex = 19;
-            this.label54.Text = "1234";
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(14, 62);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(75, 81);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 5;
-            this.pictureBox11.TabStop = false;
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.Location = new System.Drawing.Point(10, 16);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(87, 20);
-            this.label55.TabIndex = 0;
-            this.label55.Text = "Employee";
-            // 
-            // panel15
-            // 
-            this.panel15.Controls.Add(this.button7);
-            this.panel15.Controls.Add(this.label57);
-            this.panel15.Controls.Add(this.pictureBox12);
-            this.panel15.Controls.Add(this.label58);
-            this.panel15.Location = new System.Drawing.Point(418, 90);
-            this.panel15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(303, 180);
-            this.panel15.TabIndex = 21;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(224)))), ((int)(((byte)(186)))));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
-            this.button7.Location = new System.Drawing.Point(192, 132);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(100, 28);
-            this.button7.TabIndex = 4;
-            this.button7.Text = "Details...";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.btn_Inventory_Click);
-            // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
-            this.label57.Location = new System.Drawing.Point(212, 54);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(70, 32);
-            this.label57.TabIndex = 7;
-            this.label57.Text = "1234";
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(17, 61);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(75, 81);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 5;
-            this.pictureBox12.TabStop = false;
-            // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.Location = new System.Drawing.Point(13, 13);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(83, 20);
-            this.label58.TabIndex = 0;
-            this.label58.Text = "Inventory";
-            // 
-            // panel17
-            // 
-            this.panel17.Controls.Add(this.label60);
-            this.panel17.Controls.Add(this.pictureBox13);
-            this.panel17.Controls.Add(this.label61);
-            this.panel17.Controls.Add(this.button8);
-            this.panel17.Location = new System.Drawing.Point(34, 90);
-            this.panel17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(303, 180);
-            this.panel17.TabIndex = 20;
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label60.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
-            this.label60.Location = new System.Drawing.Point(39, 49);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(70, 32);
-            this.label60.TabIndex = 5;
-            this.label60.Text = "1234";
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(206, 61);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(75, 81);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox13.TabIndex = 0;
-            this.pictureBox13.TabStop = false;
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.Location = new System.Drawing.Point(216, 15);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(62, 20);
-            this.label61.TabIndex = 0;
-            this.label61.Text = "Goods";
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(224)))), ((int)(((byte)(186)))));
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
-            this.button8.Location = new System.Drawing.Point(22, 132);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(100, 28);
-            this.button8.TabIndex = 4;
-            this.button8.Text = "Details...";
-            this.button8.UseVisualStyleBackColor = false;
+            // pn_Employee
+            // 
+            this.pn_Employee.Controls.Add(this.label1);
+            this.pn_Employee.Controls.Add(this.panel19);
+            this.pn_Employee.Controls.Add(this.btn_el_edit);
+            this.pn_Employee.Controls.Add(this.btn_el_delete);
+            this.pn_Employee.Controls.Add(this.btn_el_add);
+            this.pn_Employee.Controls.Add(this.button13);
+            this.pn_Employee.Controls.Add(this.dgv_employee);
+            this.pn_Employee.Controls.Add(this.label12);
+            this.pn_Employee.Controls.Add(this.txt_Name);
+            this.pn_Employee.Controls.Add(this.label7);
+            this.pn_Employee.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pn_Employee.Location = new System.Drawing.Point(0, 0);
+            this.pn_Employee.Name = "pn_Employee";
+            this.pn_Employee.Size = new System.Drawing.Size(754, 560);
+            this.pn_Employee.TabIndex = 18;
+            this.pn_Employee.Visible = false;
+            this.pn_Employee.VisibleChanged += new System.EventHandler(this.pn_Employee_VisibleChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(187, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "label1";
+            // 
+            // panel19
+            // 
+            this.panel19.Controls.Add(this.label14);
+            this.panel19.Controls.Add(this.textBox7);
+            this.panel19.Controls.Add(this.label10);
+            this.panel19.Controls.Add(this.label6);
+            this.panel19.Controls.Add(this.label4);
+            this.panel19.Controls.Add(this.label2);
+            this.panel19.Controls.Add(this.textBox1);
+            this.panel19.Location = new System.Drawing.Point(79, 117);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(600, 322);
+            this.panel19.TabIndex = 22;
+            // 
+            // rolesBindingSource
+            // 
+            this.rolesBindingSource.DataMember = "Roles";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(21, 113);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(50, 20);
+            this.label14.TabIndex = 33;
+            this.label14.Text = "Name";
+            // 
+            // textBox7
+            // 
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textBox7.Location = new System.Drawing.Point(25, 136);
+            this.textBox7.Multiline = true;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(188, 26);
+            this.textBox7.TabIndex = 32;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(21, 119);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(0, 20);
+            this.label10.TabIndex = 29;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(265, 58);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(39, 20);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "Role";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(21, 58);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 20);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "Name";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
+            this.label2.Location = new System.Drawing.Point(206, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(183, 29);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Add Employee";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textBox1.Location = new System.Drawing.Point(25, 81);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(188, 26);
+            this.textBox1.TabIndex = 24;
+            // 
+            // btn_el_edit
+            // 
+            this.btn_el_edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(200)))), ((int)(((byte)(113)))));
+            this.btn_el_edit.FlatAppearance.BorderSize = 0;
+            this.btn_el_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_el_edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_el_edit.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_el_edit.Location = new System.Drawing.Point(320, 511);
+            this.btn_el_edit.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_el_edit.Name = "btn_el_edit";
+            this.btn_el_edit.Size = new System.Drawing.Size(122, 28);
+            this.btn_el_edit.TabIndex = 21;
+            this.btn_el_edit.Text = "Edit";
+            this.btn_el_edit.UseVisualStyleBackColor = false;
+            // 
+            // btn_el_delete
+            // 
+            this.btn_el_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(200)))), ((int)(((byte)(113)))));
+            this.btn_el_delete.FlatAppearance.BorderSize = 0;
+            this.btn_el_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_el_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_el_delete.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_el_delete.Location = new System.Drawing.Point(496, 511);
+            this.btn_el_delete.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_el_delete.Name = "btn_el_delete";
+            this.btn_el_delete.Size = new System.Drawing.Size(122, 28);
+            this.btn_el_delete.TabIndex = 20;
+            this.btn_el_delete.Text = "Delete";
+            this.btn_el_delete.UseVisualStyleBackColor = false;
+            // 
+            // btn_el_add
+            // 
+            this.btn_el_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(200)))), ((int)(((byte)(113)))));
+            this.btn_el_add.FlatAppearance.BorderSize = 0;
+            this.btn_el_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_el_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_el_add.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_el_add.Location = new System.Drawing.Point(144, 511);
+            this.btn_el_add.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_el_add.Name = "btn_el_add";
+            this.btn_el_add.Size = new System.Drawing.Size(122, 28);
+            this.btn_el_add.TabIndex = 18;
+            this.btn_el_add.Text = "Add";
+            this.btn_el_add.UseVisualStyleBackColor = false;
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(200)))), ((int)(((byte)(113)))));
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.ForeColor = System.Drawing.SystemColors.Control;
+            this.button13.Location = new System.Drawing.Point(315, 157);
+            this.button13.Margin = new System.Windows.Forms.Padding(2);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(122, 28);
+            this.button13.TabIndex = 17;
+            this.button13.Text = "Search";
+            this.button13.UseVisualStyleBackColor = false;
+            // 
+            // dgv_employee
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_employee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_employee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_employee.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dgv_employee.Location = new System.Drawing.Point(0, 231);
+            this.dgv_employee.Name = "dgv_employee";
+            this.dgv_employee.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dgv_employee.RowHeadersVisible = false;
+            this.dgv_employee.RowHeadersWidth = 50;
+            this.dgv_employee.RowTemplate.Height = 24;
+            this.dgv_employee.Size = new System.Drawing.Size(754, 266);
+            this.dgv_employee.TabIndex = 7;
+            this.dgv_employee.SelectionChanged += new System.EventHandler(this.dgv_employee_SelectionChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(89, 83);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(50, 20);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Name";
+            // 
+            // txt_Name
+            // 
+            this.txt_Name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txt_Name.Location = new System.Drawing.Point(93, 106);
+            this.txt_Name.Multiline = true;
+            this.txt_Name.Name = "txt_Name";
+            this.txt_Name.Size = new System.Drawing.Size(188, 26);
+            this.txt_Name.TabIndex = 1;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
+            this.label7.Location = new System.Drawing.Point(315, 2);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(130, 29);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Employee";
             // 
             // pn_Wh3
             // 
@@ -1464,315 +1207,257 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.btm_goods_Click);
             // 
-            // pn_Inventory
+            // pn_Home
             // 
-            this.pn_Inventory.Controls.Add(this.button14);
-            this.pn_Inventory.Controls.Add(this.label29);
-            this.pn_Inventory.Controls.Add(this.txt_Status);
-            this.pn_Inventory.Controls.Add(this.label28);
-            this.pn_Inventory.Controls.Add(this.txt_QInventory);
-            this.pn_Inventory.Controls.Add(this.label23);
-            this.pn_Inventory.Controls.Add(this.dateTimePicker4);
-            this.pn_Inventory.Controls.Add(this.label24);
-            this.pn_Inventory.Controls.Add(this.txt_PCodeInventory);
-            this.pn_Inventory.Controls.Add(this.dgv_inventory);
-            this.pn_Inventory.Controls.Add(this.label25);
-            this.pn_Inventory.Controls.Add(this.label26);
-            this.pn_Inventory.Controls.Add(this.txt_PNameInventory);
-            this.pn_Inventory.Controls.Add(this.label27);
-            this.pn_Inventory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pn_Inventory.Location = new System.Drawing.Point(0, 0);
-            this.pn_Inventory.Name = "pn_Inventory";
-            this.pn_Inventory.Size = new System.Drawing.Size(754, 560);
-            this.pn_Inventory.TabIndex = 20;
-            this.pn_Inventory.Visible = false;
-            this.pn_Inventory.VisibleChanged += new System.EventHandler(this.pn_Inventory_VisibleChanged);
+            this.pn_Home.Controls.Add(this.label62);
+            this.pn_Home.Controls.Add(this.panel6);
+            this.pn_Home.Controls.Add(this.panel5);
+            this.pn_Home.Controls.Add(this.panel4);
+            this.pn_Home.Controls.Add(this.panel10);
+            this.pn_Home.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pn_Home.Location = new System.Drawing.Point(0, 0);
+            this.pn_Home.Name = "pn_Home";
+            this.pn_Home.Size = new System.Drawing.Size(754, 560);
+            this.pn_Home.TabIndex = 9;
             // 
-            // button14
+            // label62
             // 
-            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(200)))), ((int)(((byte)(113)))));
-            this.button14.FlatAppearance.BorderSize = 0;
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.ForeColor = System.Drawing.SystemColors.Control;
-            this.button14.Location = new System.Drawing.Point(337, 234);
-            this.button14.Margin = new System.Windows.Forms.Padding(2);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(122, 28);
-            this.button14.TabIndex = 16;
-            this.button14.Text = "Search";
-            this.button14.UseVisualStyleBackColor = false;
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label62.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
+            this.label62.Location = new System.Drawing.Point(88, 32);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(130, 29);
+            this.label62.TabIndex = 26;
+            this.label62.Text = "Statement";
             // 
-            // label29
+            // panel6
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(523, 167);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(50, 20);
-            this.label29.TabIndex = 15;
-            this.label29.Text = "Status";
+            this.panel6.Controls.Add(this.label17);
+            this.panel6.Controls.Add(this.btn_Order);
+            this.panel6.Controls.Add(this.label16);
+            this.panel6.Controls.Add(this.pictureBox4);
+            this.panel6.Location = new System.Drawing.Point(440, 334);
+            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(303, 180);
+            this.panel6.TabIndex = 17;
             // 
-            // txt_Status
+            // label17
             // 
-            this.txt_Status.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Status.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Status.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txt_Status.Location = new System.Drawing.Point(526, 193);
-            this.txt_Status.Multiline = true;
-            this.txt_Status.Name = "txt_Status";
-            this.txt_Status.Size = new System.Drawing.Size(107, 20);
-            this.txt_Status.TabIndex = 14;
-            this.txt_Status.Text = "Out of Stock";
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(7, 16);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(54, 20);
+            this.label17.TabIndex = 21;
+            this.label17.Text = "Order";
             // 
-            // label28
+            // btn_Order
             // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(428, 167);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(68, 20);
-            this.label28.TabIndex = 13;
-            this.label28.Text = "Quantity";
+            this.btn_Order.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(224)))), ((int)(((byte)(186)))));
+            this.btn_Order.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Order.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Order.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
+            this.btn_Order.Location = new System.Drawing.Point(181, 132);
+            this.btn_Order.Name = "btn_Order";
+            this.btn_Order.Size = new System.Drawing.Size(100, 28);
+            this.btn_Order.TabIndex = 4;
+            this.btn_Order.Text = "Details...";
+            this.btn_Order.UseVisualStyleBackColor = false;
+            this.btn_Order.Click += new System.EventHandler(this.btn_Order_Click);
             // 
-            // txt_QInventory
+            // label16
             // 
-            this.txt_QInventory.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_QInventory.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txt_QInventory.Location = new System.Drawing.Point(428, 193);
-            this.txt_QInventory.Multiline = true;
-            this.txt_QInventory.Name = "txt_QInventory";
-            this.txt_QInventory.Size = new System.Drawing.Size(57, 20);
-            this.txt_QInventory.TabIndex = 12;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
+            this.label16.Location = new System.Drawing.Point(170, 44);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(69, 29);
+            this.label16.TabIndex = 21;
+            this.label16.Text = "1234";
             // 
-            // label23
+            // pictureBox4
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(426, 155);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(0, 18);
-            this.label23.TabIndex = 11;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(10, 57);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(75, 81);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 5;
+            this.pictureBox4.TabStop = false;
             // 
-            // dateTimePicker4
+            // panel5
             // 
-            this.dateTimePicker4.Location = new System.Drawing.Point(178, 193);
-            this.dateTimePicker4.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(204, 20);
-            this.dateTimePicker4.TabIndex = 10;
+            this.panel5.Controls.Add(this.btn_Employee);
+            this.panel5.Controls.Add(this.label11);
+            this.panel5.Controls.Add(this.pictureBox3);
+            this.panel5.Controls.Add(this.label8);
+            this.panel5.Location = new System.Drawing.Point(52, 334);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(303, 180);
+            this.panel5.TabIndex = 16;
             // 
-            // label24
+            // btn_Employee
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(174, 167);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(100, 20);
-            this.label24.TabIndex = 9;
-            this.label24.Text = "Date of Entry";
+            this.btn_Employee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(224)))), ((int)(((byte)(186)))));
+            this.btn_Employee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Employee.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Employee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
+            this.btn_Employee.Location = new System.Drawing.Point(181, 132);
+            this.btn_Employee.Name = "btn_Employee";
+            this.btn_Employee.Size = new System.Drawing.Size(100, 28);
+            this.btn_Employee.TabIndex = 4;
+            this.btn_Employee.Text = "Details...";
+            this.btn_Employee.UseVisualStyleBackColor = false;
+            this.btn_Employee.Click += new System.EventHandler(this.btn_Employee_Click);
             // 
-            // txt_PCodeInventory
+            // label11
             // 
-            this.txt_PCodeInventory.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_PCodeInventory.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txt_PCodeInventory.Location = new System.Drawing.Point(428, 110);
-            this.txt_PCodeInventory.Multiline = true;
-            this.txt_PCodeInventory.Name = "txt_PCodeInventory";
-            this.txt_PCodeInventory.Size = new System.Drawing.Size(202, 20);
-            this.txt_PCodeInventory.TabIndex = 8;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
+            this.label11.Location = new System.Drawing.Point(174, 44);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(69, 29);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "1234";
             // 
-            // dgv_inventory
+            // pictureBox3
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_inventory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgv_inventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_inventory.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgv_inventory.Location = new System.Drawing.Point(39, 284);
-            this.dgv_inventory.Name = "dgv_inventory";
-            this.dgv_inventory.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dgv_inventory.RowHeadersVisible = false;
-            this.dgv_inventory.RowHeadersWidth = 50;
-            this.dgv_inventory.RowTemplate.Height = 24;
-            this.dgv_inventory.Size = new System.Drawing.Size(684, 266);
-            this.dgv_inventory.TabIndex = 7;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(8, 56);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(75, 81);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 5;
+            this.pictureBox3.TabStop = false;
             // 
-            // label25
+            // label8
             // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(428, 84);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(102, 20);
-            this.label25.TabIndex = 5;
-            this.label25.Text = "Product Code";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(7, 16);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(87, 20);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Employee";
             // 
-            // label26
+            // panel4
             // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(175, 84);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(121, 18);
-            this.label26.TabIndex = 3;
-            this.label26.Text = "Product Name ";
+            this.panel4.Controls.Add(this.btn_Inventory);
+            this.panel4.Controls.Add(this.label9);
+            this.panel4.Controls.Add(this.pictureBox2);
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Location = new System.Drawing.Point(440, 98);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(303, 180);
+            this.panel4.TabIndex = 15;
             // 
-            // txt_PNameInventory
+            // btn_Inventory
             // 
-            this.txt_PNameInventory.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_PNameInventory.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txt_PNameInventory.Location = new System.Drawing.Point(178, 110);
-            this.txt_PNameInventory.Multiline = true;
-            this.txt_PNameInventory.Name = "txt_PNameInventory";
-            this.txt_PNameInventory.Size = new System.Drawing.Size(202, 20);
-            this.txt_PNameInventory.TabIndex = 1;
+            this.btn_Inventory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(224)))), ((int)(((byte)(186)))));
+            this.btn_Inventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Inventory.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Inventory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
+            this.btn_Inventory.Location = new System.Drawing.Point(181, 132);
+            this.btn_Inventory.Name = "btn_Inventory";
+            this.btn_Inventory.Size = new System.Drawing.Size(100, 28);
+            this.btn_Inventory.TabIndex = 4;
+            this.btn_Inventory.Text = "Details...";
+            this.btn_Inventory.UseVisualStyleBackColor = false;
+            this.btn_Inventory.Click += new System.EventHandler(this.btn_Inventory_Click);
             // 
-            // label27
+            // label9
             // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
-            this.label27.Location = new System.Drawing.Point(332, 22);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(118, 29);
-            this.label27.TabIndex = 0;
-            this.label27.Text = "Inventory";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
+            this.label9.Location = new System.Drawing.Point(170, 54);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(69, 29);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "1234";
             // 
-            // pn_Welcome
+            // pictureBox2
             // 
-            this.pn_Welcome.Controls.Add(this.lb_welcome);
-            this.pn_Welcome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pn_Welcome.Location = new System.Drawing.Point(0, 0);
-            this.pn_Welcome.Margin = new System.Windows.Forms.Padding(2);
-            this.pn_Welcome.Name = "pn_Welcome";
-            this.pn_Welcome.Size = new System.Drawing.Size(754, 560);
-            this.pn_Welcome.TabIndex = 26;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(10, 53);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(75, 81);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
             // 
-            // lb_welcome
+            // label5
             // 
-            this.lb_welcome.AutoSize = true;
-            this.lb_welcome.Font = new System.Drawing.Font("Palatino Linotype", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_welcome.Location = new System.Drawing.Point(224, 236);
-            this.lb_welcome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lb_welcome.Name = "lb_welcome";
-            this.lb_welcome.Size = new System.Drawing.Size(325, 51);
-            this.lb_welcome.TabIndex = 0;
-            this.lb_welcome.Text = "Welcome to login";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(12, 23);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(83, 20);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Inventory";
             // 
-            // pn_Employee
+            // panel10
             // 
-            this.pn_Employee.Controls.Add(this.button13);
-            this.pn_Employee.Controls.Add(this.dgv_employee);
-            this.pn_Employee.Controls.Add(this.cb_Role);
-            this.pn_Employee.Controls.Add(this.label14);
-            this.pn_Employee.Controls.Add(this.label12);
-            this.pn_Employee.Controls.Add(this.txt_Name);
-            this.pn_Employee.Controls.Add(this.label7);
-            this.pn_Employee.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pn_Employee.Location = new System.Drawing.Point(0, 0);
-            this.pn_Employee.Name = "pn_Employee";
-            this.pn_Employee.Size = new System.Drawing.Size(754, 560);
-            this.pn_Employee.TabIndex = 18;
-            this.pn_Employee.Visible = false;
-            this.pn_Employee.VisibleChanged += new System.EventHandler(this.pn_Employee_VisibleChanged);
+            this.panel10.Controls.Add(this.label3);
+            this.panel10.Controls.Add(this.pictureBox5);
+            this.panel10.Controls.Add(this.label15);
+            this.panel10.Controls.Add(this.btm_goods);
+            this.panel10.Location = new System.Drawing.Point(50, 98);
+            this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(303, 180);
+            this.panel10.TabIndex = 11;
             // 
-            // button13
+            // label3
             // 
-            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(200)))), ((int)(((byte)(113)))));
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.ForeColor = System.Drawing.SystemColors.Control;
-            this.button13.Location = new System.Drawing.Point(323, 185);
-            this.button13.Margin = new System.Windows.Forms.Padding(2);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(122, 28);
-            this.button13.TabIndex = 17;
-            this.button13.Text = "Search";
-            this.button13.UseVisualStyleBackColor = false;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
+            this.label3.Location = new System.Drawing.Point(176, 58);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 29);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "1234";
             // 
-            // dgv_employee
+            // pictureBox5
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_employee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgv_employee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_employee.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgv_employee.Location = new System.Drawing.Point(76, 231);
-            this.dgv_employee.Name = "dgv_employee";
-            this.dgv_employee.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dgv_employee.RowHeadersVisible = false;
-            this.dgv_employee.RowHeadersWidth = 50;
-            this.dgv_employee.RowTemplate.Height = 24;
-            this.dgv_employee.Size = new System.Drawing.Size(623, 266);
-            this.dgv_employee.TabIndex = 7;
-            this.dgv_employee.SelectionChanged += new System.EventHandler(this.dgv_employee_SelectionChanged);
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(12, 53);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(75, 81);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
             // 
-            // cb_Role
+            // label15
             // 
-            this.cb_Role.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_Role.FormattingEnabled = true;
-            this.cb_Role.Items.AddRange(new object[] {
-            "Manager",
-            "Staff",
-            "All"});
-            this.cb_Role.Location = new System.Drawing.Point(413, 136);
-            this.cb_Role.Name = "cb_Role";
-            this.cb_Role.Size = new System.Drawing.Size(202, 21);
-            this.cb_Role.TabIndex = 6;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(14, 16);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(62, 20);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Goods";
             // 
-            // label14
+            // btm_goods
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(418, 99);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(39, 20);
-            this.label14.TabIndex = 5;
-            this.label14.Text = "Role";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(159, 99);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(50, 20);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "Name";
-            // 
-            // txt_Name
-            // 
-            this.txt_Name.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txt_Name.Location = new System.Drawing.Point(163, 136);
-            this.txt_Name.Multiline = true;
-            this.txt_Name.Name = "txt_Name";
-            this.txt_Name.Size = new System.Drawing.Size(188, 24);
-            this.txt_Name.TabIndex = 1;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
-            this.label7.Location = new System.Drawing.Point(329, 24);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(130, 29);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Employee";
+            this.btm_goods.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(224)))), ((int)(((byte)(186)))));
+            this.btm_goods.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btm_goods.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btm_goods.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
+            this.btm_goods.Location = new System.Drawing.Point(181, 132);
+            this.btm_goods.Name = "btm_goods";
+            this.btm_goods.Size = new System.Drawing.Size(100, 28);
+            this.btm_goods.TabIndex = 4;
+            this.btm_goods.Text = "Details...";
+            this.btm_goods.UseVisualStyleBackColor = false;
+            this.btm_goods.Click += new System.EventHandler(this.btm_goods_Click);
             // 
             // pn_Order
             // 
@@ -1859,14 +1544,14 @@
             // 
             // dgv_order
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_order.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_order.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_order.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_order.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgv_order.Location = new System.Drawing.Point(16, 267);
@@ -2009,14 +1694,14 @@
             // 
             // dgv_good
             // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_good.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_good.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_good.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_good.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgv_good.Location = new System.Drawing.Point(56, 291);
@@ -2070,6 +1755,458 @@
             this.label20.TabIndex = 0;
             this.label20.Text = "Good";
             // 
+            // pn_Wh2
+            // 
+            this.pn_Wh2.Controls.Add(this.label31);
+            this.pn_Wh2.Controls.Add(this.panel13);
+            this.pn_Wh2.Controls.Add(this.panel14);
+            this.pn_Wh2.Controls.Add(this.panel15);
+            this.pn_Wh2.Controls.Add(this.panel17);
+            this.pn_Wh2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pn_Wh2.Location = new System.Drawing.Point(0, 0);
+            this.pn_Wh2.Name = "pn_Wh2";
+            this.pn_Wh2.Size = new System.Drawing.Size(754, 560);
+            this.pn_Wh2.TabIndex = 25;
+            this.pn_Wh2.Visible = false;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
+            this.label31.Location = new System.Drawing.Point(88, 28);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(166, 29);
+            this.label31.TabIndex = 26;
+            this.label31.Text = "Warehouse 2";
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.label50);
+            this.panel13.Controls.Add(this.button5);
+            this.panel13.Controls.Add(this.label52);
+            this.panel13.Controls.Add(this.pictureBox10);
+            this.panel13.Location = new System.Drawing.Point(418, 327);
+            this.panel13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(303, 180);
+            this.panel13.TabIndex = 23;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.Location = new System.Drawing.Point(234, 16);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(54, 20);
+            this.label50.TabIndex = 21;
+            this.label50.Text = "Order";
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(224)))), ((int)(((byte)(186)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
+            this.button5.Location = new System.Drawing.Point(16, 132);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(100, 28);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Details...";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
+            this.label52.Location = new System.Drawing.Point(30, 51);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(70, 32);
+            this.label52.TabIndex = 21;
+            this.label52.Text = "1234";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(215, 62);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(75, 81);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 5;
+            this.pictureBox10.TabStop = false;
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.button6);
+            this.panel14.Controls.Add(this.label54);
+            this.panel14.Controls.Add(this.pictureBox11);
+            this.panel14.Controls.Add(this.label55);
+            this.panel14.Location = new System.Drawing.Point(36, 327);
+            this.panel14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(303, 180);
+            this.panel14.TabIndex = 22;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(224)))), ((int)(((byte)(186)))));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
+            this.button6.Location = new System.Drawing.Point(185, 132);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(100, 28);
+            this.button6.TabIndex = 4;
+            this.button6.Text = "Details...";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.btn_Employee_Click);
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
+            this.label54.Location = new System.Drawing.Point(198, 52);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(70, 32);
+            this.label54.TabIndex = 19;
+            this.label54.Text = "1234";
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(14, 62);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(75, 81);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 5;
+            this.pictureBox11.TabStop = false;
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Location = new System.Drawing.Point(10, 16);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(87, 20);
+            this.label55.TabIndex = 0;
+            this.label55.Text = "Employee";
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.button7);
+            this.panel15.Controls.Add(this.label57);
+            this.panel15.Controls.Add(this.pictureBox12);
+            this.panel15.Controls.Add(this.label58);
+            this.panel15.Location = new System.Drawing.Point(418, 90);
+            this.panel15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(303, 180);
+            this.panel15.TabIndex = 21;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(224)))), ((int)(((byte)(186)))));
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
+            this.button7.Location = new System.Drawing.Point(192, 132);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(100, 28);
+            this.button7.TabIndex = 4;
+            this.button7.Text = "Details...";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.btn_Inventory_Click);
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
+            this.label57.Location = new System.Drawing.Point(212, 54);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(70, 32);
+            this.label57.TabIndex = 7;
+            this.label57.Text = "1234";
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(17, 61);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(75, 81);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 5;
+            this.pictureBox12.TabStop = false;
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.Location = new System.Drawing.Point(13, 13);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(83, 20);
+            this.label58.TabIndex = 0;
+            this.label58.Text = "Inventory";
+            // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.label60);
+            this.panel17.Controls.Add(this.pictureBox13);
+            this.panel17.Controls.Add(this.label61);
+            this.panel17.Controls.Add(this.button8);
+            this.panel17.Location = new System.Drawing.Point(34, 90);
+            this.panel17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(303, 180);
+            this.panel17.TabIndex = 20;
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
+            this.label60.Location = new System.Drawing.Point(39, 49);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(70, 32);
+            this.label60.TabIndex = 5;
+            this.label60.Text = "1234";
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
+            this.pictureBox13.Location = new System.Drawing.Point(206, 61);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(75, 81);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox13.TabIndex = 0;
+            this.pictureBox13.TabStop = false;
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.Location = new System.Drawing.Point(216, 15);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(62, 20);
+            this.label61.TabIndex = 0;
+            this.label61.Text = "Goods";
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(224)))), ((int)(((byte)(186)))));
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
+            this.button8.Location = new System.Drawing.Point(22, 132);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(100, 28);
+            this.button8.TabIndex = 4;
+            this.button8.Text = "Details...";
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // pn_Inventory
+            // 
+            this.pn_Inventory.Controls.Add(this.button14);
+            this.pn_Inventory.Controls.Add(this.label29);
+            this.pn_Inventory.Controls.Add(this.txt_Status);
+            this.pn_Inventory.Controls.Add(this.label28);
+            this.pn_Inventory.Controls.Add(this.txt_QInventory);
+            this.pn_Inventory.Controls.Add(this.label23);
+            this.pn_Inventory.Controls.Add(this.dateTimePicker4);
+            this.pn_Inventory.Controls.Add(this.label24);
+            this.pn_Inventory.Controls.Add(this.txt_PCodeInventory);
+            this.pn_Inventory.Controls.Add(this.dgv_inventory);
+            this.pn_Inventory.Controls.Add(this.label25);
+            this.pn_Inventory.Controls.Add(this.label26);
+            this.pn_Inventory.Controls.Add(this.txt_PNameInventory);
+            this.pn_Inventory.Controls.Add(this.label27);
+            this.pn_Inventory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pn_Inventory.Location = new System.Drawing.Point(0, 0);
+            this.pn_Inventory.Name = "pn_Inventory";
+            this.pn_Inventory.Size = new System.Drawing.Size(754, 560);
+            this.pn_Inventory.TabIndex = 20;
+            this.pn_Inventory.Visible = false;
+            this.pn_Inventory.VisibleChanged += new System.EventHandler(this.pn_Inventory_VisibleChanged);
+            // 
+            // button14
+            // 
+            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(200)))), ((int)(((byte)(113)))));
+            this.button14.FlatAppearance.BorderSize = 0;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14.ForeColor = System.Drawing.SystemColors.Control;
+            this.button14.Location = new System.Drawing.Point(337, 234);
+            this.button14.Margin = new System.Windows.Forms.Padding(2);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(122, 28);
+            this.button14.TabIndex = 16;
+            this.button14.Text = "Search";
+            this.button14.UseVisualStyleBackColor = false;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(523, 167);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(50, 20);
+            this.label29.TabIndex = 15;
+            this.label29.Text = "Status";
+            // 
+            // txt_Status
+            // 
+            this.txt_Status.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Status.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Status.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txt_Status.Location = new System.Drawing.Point(526, 193);
+            this.txt_Status.Multiline = true;
+            this.txt_Status.Name = "txt_Status";
+            this.txt_Status.Size = new System.Drawing.Size(107, 20);
+            this.txt_Status.TabIndex = 14;
+            this.txt_Status.Text = "Out of Stock";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(428, 167);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(68, 20);
+            this.label28.TabIndex = 13;
+            this.label28.Text = "Quantity";
+            // 
+            // txt_QInventory
+            // 
+            this.txt_QInventory.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_QInventory.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txt_QInventory.Location = new System.Drawing.Point(428, 193);
+            this.txt_QInventory.Multiline = true;
+            this.txt_QInventory.Name = "txt_QInventory";
+            this.txt_QInventory.Size = new System.Drawing.Size(57, 20);
+            this.txt_QInventory.TabIndex = 12;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(426, 155);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(0, 18);
+            this.label23.TabIndex = 11;
+            // 
+            // dateTimePicker4
+            // 
+            this.dateTimePicker4.Location = new System.Drawing.Point(178, 193);
+            this.dateTimePicker4.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePicker4.Name = "dateTimePicker4";
+            this.dateTimePicker4.Size = new System.Drawing.Size(204, 20);
+            this.dateTimePicker4.TabIndex = 10;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(174, 167);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(100, 20);
+            this.label24.TabIndex = 9;
+            this.label24.Text = "Date of Entry";
+            // 
+            // txt_PCodeInventory
+            // 
+            this.txt_PCodeInventory.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_PCodeInventory.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txt_PCodeInventory.Location = new System.Drawing.Point(428, 110);
+            this.txt_PCodeInventory.Multiline = true;
+            this.txt_PCodeInventory.Name = "txt_PCodeInventory";
+            this.txt_PCodeInventory.Size = new System.Drawing.Size(202, 20);
+            this.txt_PCodeInventory.TabIndex = 8;
+            // 
+            // dgv_inventory
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_inventory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_inventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_inventory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dgv_inventory.Location = new System.Drawing.Point(39, 284);
+            this.dgv_inventory.Name = "dgv_inventory";
+            this.dgv_inventory.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dgv_inventory.RowHeadersVisible = false;
+            this.dgv_inventory.RowHeadersWidth = 50;
+            this.dgv_inventory.RowTemplate.Height = 24;
+            this.dgv_inventory.Size = new System.Drawing.Size(684, 266);
+            this.dgv_inventory.TabIndex = 7;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(428, 84);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(102, 20);
+            this.label25.TabIndex = 5;
+            this.label25.Text = "Product Code";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(175, 84);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(121, 18);
+            this.label26.TabIndex = 3;
+            this.label26.Text = "Product Name ";
+            // 
+            // txt_PNameInventory
+            // 
+            this.txt_PNameInventory.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_PNameInventory.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txt_PNameInventory.Location = new System.Drawing.Point(178, 110);
+            this.txt_PNameInventory.Multiline = true;
+            this.txt_PNameInventory.Name = "txt_PNameInventory";
+            this.txt_PNameInventory.Size = new System.Drawing.Size(202, 20);
+            this.txt_PNameInventory.TabIndex = 1;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
+            this.label27.Location = new System.Drawing.Point(332, 22);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(118, 29);
+            this.label27.TabIndex = 0;
+            this.label27.Text = "Inventory";
+            // 
+            // pn_Welcome
+            // 
+            this.pn_Welcome.Controls.Add(this.lb_welcome);
+            this.pn_Welcome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pn_Welcome.Location = new System.Drawing.Point(0, 0);
+            this.pn_Welcome.Margin = new System.Windows.Forms.Padding(2);
+            this.pn_Welcome.Name = "pn_Welcome";
+            this.pn_Welcome.Size = new System.Drawing.Size(754, 560);
+            this.pn_Welcome.TabIndex = 26;
+            // 
+            // lb_welcome
+            // 
+            this.lb_welcome.AutoSize = true;
+            this.lb_welcome.Font = new System.Drawing.Font("Palatino Linotype", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_welcome.Location = new System.Drawing.Point(224, 236);
+            this.lb_welcome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_welcome.Name = "lb_welcome";
+            this.lb_welcome.Size = new System.Drawing.Size(325, 51);
+            this.lb_welcome.TabIndex = 0;
+            this.lb_welcome.Text = "Welcome to login";
+            // 
             // pn_Header
             // 
             this.pn_Header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(224)))), ((int)(((byte)(186)))));
@@ -2119,34 +2256,12 @@
             this.pn_Sidebar.ResumeLayout(false);
             this.pn_MenuWH.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.pn_Home.ResumeLayout(false);
-            this.pn_Home.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.pn_Wh2.ResumeLayout(false);
-            this.pn_Wh2.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            this.panel17.ResumeLayout(false);
-            this.panel17.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            this.pn_Employee.ResumeLayout(false);
+            this.pn_Employee.PerformLayout();
+            this.panel19.ResumeLayout(false);
+            this.panel19.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rolesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_employee)).EndInit();
             this.pn_Wh3.ResumeLayout(false);
             this.pn_Wh3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -2175,20 +2290,45 @@
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            this.pn_Inventory.ResumeLayout(false);
-            this.pn_Inventory.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_inventory)).EndInit();
-            this.pn_Welcome.ResumeLayout(false);
-            this.pn_Welcome.PerformLayout();
-            this.pn_Employee.ResumeLayout(false);
-            this.pn_Employee.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_employee)).EndInit();
+            this.pn_Home.ResumeLayout(false);
+            this.pn_Home.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.pn_Order.ResumeLayout(false);
             this.pn_Order.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_order)).EndInit();
             this.pn_Good.ResumeLayout(false);
             this.pn_Good.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_good)).EndInit();
+            this.pn_Wh2.ResumeLayout(false);
+            this.pn_Wh2.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            this.pn_Inventory.ResumeLayout(false);
+            this.pn_Inventory.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_inventory)).EndInit();
+            this.pn_Welcome.ResumeLayout(false);
+            this.pn_Welcome.PerformLayout();
             this.pn_Header.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -2235,8 +2375,6 @@
         private System.Windows.Forms.Button btm_goods;
         private System.Windows.Forms.Panel pn_Employee;
         private System.Windows.Forms.DataGridView dgv_employee;
-        private System.Windows.Forms.ComboBox cb_Role;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txt_Name;
         private System.Windows.Forms.Label label7;
@@ -2349,5 +2487,18 @@
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Panel pn_Welcome;
         private System.Windows.Forms.Label lb_welcome;
+        private System.Windows.Forms.Button btn_el_edit;
+        private System.Windows.Forms.Button btn_el_delete;
+        private System.Windows.Forms.Button btn_el_add;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.BindingSource rolesBindingSource;
     }
 }

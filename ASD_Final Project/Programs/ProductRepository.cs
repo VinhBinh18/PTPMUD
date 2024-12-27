@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Odbc;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace ASD_Final_Project.Program
 {
@@ -294,7 +295,7 @@ namespace ASD_Final_Project.Program
                     conn.Open();
                     using (var cmd = new SqlCommand(query, conn))
                     {
- 
+
                         using (var adapter = new SqlDataAdapter(cmd))
                         {
                             DataTable table = new DataTable();
@@ -378,35 +379,45 @@ namespace ASD_Final_Project.Program
                         count = cmd.ExecuteNonQuery();
                         return count;
                     }
-                }    
-            }catch (Exception ex)
-            {
-                MessageBox.Show("Can't Count User: errol: "+ ex.Message);
-            }
-            return count;
-        }
-
-        public int CountOrder(int wh_id)
-        {
-            int count = 0;
-            string query = "";
-            try
-            {
-                using (var con = new SqlConnection(_dbConnection.ConnectionString))
-                {
-                    con.Open();
-                    using (var cmd = new SqlCommand(query, con))
-                    {
-                        count = cmd.ExecuteNonQuery();
-                        return count;
-                    }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Can't Count User: errol: " + ex.Message);
             }
-            return count;//not yet
+            return count;
+        }
+
+        public int CountOrder(int wh_id)
+        {
+            int count = 0; // Biến lưu tổng số lượng order
+            string query = "SELECT COUNT(*) AS TotalOrders FROM WH_Transaction WHERE Wh_ID = @Wh_ID"; // Truy vấn SQL
+
+            try
+            {
+                // Kết nối tới cơ sở dữ liệu
+                using (var con = new SqlConnection(_dbConnection.ConnectionString))
+                {
+                    con.Open(); // Mở kết nối
+
+                    using (var cmd = new SqlCommand(query, con))
+                    {
+                        // Gán giá trị tham số
+                        cmd.Parameters.AddWithValue("@Wh_ID", wh_id);
+
+                        // Sử dụng ExecuteScalar để lấy giá trị đếm
+                        count = (int)cmd.ExecuteScalar();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Hiển thị lỗi nếu xảy ra
+                MessageBox.Show("Can't Count Order: error: " + ex.Message);
+            }
+
+            // Trả về tổng số lượng order
+            return count;
         }
     }
 

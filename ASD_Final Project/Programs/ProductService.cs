@@ -57,7 +57,11 @@ namespace ASD_Final_Project.Program
 
         public int CountOrder()
         {
-            return CountOrder();
+            return _productRepository.CountOrder();
+        }
+        public int CountOrder(int wh_id)
+        {
+            return _productRepository.CountOrder(wh_id);
         }
 
         /*        public void AddProduct(Product product)

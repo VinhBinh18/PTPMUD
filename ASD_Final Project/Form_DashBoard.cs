@@ -198,6 +198,8 @@ namespace ASD_Final_Project
 
         private void Form_DashBoard_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'rl_Name.Roles' table. You can move, or remove it, as needed.
+            this.rolesTableAdapter.Fill(this.rl_Name.Roles);
             lb_name.Text = _user.Username.ToString();
             lb_role.Text = _user.Role.ToString();
             checkRole(_user.Role, _user.Warehouse);
@@ -513,5 +515,6 @@ namespace ASD_Final_Project
             }
         } //done
 
+     
     }
 }
