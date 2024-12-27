@@ -363,78 +363,123 @@ namespace ASD_Final_Project.Program
                 MessageBox.Show("Error loading data: " + ex.Message);
             }
         }
+
+        public int CountOrder()
+        {
+            int count = 0;
+            string query = "SELECT COUNT(*) AS TotalCount FROM WH_Transaction t JOIN WareHouse w ON t.Wh_ID = w.Wh_ID JOIN WH_Transaction_Details td ON t.T_ID = td.T_ID JOIN Products p ON td.P_ID = p.P_ID JOIN Users u ON t.Wh_ID = u.Wh_ID";
+            try
+            {
+                using (var con = new SqlConnection(_dbConnection.ConnectionString))
+                {
+                    con.Open();
+                    using (var cmd = new SqlCommand(query, con))
+                    {
+                        count = cmd.ExecuteNonQuery();
+                        return count;
+                    }
+                }    
+            }catch (Exception ex)
+            {
+                MessageBox.Show("Can't Count User: errol: "+ ex.Message);
+            }
+            return count;
+        }
+
+        public int CountOrder(int wh_id)
+        {
+            int count = 0;
+            string query = "";
+            try
+            {
+                using (var con = new SqlConnection(_dbConnection.ConnectionString))
+                {
+                    con.Open();
+                    using (var cmd = new SqlCommand(query, con))
+                    {
+                        count = cmd.ExecuteNonQuery();
+                        return count;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Can't Count User: errol: " + ex.Message);
+            }
+            return count;//not yet
+        }
     }
 
-        /*        public void AddProduct(Product product)
+    /*        public void AddProduct(Product product)
+            {
+                try
                 {
-                    try
+                    _dbConnection.Open();
+                    using (var command = new SqlCommand("INSERT INTO Products (Name, Quantity, WarehouseId) VALUES (@Name, @Quantity, @WarehouseId)", _dbConnection))
                     {
-                        _dbConnection.Open();
-                        using (var command = new SqlCommand("INSERT INTO Products (Name, Quantity, WarehouseId) VALUES (@Name, @Quantity, @WarehouseId)", _dbConnection))
-                        {
-                            command.Parameters.AddWithValue("@Name", product.Name);
-                            command.Parameters.AddWithValue("@Quantity", product.Quantity);
-                            command.Parameters.AddWithValue("@WarehouseId", product.WarehouseId); // Assuming WarehouseId is part of Product
+                        command.Parameters.AddWithValue("@Name", product.Name);
+                        command.Parameters.AddWithValue("@Quantity", product.Quantity);
+                        command.Parameters.AddWithValue("@WarehouseId", product.WarehouseId); // Assuming WarehouseId is part of Product
 
-                            command.ExecuteNonQuery();
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        // Xử lý lỗi nếu cần
-                        Console.WriteLine(ex.Message);
-                    }
-                    finally
-                    {
-                        _dbConnection.Close();
+                        command.ExecuteNonQuery();
                     }
                 }
-
-                public void UpdateProduct(Product product)
+                catch (Exception ex)
                 {
-                    try
-                    {
-                        _dbConnection.Open();
-                        using (var command = new SqlCommand("UPDATE Products SET Name = @Name, Quantity = @Quantity WHERE Id = @Id", _dbConnection))
-                        {
-                            command.Parameters.AddWithValue("@Id", product.Id);
-                            command.Parameters.AddWithValue("@Name", product.Name);
-                            command.Parameters.AddWithValue("@Quantity", product.Quantity);
+                    // Xử lý lỗi nếu cần
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    _dbConnection.Close();
+                }
+            }
 
-                            command.ExecuteNonQuery();
-                        }
-                    }
-                    catch (Exception ex)
+            public void UpdateProduct(Product product)
+            {
+                try
+                {
+                    _dbConnection.Open();
+                    using (var command = new SqlCommand("UPDATE Products SET Name = @Name, Quantity = @Quantity WHERE Id = @Id", _dbConnection))
                     {
-                        // Xử lý lỗi nếu cần
-                        Console.WriteLine(ex.Message);
-                    }
-                    finally
-                    {
-                        _dbConnection.Close();
+                        command.Parameters.AddWithValue("@Id", product.Id);
+                        command.Parameters.AddWithValue("@Name", product.Name);
+                        command.Parameters.AddWithValue("@Quantity", product.Quantity);
+
+                        command.ExecuteNonQuery();
                     }
                 }
-
-                public void DeleteProduct(int productId)
+                catch (Exception ex)
                 {
-                    try
+                    // Xử lý lỗi nếu cần
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    _dbConnection.Close();
+                }
+            }
+
+            public void DeleteProduct(int productId)
+            {
+                try
+                {
+                    _dbConnection.Open();
+                    using (var command = new SqlCommand("DELETE FROM Products WHERE Id = @Id", _dbConnection))
                     {
-                        _dbConnection.Open();
-                        using (var command = new SqlCommand("DELETE FROM Products WHERE Id = @Id", _dbConnection))
-                        {
-                            command.Parameters.AddWithValue("@Id", productId);
-                            command.ExecuteNonQuery();
-                        }
+                        command.Parameters.AddWithValue("@Id", productId);
+                        command.ExecuteNonQuery();
                     }
-                    catch (Exception ex)
-                    {
-                        // Xử lý lỗi nếu cần
-                        Console.WriteLine(ex.Message);
-                    }
-                    finally
-                    {
-                        _dbConnection.Close();
-                    }
-                }*/
- }
+                }
+                catch (Exception ex)
+                {
+                    // Xử lý lỗi nếu cần
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    _dbConnection.Close();
+                }
+            }*/
+}
 
