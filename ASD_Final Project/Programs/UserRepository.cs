@@ -240,6 +240,7 @@ namespace ASD_Final_Project.Program
                             userSigned.Phone = reader.GetString(3);
                             userSigned.Role = reader.GetString(4);
                             userSigned.Warehouse = reader.GetString(5);
+                            userSigned.Password = password;
                             return userSigned; // Trả về người dùng nếu đăng nhập thành công
                         }
                     }

@@ -54,6 +54,7 @@ namespace ASD_Final_Project
             pn_Wh3.Visible = false;
             pn_Welcome.Visible = false;
             pn_el_add.Visible = false;
+            pn_setting.Visible = false;
 
         }//done
 
@@ -196,11 +197,6 @@ namespace ASD_Final_Project
         //Load
         private void Form_DashBoard_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'wH_MANAGEMENTDataSet1.WareHouse' table. You can move, or remove it, as needed.
-            this.wareHouseTableAdapter.Fill(this.wH_MANAGEMENTDataSet1.WareHouse);
-            // TODO: This line of code loads data into the 'wH_MANAGEMENTDataSet.Roles' table. You can move, or remove it, as needed.
-            this.rolesTableAdapter.Fill(this.wH_MANAGEMENTDataSet.Roles);
-            // TODO: This line of code loads data into the 'rl_Name.Roles' table. You can move, or remove it, as needed.
             lb_name.Text = _user.Username.ToString();
             lb_role.Text = _user.Role.ToString();
             if (_user.Role == "Admin")
@@ -742,6 +738,77 @@ namespace ASD_Final_Project
             {
                 MessageBox.Show("Error loading data: " + ex.Message);
             }
+        }
+
+        private void pn_setting_VisibleChanged(object sender, EventArgs e)
+        {
+            if (pn_setting.Visible)
+            {
+                txt_set_name.Text = _user.Username;
+                txt_set_pw.Text = _user.Password;
+                txt_set_phone.Text = _user.Phone;
+                txt_set_address.Text = _user.Address;
+                txt_set_wh.Text = _user.Warehouse;
+                txt_set_role.Text = _user.Role;
+            }else
+            {
+                txt_set_name.Text = string.Empty ;
+                txt_set_pw.Text = string.Empty;
+                txt_set_phone.Text = string.Empty;
+                txt_set_address.Text = string.Empty;
+                txt_set_wh.Text = string.Empty;
+                txt_set_role.Text = string.Empty;
+            }
+        }
+
+        private void btn_set_submit_Click(object sender, EventArgs e)
+        {
+            if(checkSettingChangce() == true)
+            {
+                try
+                {
+                    User user = new User();
+                    user.Id = _user.Id;
+                    user.Username = txt_set_name.Text;
+                    user.Password = txt_set_pw.Text;
+                    user.Address = txt_set_address.Text;
+                    user.Warehouse = txt_set_wh.Text;
+                    user.Phone = txt_set_phone.Text;
+                    user.Role = txt_set_role.Text;
+                    _userService.UpdateUser(user);
+                    MessageBox.Show("Cập nhật thành công");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Cập nhật thất bại. Errol: " + ex);
+                }
+            }
+        }
+
+        private bool checkSettingChangce()
+        {
+            if(txt_set_name.Text == _user.Username)
+            {
+                return true;
+            }
+            if (txt_set_pw.Text == _user.Password)
+            {
+                return true;
+            }
+            if (txt_set_phone.Text == _user.Phone)
+            {
+                return true;
+            }
+            if (txt_set_address.Text == _user.Address)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            ShowPanel(pn_setting);
         }
     }
 }
