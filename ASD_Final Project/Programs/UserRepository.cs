@@ -27,6 +27,7 @@ namespace ASD_Final_Project.Program
                 _dbConnection.Open();
                 using (var command = new SqlCommand("SELECT U.U_ID, U.U_UserName, U.U_Address, U.U_Phone, R.Rl_Name, W.Wh_Name  FROM Users U, Roles R, WareHouse W WHERE U.U_ID = @U_ID and U.Rl_ID = R.Rl_ID and W.Wh_ID = U.Wh_ID;", _dbConnection))
                 {
+                    command.Parameters.AddWithValue("@U_ID", UserID);
                     using (var reader = command.ExecuteReader())
                     {
                         while (reader.Read())
@@ -149,7 +150,7 @@ namespace ASD_Final_Project.Program
                     command.Parameters.AddWithValue("@Phone", user.Phone);
                     command.Parameters.AddWithValue("@RolesID", GetRoleId(user.Role));
                     command.Parameters.AddWithValue("@Password", "123");
-                    command.Parameters.AddWithValue("@Wh_ID", user.Warehouse);
+                    command.Parameters.AddWithValue("@Wh_ID", GetWareHouseID(user.Warehouse));
 
                     command.ExecuteNonQuery();
                 }
@@ -317,9 +318,9 @@ namespace ASD_Final_Project.Program
         {
             switch (warehouse)
             {
-                case "Kho Miền Bắc": return 1;
-                case "Kho Miền Nam": return 2;
-                case "Kho Miền Trung": return 3;
+                case "Warehouse North": return 1;
+                case "Warehouse Central": return 2;
+                case "Warehouse South": return 3;
                 default: throw new ArgumentException("Invalid warehouse name");
             }
         } //done
@@ -405,6 +406,184 @@ namespace ASD_Final_Project.Program
             {
                 _dbConnection.Close();
             }
+        }
+
+        public IEnumerable<User> GetUsers(int wh_id, string name)
+        {
+            var users = new List<User>();
+
+            try
+            {
+                // Mở kết nối đến cơ sở dữ liệu
+                _dbConnection.Open();
+
+                // Câu lệnh SQL đã sửa lại
+                using (var command = new SqlCommand(
+                    "SELECT U.U_ID, U.U_UserName,U.U_Password, U.U_Address, U.U_Phone, R.Rl_Name, W.Wh_Name " +
+                    "FROM Users U " +
+                    "JOIN Roles R ON U.Rl_ID = R.Rl_ID " +
+                    "JOIN WareHouse W ON U.Wh_ID = W.Wh_ID " +
+                    "WHERE U.Wh_ID = @wh_id AND U.U_UserName LIKE '%' + @name + '%'",
+                    _dbConnection))
+                {
+                    // Thêm tham số vào câu lệnh SQL
+                    command.Parameters.AddWithValue("@name", name);
+                    command.Parameters.AddWithValue("@wh_id", wh_id);
+
+                    // Thực thi câu lệnh và lấy dữ liệu
+                    using (var reader = command.ExecuteReader())
+                    {
+                        // Đọc dữ liệu trả về
+                        while (reader.Read())
+                        {
+                            var user = new User
+                            {
+                                Id = reader.GetInt32(0),         // Lấy giá trị U_ID
+                                Username = reader.GetString(1),
+                                Password = reader.GetString(2),// Lấy giá trị U_UserName
+                                Address = reader.GetString(3),   // Lấy giá trị U_Address
+                                Phone = reader.GetString(4),     // Lấy giá trị U_Phone
+                                Role = reader.GetString(5),      // Lấy giá trị Rl_Name
+                                Warehouse = reader.GetString(6) // Lấy giá trị Wh_Name
+                            };
+
+                            // Thêm người dùng vào danh sách
+                            users.Add(user);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Hiển thị thông báo lỗi nếu có
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+            finally
+            {
+                // Đảm bảo rằng kết nối luôn được đóng
+                _dbConnection.Close();
+            }
+
+            // Trả về danh sách người dùng
+            return users;
+        }
+
+        public IEnumerable<User> GetUsers(string name)
+        {
+            var users = new List<User>();
+
+            try
+            {
+                // Mở kết nối đến cơ sở dữ liệu
+                _dbConnection.Open();
+
+                // Câu lệnh SQL đã sửa lại
+                using (var command = new SqlCommand(
+                    "SELECT U.U_ID, U.U_UserName,U.U_Password, U.U_Address, U.U_Phone, R.Rl_Name, W.Wh_Name " +
+                    "FROM Users U " +
+                    "JOIN Roles R ON U.Rl_ID = R.Rl_ID " +
+                    "JOIN WareHouse W ON U.Wh_ID = W.Wh_ID " +
+                    "WHERE U.U_UserName LIKE '%' + @name + '%'",
+                    _dbConnection))
+                {
+                    // Thêm tham số vào câu lệnh SQL
+                    command.Parameters.AddWithValue("@name", name);
+
+                    // Thực thi câu lệnh và lấy dữ liệu
+                    using (var reader = command.ExecuteReader())
+                    {
+                        // Đọc dữ liệu trả về
+                        while (reader.Read())
+                        {
+                            var user = new User
+                            {
+                                Id = reader.GetInt32(0),         // Lấy giá trị U_ID
+                                Username = reader.GetString(1),
+                                Password= reader.GetString(2),// Lấy giá trị U_UserName
+                                Address = reader.GetString(3),   // Lấy giá trị U_Address
+                                Phone = reader.GetString(4),     // Lấy giá trị U_Phone
+                                Role = reader.GetString(5),      // Lấy giá trị Rl_Name
+                                Warehouse = reader.GetString(6)  // Lấy giá trị Wh_Name
+                            };
+
+                            // Thêm người dùng vào danh sách
+                            users.Add(user);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Hiển thị thông báo lỗi nếu có
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+            finally
+            {
+                // Đảm bảo rằng kết nối luôn được đóng
+                _dbConnection.Close();
+            }
+
+            // Trả về danh sách người dùng
+            return users;
+        }
+
+        public IEnumerable<User> GetUsersNonAdmin(int wh_id, string name)
+        {
+            var users = new List<User>();
+
+            try
+            {
+                // Mở kết nối đến cơ sở dữ liệu
+                _dbConnection.Open();
+
+                // Câu lệnh SQL đã sửa lại
+                using (var command = new SqlCommand(
+                    "SELECT U.U_ID, U.U_UserName, U.U_Address, U.U_Phone, R.Rl_Name, W.Wh_Name " +
+                    "FROM Users U " +
+                    "JOIN Roles R ON U.Rl_ID = R.Rl_ID " +
+                    "JOIN WareHouse W ON U.Wh_ID = W.Wh_ID " +
+                    "WHERE U.Wh_ID = @wh_id AND U.U_UserName LIKE '%' + @name + '%'",
+                    _dbConnection))
+                {
+                    // Thêm tham số vào câu lệnh SQL
+                    command.Parameters.AddWithValue("@name", name);
+                    command.Parameters.AddWithValue("@wh_id", wh_id);
+
+                    // Thực thi câu lệnh và lấy dữ liệu
+                    using (var reader = command.ExecuteReader())
+                    {
+                        // Đọc dữ liệu trả về
+                        while (reader.Read())
+                        {
+                            var user = new User
+                            {
+                                Id = reader.GetInt32(0),         // Lấy giá trị U_ID
+                                Username = reader.GetString(1),
+                                Address = reader.GetString(2),   // Lấy giá trị U_Address
+                                Phone = reader.GetString(3),     // Lấy giá trị U_Phone
+                                Role = reader.GetString(4),      // Lấy giá trị Rl_Name
+                                Warehouse = reader.GetString(5) // Lấy giá trị Wh_Name
+                            };
+
+                            // Thêm người dùng vào danh sách
+                            users.Add(user);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Hiển thị thông báo lỗi nếu có
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+            finally
+            {
+                // Đảm bảo rằng kết nối luôn được đóng
+                _dbConnection.Close();
+            }
+
+            // Trả về danh sách người dùng
+            return users;
         }
     }
 }

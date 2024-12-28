@@ -147,6 +147,16 @@
     <Compile Include="Form_Sign.Designer.cs">
       <DependentUpon>Form_Sign.cs</DependentUpon>
     </Compile>
+    <Compile Include="WH_MANAGEMENTDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WH_MANAGEMENTDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WH_MANAGEMENTDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WH_MANAGEMENTDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin\Admin_Control.resx">
       <DependentUpon>Admin_Control.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +192,28 @@
     <None Include="Resources\icons8-x-50.png" />
     <None Include="Resources\roles.png" />
     <None Include="Resources\success.png" />
+    <None Include="WH_MANAGEMENTDataSet.xsc">
+      <DependentUpon>WH_MANAGEMENTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WH_MANAGEMENTDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WH_MANAGEMENTDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WH_MANAGEMENTDataSet.xss">
+      <DependentUpon>WH_MANAGEMENTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WH_MANAGEMENTDataSet1.xsc">
+      <DependentUpon>WH_MANAGEMENTDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="WH_MANAGEMENTDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WH_MANAGEMENTDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WH_MANAGEMENTDataSet1.xss">
+      <DependentUpon>WH_MANAGEMENTDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

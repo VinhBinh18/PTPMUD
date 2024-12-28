@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_DashBoard));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lb_role = new System.Windows.Forms.Label();
             this.lb_name = new System.Windows.Forms.Label();
@@ -49,24 +49,44 @@
             this.btn_home = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pn_Employee = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.rolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pn_el_edit = new System.Windows.Forms.Panel();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.btn_el_edit_submit = new System.Windows.Forms.Button();
+            this.cbx_el_edit_wh = new System.Windows.Forms.ComboBox();
+            this.wareHouseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.wH_MANAGEMENTDataSet1 = new ASD_Final_Project.WH_MANAGEMENTDataSet1();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cbx_el_edit_role = new System.Windows.Forms.ComboBox();
+            this.rolesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.wH_MANAGEMENTDataSet = new ASD_Final_Project.WH_MANAGEMENTDataSet();
+            this.label59 = new System.Windows.Forms.Label();
+            this.txt_el_edit_name = new System.Windows.Forms.TextBox();
+            this.label63 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.txt_el_edit_id = new System.Windows.Forms.TextBox();
+            this.pn_el_add = new System.Windows.Forms.Panel();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.btn_el_add_submit = new System.Windows.Forms.Button();
+            this.cbx_el_wh = new System.Windows.Forms.ComboBox();
+            this.wh = new System.Windows.Forms.Label();
+            this.cbx_el_role = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txt_el_pw = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_el_name = new System.Windows.Forms.TextBox();
             this.btn_el_edit = new System.Windows.Forms.Button();
             this.btn_el_delete = new System.Windows.Forms.Button();
             this.btn_el_add = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
+            this.btn_el_search = new System.Windows.Forms.Button();
             this.dgv_employee = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
-            this.txt_Name = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.txt_el_s_name = new System.Windows.Forms.TextBox();
+            this.a = new System.Windows.Forms.Label();
             this.pn_Wh3 = new System.Windows.Forms.Panel();
             this.label37 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -196,17 +216,28 @@
             this.label27 = new System.Windows.Forms.Label();
             this.pn_Welcome = new System.Windows.Forms.Panel();
             this.lb_welcome = new System.Windows.Forms.Label();
+            this.rolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pn_Header = new System.Windows.Forms.Panel();
             this.btn_Menuside = new System.Windows.Forms.Button();
             this.Sidepart = new System.Windows.Forms.Timer(this.components);
+            this.rolesTableAdapter = new ASD_Final_Project.WH_MANAGEMENTDataSetTableAdapters.RolesTableAdapter();
+            this.wareHouseTableAdapter = new ASD_Final_Project.WH_MANAGEMENTDataSet1TableAdapters.WareHouseTableAdapter();
+            this.cbx_el_s_role = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pn_Sidebar.SuspendLayout();
             this.pn_MenuWH.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pn_Employee.SuspendLayout();
-            this.panel19.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rolesBindingSource)).BeginInit();
+            this.pn_el_edit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wareHouseBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wH_MANAGEMENTDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rolesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wH_MANAGEMENTDataSet)).BeginInit();
+            this.pn_el_add.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_employee)).BeginInit();
             this.pn_Wh3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -251,6 +282,7 @@
             this.pn_Inventory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_inventory)).BeginInit();
             this.pn_Welcome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rolesBindingSource)).BeginInit();
             this.pn_Header.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -470,16 +502,18 @@
             // 
             // pn_Employee
             // 
-            this.pn_Employee.Controls.Add(this.label1);
-            this.pn_Employee.Controls.Add(this.panel19);
+            this.pn_Employee.Controls.Add(this.pn_el_add);
+            this.pn_Employee.Controls.Add(this.pn_el_edit);
+            this.pn_Employee.Controls.Add(this.label7);
+            this.pn_Employee.Controls.Add(this.cbx_el_s_role);
             this.pn_Employee.Controls.Add(this.btn_el_edit);
             this.pn_Employee.Controls.Add(this.btn_el_delete);
             this.pn_Employee.Controls.Add(this.btn_el_add);
-            this.pn_Employee.Controls.Add(this.button13);
+            this.pn_Employee.Controls.Add(this.btn_el_search);
             this.pn_Employee.Controls.Add(this.dgv_employee);
             this.pn_Employee.Controls.Add(this.label12);
-            this.pn_Employee.Controls.Add(this.txt_Name);
-            this.pn_Employee.Controls.Add(this.label7);
+            this.pn_Employee.Controls.Add(this.txt_el_s_name);
+            this.pn_Employee.Controls.Add(this.a);
             this.pn_Employee.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_Employee.Location = new System.Drawing.Point(0, 0);
             this.pn_Employee.Name = "pn_Employee";
@@ -488,53 +522,281 @@
             this.pn_Employee.Visible = false;
             this.pn_Employee.VisibleChanged += new System.EventHandler(this.pn_Employee_VisibleChanged);
             // 
-            // label1
+            // pn_el_edit
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(187, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "label1";
+            this.pn_el_edit.Controls.Add(this.pictureBox19);
+            this.pn_el_edit.Controls.Add(this.btn_el_edit_submit);
+            this.pn_el_edit.Controls.Add(this.cbx_el_edit_wh);
+            this.pn_el_edit.Controls.Add(this.label13);
+            this.pn_el_edit.Controls.Add(this.cbx_el_edit_role);
+            this.pn_el_edit.Controls.Add(this.label59);
+            this.pn_el_edit.Controls.Add(this.txt_el_edit_name);
+            this.pn_el_edit.Controls.Add(this.label63);
+            this.pn_el_edit.Controls.Add(this.label64);
+            this.pn_el_edit.Controls.Add(this.label65);
+            this.pn_el_edit.Controls.Add(this.label66);
+            this.pn_el_edit.Controls.Add(this.txt_el_edit_id);
+            this.pn_el_edit.Location = new System.Drawing.Point(105, 83);
+            this.pn_el_edit.Name = "pn_el_edit";
+            this.pn_el_edit.Size = new System.Drawing.Size(600, 322);
+            this.pn_el_edit.TabIndex = 37;
+            this.pn_el_edit.Visible = false;
             // 
-            // panel19
+            // pictureBox19
             // 
-            this.panel19.Controls.Add(this.label14);
-            this.panel19.Controls.Add(this.textBox7);
-            this.panel19.Controls.Add(this.label10);
-            this.panel19.Controls.Add(this.label6);
-            this.panel19.Controls.Add(this.label4);
-            this.panel19.Controls.Add(this.label2);
-            this.panel19.Controls.Add(this.textBox1);
-            this.panel19.Location = new System.Drawing.Point(79, 117);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(600, 322);
-            this.panel19.TabIndex = 22;
+            this.pictureBox19.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox19.Image")));
+            this.pictureBox19.Location = new System.Drawing.Point(291, 2);
+            this.pictureBox19.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(309, 322);
+            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox19.TabIndex = 4;
+            this.pictureBox19.TabStop = false;
             // 
-            // rolesBindingSource
+            // btn_el_edit_submit
             // 
-            this.rolesBindingSource.DataMember = "Roles";
+            this.btn_el_edit_submit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(200)))), ((int)(((byte)(113)))));
+            this.btn_el_edit_submit.FlatAppearance.BorderSize = 0;
+            this.btn_el_edit_submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_el_edit_submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_el_edit_submit.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_el_edit_submit.Location = new System.Drawing.Point(73, 273);
+            this.btn_el_edit_submit.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_el_edit_submit.Name = "btn_el_edit_submit";
+            this.btn_el_edit_submit.Size = new System.Drawing.Size(122, 28);
+            this.btn_el_edit_submit.TabIndex = 24;
+            this.btn_el_edit_submit.Text = "Submit";
+            this.btn_el_edit_submit.UseVisualStyleBackColor = false;
+            this.btn_el_edit_submit.Click += new System.EventHandler(this.btn_el_edit_submit_Click);
+            // 
+            // cbx_el_edit_wh
+            // 
+            this.cbx_el_edit_wh.DataSource = this.wareHouseBindingSource;
+            this.cbx_el_edit_wh.DisplayMember = "Wh_Name";
+            this.cbx_el_edit_wh.FormattingEnabled = true;
+            this.cbx_el_edit_wh.Location = new System.Drawing.Point(34, 216);
+            this.cbx_el_edit_wh.Name = "cbx_el_edit_wh";
+            this.cbx_el_edit_wh.Size = new System.Drawing.Size(191, 21);
+            this.cbx_el_edit_wh.TabIndex = 36;
+            this.cbx_el_edit_wh.ValueMember = "Wh_ID";
+            // 
+            // wareHouseBindingSource
+            // 
+            this.wareHouseBindingSource.DataMember = "WareHouse";
+            this.wareHouseBindingSource.DataSource = this.wH_MANAGEMENTDataSet1;
+            // 
+            // wH_MANAGEMENTDataSet1
+            // 
+            this.wH_MANAGEMENTDataSet1.DataSetName = "WH_MANAGEMENTDataSet1";
+            this.wH_MANAGEMENTDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(30, 193);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(85, 20);
+            this.label13.TabIndex = 35;
+            this.label13.Text = "Warehouse";
+            // 
+            // cbx_el_edit_role
+            // 
+            this.cbx_el_edit_role.DataSource = this.rolesBindingSource1;
+            this.cbx_el_edit_role.DisplayMember = "Rl_Name";
+            this.cbx_el_edit_role.FormattingEnabled = true;
+            this.cbx_el_edit_role.Location = new System.Drawing.Point(34, 165);
+            this.cbx_el_edit_role.Name = "cbx_el_edit_role";
+            this.cbx_el_edit_role.Size = new System.Drawing.Size(191, 21);
+            this.cbx_el_edit_role.TabIndex = 34;
+            this.cbx_el_edit_role.ValueMember = "Rl_ID";
+            // 
+            // rolesBindingSource1
+            // 
+            this.rolesBindingSource1.DataMember = "Roles";
+            this.rolesBindingSource1.DataSource = this.wH_MANAGEMENTDataSet;
+            // 
+            // wH_MANAGEMENTDataSet
+            // 
+            this.wH_MANAGEMENTDataSet.DataSetName = "WH_MANAGEMENTDataSet";
+            this.wH_MANAGEMENTDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.Location = new System.Drawing.Point(30, 93);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(50, 20);
+            this.label59.TabIndex = 33;
+            this.label59.Text = "Name";
+            // 
+            // txt_el_edit_name
+            // 
+            this.txt_el_edit_name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_el_edit_name.Enabled = false;
+            this.txt_el_edit_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_el_edit_name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txt_el_edit_name.Location = new System.Drawing.Point(34, 114);
+            this.txt_el_edit_name.Multiline = true;
+            this.txt_el_edit_name.Name = "txt_el_edit_name";
+            this.txt_el_edit_name.Size = new System.Drawing.Size(188, 21);
+            this.txt_el_edit_name.TabIndex = 32;
+            this.txt_el_edit_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.Location = new System.Drawing.Point(21, 119);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(0, 20);
+            this.label63.TabIndex = 29;
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.Location = new System.Drawing.Point(30, 145);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(39, 20);
+            this.label64.TabIndex = 27;
+            this.label64.Text = "Role";
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label65.Location = new System.Drawing.Point(30, 48);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(24, 20);
+            this.label65.TabIndex = 25;
+            this.label65.Text = "ID";
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label66.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
+            this.label66.Location = new System.Drawing.Point(53, 16);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(183, 29);
+            this.label66.TabIndex = 24;
+            this.label66.Text = "Edit Employee";
+            // 
+            // txt_el_edit_id
+            // 
+            this.txt_el_edit_id.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_el_edit_id.Enabled = false;
+            this.txt_el_edit_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_el_edit_id.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txt_el_edit_id.Location = new System.Drawing.Point(34, 71);
+            this.txt_el_edit_id.Multiline = true;
+            this.txt_el_edit_id.Name = "txt_el_edit_id";
+            this.txt_el_edit_id.Size = new System.Drawing.Size(188, 21);
+            this.txt_el_edit_id.TabIndex = 24;
+            // 
+            // pn_el_add
+            // 
+            this.pn_el_add.Controls.Add(this.pictureBox18);
+            this.pn_el_add.Controls.Add(this.btn_el_add_submit);
+            this.pn_el_add.Controls.Add(this.cbx_el_wh);
+            this.pn_el_add.Controls.Add(this.wh);
+            this.pn_el_add.Controls.Add(this.cbx_el_role);
+            this.pn_el_add.Controls.Add(this.label14);
+            this.pn_el_add.Controls.Add(this.txt_el_pw);
+            this.pn_el_add.Controls.Add(this.label10);
+            this.pn_el_add.Controls.Add(this.label6);
+            this.pn_el_add.Controls.Add(this.label4);
+            this.pn_el_add.Controls.Add(this.label2);
+            this.pn_el_add.Controls.Add(this.txt_el_name);
+            this.pn_el_add.Location = new System.Drawing.Point(106, 83);
+            this.pn_el_add.Name = "pn_el_add";
+            this.pn_el_add.Size = new System.Drawing.Size(600, 322);
+            this.pn_el_add.TabIndex = 22;
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
+            this.pictureBox18.Location = new System.Drawing.Point(291, 2);
+            this.pictureBox18.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(309, 322);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox18.TabIndex = 4;
+            this.pictureBox18.TabStop = false;
+            // 
+            // btn_el_add_submit
+            // 
+            this.btn_el_add_submit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(200)))), ((int)(((byte)(113)))));
+            this.btn_el_add_submit.FlatAppearance.BorderSize = 0;
+            this.btn_el_add_submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_el_add_submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_el_add_submit.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_el_add_submit.Location = new System.Drawing.Point(73, 273);
+            this.btn_el_add_submit.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_el_add_submit.Name = "btn_el_add_submit";
+            this.btn_el_add_submit.Size = new System.Drawing.Size(122, 28);
+            this.btn_el_add_submit.TabIndex = 24;
+            this.btn_el_add_submit.Text = "Submit";
+            this.btn_el_add_submit.UseVisualStyleBackColor = false;
+            this.btn_el_add_submit.Click += new System.EventHandler(this.btn_el_add_submit_Click);
+            // 
+            // cbx_el_wh
+            // 
+            this.cbx_el_wh.DataSource = this.wareHouseBindingSource;
+            this.cbx_el_wh.DisplayMember = "Wh_Name";
+            this.cbx_el_wh.FormattingEnabled = true;
+            this.cbx_el_wh.Location = new System.Drawing.Point(34, 216);
+            this.cbx_el_wh.Name = "cbx_el_wh";
+            this.cbx_el_wh.Size = new System.Drawing.Size(191, 21);
+            this.cbx_el_wh.TabIndex = 36;
+            this.cbx_el_wh.ValueMember = "Wh_ID";
+            // 
+            // wh
+            // 
+            this.wh.AutoSize = true;
+            this.wh.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wh.Location = new System.Drawing.Point(30, 193);
+            this.wh.Name = "wh";
+            this.wh.Size = new System.Drawing.Size(85, 20);
+            this.wh.TabIndex = 35;
+            this.wh.Text = "Warehouse";
+            // 
+            // cbx_el_role
+            // 
+            this.cbx_el_role.DataSource = this.rolesBindingSource1;
+            this.cbx_el_role.DisplayMember = "Rl_Name";
+            this.cbx_el_role.FormattingEnabled = true;
+            this.cbx_el_role.Location = new System.Drawing.Point(34, 165);
+            this.cbx_el_role.Name = "cbx_el_role";
+            this.cbx_el_role.Size = new System.Drawing.Size(191, 21);
+            this.cbx_el_role.TabIndex = 34;
+            this.cbx_el_role.ValueMember = "Rl_ID";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(21, 113);
+            this.label14.Location = new System.Drawing.Point(30, 93);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(50, 20);
+            this.label14.Size = new System.Drawing.Size(73, 20);
             this.label14.TabIndex = 33;
-            this.label14.Text = "Name";
+            this.label14.Text = "Password";
             // 
-            // textBox7
+            // txt_el_pw
             // 
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox7.Location = new System.Drawing.Point(25, 136);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(188, 26);
-            this.textBox7.TabIndex = 32;
+            this.txt_el_pw.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_el_pw.Enabled = false;
+            this.txt_el_pw.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_el_pw.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txt_el_pw.Location = new System.Drawing.Point(34, 114);
+            this.txt_el_pw.Multiline = true;
+            this.txt_el_pw.Name = "txt_el_pw";
+            this.txt_el_pw.Size = new System.Drawing.Size(188, 21);
+            this.txt_el_pw.TabIndex = 32;
+            this.txt_el_pw.Text = "123";
+            this.txt_el_pw.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label10
             // 
@@ -549,7 +811,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(265, 58);
+            this.label6.Location = new System.Drawing.Point(30, 145);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(39, 20);
             this.label6.TabIndex = 27;
@@ -559,7 +821,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(21, 58);
+            this.label4.Location = new System.Drawing.Point(30, 48);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 20);
             this.label4.TabIndex = 25;
@@ -570,22 +832,22 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
-            this.label2.Location = new System.Drawing.Point(206, 19);
+            this.label2.Location = new System.Drawing.Point(53, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(183, 29);
             this.label2.TabIndex = 24;
             this.label2.Text = "Add Employee";
             // 
-            // textBox1
+            // txt_el_name
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox1.Location = new System.Drawing.Point(25, 81);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 26);
-            this.textBox1.TabIndex = 24;
+            this.txt_el_name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_el_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_el_name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txt_el_name.Location = new System.Drawing.Point(34, 71);
+            this.txt_el_name.Multiline = true;
+            this.txt_el_name.Name = "txt_el_name";
+            this.txt_el_name.Size = new System.Drawing.Size(188, 21);
+            this.txt_el_name.TabIndex = 24;
             // 
             // btn_el_edit
             // 
@@ -601,6 +863,7 @@
             this.btn_el_edit.TabIndex = 21;
             this.btn_el_edit.Text = "Edit";
             this.btn_el_edit.UseVisualStyleBackColor = false;
+            this.btn_el_edit.Click += new System.EventHandler(this.btn_el_edit_Click);
             // 
             // btn_el_delete
             // 
@@ -616,6 +879,7 @@
             this.btn_el_delete.TabIndex = 20;
             this.btn_el_delete.Text = "Delete";
             this.btn_el_delete.UseVisualStyleBackColor = false;
+            this.btn_el_delete.Click += new System.EventHandler(this.btn_el_delete_Click);
             // 
             // btn_el_add
             // 
@@ -631,38 +895,39 @@
             this.btn_el_add.TabIndex = 18;
             this.btn_el_add.Text = "Add";
             this.btn_el_add.UseVisualStyleBackColor = false;
+            this.btn_el_add.Click += new System.EventHandler(this.btn_el_add_Click);
             // 
-            // button13
+            // btn_el_search
             // 
-            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(200)))), ((int)(((byte)(113)))));
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.ForeColor = System.Drawing.SystemColors.Control;
-            this.button13.Location = new System.Drawing.Point(315, 157);
-            this.button13.Margin = new System.Windows.Forms.Padding(2);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(122, 28);
-            this.button13.TabIndex = 17;
-            this.button13.Text = "Search";
-            this.button13.UseVisualStyleBackColor = false;
+            this.btn_el_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(200)))), ((int)(((byte)(113)))));
+            this.btn_el_search.FlatAppearance.BorderSize = 0;
+            this.btn_el_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_el_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_el_search.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_el_search.Location = new System.Drawing.Point(315, 157);
+            this.btn_el_search.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_el_search.Name = "btn_el_search";
+            this.btn_el_search.Size = new System.Drawing.Size(122, 28);
+            this.btn_el_search.TabIndex = 17;
+            this.btn_el_search.Text = "Search";
+            this.btn_el_search.UseVisualStyleBackColor = false;
+            this.btn_el_search.Click += new System.EventHandler(this.btn_el_search_Click);
             // 
             // dgv_employee
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_employee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_employee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgv_employee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_employee.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgv_employee.Location = new System.Drawing.Point(0, 231);
             this.dgv_employee.Name = "dgv_employee";
             this.dgv_employee.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dgv_employee.RowHeadersVisible = false;
             this.dgv_employee.RowHeadersWidth = 50;
             this.dgv_employee.RowTemplate.Height = 24;
             this.dgv_employee.Size = new System.Drawing.Size(754, 266);
@@ -679,27 +944,27 @@
             this.label12.TabIndex = 3;
             this.label12.Text = "Name";
             // 
-            // txt_Name
+            // txt_el_s_name
             // 
-            this.txt_Name.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txt_Name.Location = new System.Drawing.Point(93, 106);
-            this.txt_Name.Multiline = true;
-            this.txt_Name.Name = "txt_Name";
-            this.txt_Name.Size = new System.Drawing.Size(188, 26);
-            this.txt_Name.TabIndex = 1;
+            this.txt_el_s_name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_el_s_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_el_s_name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txt_el_s_name.Location = new System.Drawing.Point(93, 106);
+            this.txt_el_s_name.Multiline = true;
+            this.txt_el_s_name.Name = "txt_el_s_name";
+            this.txt_el_s_name.Size = new System.Drawing.Size(188, 26);
+            this.txt_el_s_name.TabIndex = 1;
             // 
-            // label7
+            // a
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
-            this.label7.Location = new System.Drawing.Point(315, 2);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(130, 29);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Employee";
+            this.a.AutoSize = true;
+            this.a.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.a.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(190)))), ((int)(((byte)(163)))));
+            this.a.Location = new System.Drawing.Point(315, 2);
+            this.a.Name = "a";
+            this.a.Size = new System.Drawing.Size(130, 29);
+            this.a.TabIndex = 0;
+            this.a.Text = "Employee";
             // 
             // pn_Wh3
             // 
@@ -1544,14 +1809,14 @@
             // 
             // dgv_order
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_order.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_order.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgv_order.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_order.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgv_order.Location = new System.Drawing.Point(16, 267);
@@ -1694,14 +1959,14 @@
             // 
             // dgv_good
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_good.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_good.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgv_good.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_good.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgv_good.Location = new System.Drawing.Point(56, 291);
@@ -2126,14 +2391,14 @@
             // 
             // dgv_inventory
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_inventory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_inventory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgv_inventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_inventory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgv_inventory.Location = new System.Drawing.Point(39, 284);
@@ -2207,6 +2472,10 @@
             this.lb_welcome.TabIndex = 0;
             this.lb_welcome.Text = "Welcome to login";
             // 
+            // rolesBindingSource
+            // 
+            this.rolesBindingSource.DataMember = "Roles";
+            // 
             // pn_Header
             // 
             this.pn_Header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(224)))), ((int)(((byte)(186)))));
@@ -2236,6 +2505,36 @@
             this.Sidepart.Interval = 10;
             this.Sidepart.Tick += new System.EventHandler(this.Sidepart_Tick);
             // 
+            // rolesTableAdapter
+            // 
+            this.rolesTableAdapter.ClearBeforeFill = true;
+            // 
+            // wareHouseTableAdapter
+            // 
+            this.wareHouseTableAdapter.ClearBeforeFill = true;
+            // 
+            // cbx_el_s_role
+            // 
+            this.cbx_el_s_role.FormattingEnabled = true;
+            this.cbx_el_s_role.Items.AddRange(new object[] {
+            "Admin",
+            "Manager",
+            "Staff"});
+            this.cbx_el_s_role.Location = new System.Drawing.Point(440, 111);
+            this.cbx_el_s_role.Name = "cbx_el_s_role";
+            this.cbx_el_s_role.Size = new System.Drawing.Size(121, 21);
+            this.cbx_el_s_role.TabIndex = 38;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(441, 87);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(85, 20);
+            this.label7.TabIndex = 39;
+            this.label7.Text = "Warehouse";
+            // 
             // Form_DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2258,9 +2557,16 @@
             this.panel3.ResumeLayout(false);
             this.pn_Employee.ResumeLayout(false);
             this.pn_Employee.PerformLayout();
-            this.panel19.ResumeLayout(false);
-            this.panel19.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rolesBindingSource)).EndInit();
+            this.pn_el_edit.ResumeLayout(false);
+            this.pn_el_edit.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wareHouseBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wH_MANAGEMENTDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rolesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wH_MANAGEMENTDataSet)).EndInit();
+            this.pn_el_add.ResumeLayout(false);
+            this.pn_el_add.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_employee)).EndInit();
             this.pn_Wh3.ResumeLayout(false);
             this.pn_Wh3.PerformLayout();
@@ -2329,6 +2635,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_inventory)).EndInit();
             this.pn_Welcome.ResumeLayout(false);
             this.pn_Welcome.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rolesBindingSource)).EndInit();
             this.pn_Header.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -2376,8 +2683,8 @@
         private System.Windows.Forms.Panel pn_Employee;
         private System.Windows.Forms.DataGridView dgv_employee;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txt_Name;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txt_el_s_name;
+        private System.Windows.Forms.Label a;
         private System.Windows.Forms.Panel pn_Good;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label22;
@@ -2484,21 +2791,46 @@
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button btn_el_search;
         private System.Windows.Forms.Panel pn_Welcome;
         private System.Windows.Forms.Label lb_welcome;
         private System.Windows.Forms.Button btn_el_edit;
         private System.Windows.Forms.Button btn_el_delete;
         private System.Windows.Forms.Button btn_el_add;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.Panel pn_el_add;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txt_el_pw;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_el_name;
         private System.Windows.Forms.BindingSource rolesBindingSource;
+        private System.Windows.Forms.ComboBox cbx_el_role;
+        private WH_MANAGEMENTDataSet wH_MANAGEMENTDataSet;
+        private System.Windows.Forms.BindingSource rolesBindingSource1;
+        private WH_MANAGEMENTDataSetTableAdapters.RolesTableAdapter rolesTableAdapter;
+        private System.Windows.Forms.ComboBox cbx_el_wh;
+        private System.Windows.Forms.Label wh;
+        private WH_MANAGEMENTDataSet1 wH_MANAGEMENTDataSet1;
+        private System.Windows.Forms.BindingSource wareHouseBindingSource;
+        private WH_MANAGEMENTDataSet1TableAdapters.WareHouseTableAdapter wareHouseTableAdapter;
+        private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.Button btn_el_add_submit;
+        private System.Windows.Forms.Panel pn_el_edit;
+        private System.Windows.Forms.PictureBox pictureBox19;
+        private System.Windows.Forms.Button btn_el_edit_submit;
+        private System.Windows.Forms.ComboBox cbx_el_edit_wh;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox cbx_el_edit_role;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.TextBox txt_el_edit_name;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.TextBox txt_el_edit_id;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cbx_el_s_role;
     }
 }

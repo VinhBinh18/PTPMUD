@@ -5,10 +5,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace ASD_Final_Project
 {
@@ -19,14 +21,14 @@ namespace ASD_Final_Project
         private readonly User _user;
         private int wh_id;
 
-        public Form_DashBoard(UserService userService,ProductService productService, User user)
+        public Form_DashBoard(UserService userService, ProductService productService, User user)
         {
             _userService = userService;
             _user = user;
             _productService = productService;
             InitializeComponent();
             Customize();
-            
+
         }
 
         private void Customize()
@@ -51,6 +53,7 @@ namespace ASD_Final_Project
             pn_Wh2.Visible = false;
             pn_Wh3.Visible = false;
             pn_Welcome.Visible = false;
+            pn_el_add.Visible = false;
 
         }//done
 
@@ -67,18 +70,18 @@ namespace ASD_Final_Project
             {
                 Sidepart.Start();
             }
-            if(_user.Role == "Admin")
+            if (_user.Role == "Admin")
             {
                 wh_id = 0;
                 quantity(wh_id);
                 MoveSidePanel(btn_home);
                 ShowPanel(pn_Home);
-            }else if(_user.Role == "Manager")
+            } else if (_user.Role == "Manager")
             {
                 wh_id = GetWareHouseID(_user.Warehouse);
                 quantity(wh_id);
                 MoveSidePanel(btn_home);
-                ShowPanel(pn_Home);
+                ShowPanel(pn_Welcome);
             }
             else
             {
@@ -135,7 +138,7 @@ namespace ASD_Final_Project
             else
             {
                 pn_Sidebar.Width += 5;
-                if(pn_Sidebar.Width >= 180)
+                if (pn_Sidebar.Width >= 180)
                 {
                     sidepartExpand = true;
                     Sidepart.Stop();
@@ -150,22 +153,18 @@ namespace ASD_Final_Project
             Sidepart.Start();
 
         }//done
-
         private void btm_goods_Click(object sender, EventArgs e)
         {
             ShowPanel(pn_Good);
         }//done
-
         private void btn_Inventory_Click(object sender, EventArgs e)
         {
             ShowPanel(pn_Inventory);
         }//done
-
         private void btn_Employee_Click(object sender, EventArgs e)
         {
             ShowPanel(pn_Employee);
         }//done
-
         private void btn_Order_Click(object sender, EventArgs e)
         {
             ShowPanel(pn_Order);
@@ -179,7 +178,6 @@ namespace ASD_Final_Project
             quantity(wh_id);
             ShowPanel(pn_Wh1);
         }//done
-
         private void btn_wh2_Click(object sender, EventArgs e)
         {
             hideMenu();
@@ -187,7 +185,6 @@ namespace ASD_Final_Project
             quantity(wh_id);
             ShowPanel(pn_Wh2);
         }//done
-
         private void btn_wh3_Click(object sender, EventArgs e)
         {
             hideMenu();
@@ -196,13 +193,23 @@ namespace ASD_Final_Project
             ShowPanel(pn_Wh3);
         }//done
 
+        //Load
         private void Form_DashBoard_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'wH_MANAGEMENTDataSet1.WareHouse' table. You can move, or remove it, as needed.
+            this.wareHouseTableAdapter.Fill(this.wH_MANAGEMENTDataSet1.WareHouse);
+            // TODO: This line of code loads data into the 'wH_MANAGEMENTDataSet.Roles' table. You can move, or remove it, as needed.
+            this.rolesTableAdapter.Fill(this.wH_MANAGEMENTDataSet.Roles);
             // TODO: This line of code loads data into the 'rl_Name.Roles' table. You can move, or remove it, as needed.
-            this.rolesTableAdapter.Fill(this.rl_Name.Roles);
             lb_name.Text = _user.Username.ToString();
             lb_role.Text = _user.Role.ToString();
+            if (_user.Role == "Admin")
+            {
+                quantity(0);
+            }
+            else {  quantity(wh_id); }
             checkRole(_user.Role, _user.Warehouse);
+            btn_home.PerformClick();
         }//done
 
         // Employee loading
@@ -216,15 +223,14 @@ namespace ASD_Final_Project
                 string address = seclectRow.Cells[4].Value.ToString();
                 string role = seclectRow.Cells[5].Value.ToString();
                 string warehouse = seclectRow.Cells[6].Value.ToString();
-               /* pn_user_txt_name.Text = name;
-                pn_user_txt_phone.Text = phone;
-                pn_user_txt_address.Text = address;
-                pn_user_txt_role.Text = role;
-                pn_user_txt_wh.Text = warehouse;*/
+                /* pn_user_txt_name.Text = name;
+                 pn_user_txt_phone.Text = phone;
+                 pn_user_txt_address.Text = address;
+                 pn_user_txt_role.Text = role;
+                 pn_user_txt_wh.Text = warehouse;*/
 
             }
         }//done
-
         void LoadDataUsers()
         {
             try
@@ -244,7 +250,6 @@ namespace ASD_Final_Project
                 MessageBox.Show("Error loading data: " + ex.Message);
             }
         } // done
-
         void LoadDataUsers(int Wh_ID)
         {
             try
@@ -264,14 +269,13 @@ namespace ASD_Final_Project
                 MessageBox.Show("Error loading data: " + ex.Message);
             }
         } //done
-        
         private void pn_Employee_VisibleChanged(object sender, EventArgs e)
         {
-            if(pn_Employee.Visible)
-            {   
-                if(wh_id != 0)
+            if (pn_Employee.Visible)
+            {
+                if (wh_id != 0)
                 {
-                    LoadDataUsers(wh_id); 
+                    LoadDataUsers(wh_id);
                 }
                 else
                 {
@@ -279,7 +283,7 @@ namespace ASD_Final_Project
                 }
             }
         }//done
-        
+
         //Inventory loading
         void LoadDataInventory()
         {
@@ -292,7 +296,6 @@ namespace ASD_Final_Project
                 MessageBox.Show("Error loading data: " + ex.Message);
             }
         }//done
-
         void LoadDataInventory(int Wh_ID)
         {
             try
@@ -304,12 +307,11 @@ namespace ASD_Final_Project
                 MessageBox.Show("Error loading data: " + ex.Message);
             }
         }//done
-
         private void pn_Inventory_VisibleChanged(object sender, EventArgs e)
         {
-            if(pn_Inventory.Visible)
+            if (pn_Inventory.Visible)
             {
-                if(wh_id != 0)
+                if (wh_id != 0)
                 {
                     LoadDataInventory(wh_id);
                 }
@@ -340,7 +342,6 @@ namespace ASD_Final_Project
                 MessageBox.Show("Error loading data: " + ex.Message);
             }
         }//done
-
         void LoadDataGoods(int Wh_ID)
         {
             try
@@ -360,7 +361,6 @@ namespace ASD_Final_Project
                 MessageBox.Show("Error loading data: " + ex.Message);
             }
         }//done
-
         private void pn_Good_VisibleChanged(object sender, EventArgs e)
         {
             if (pn_Good.Visible)
@@ -375,7 +375,7 @@ namespace ASD_Final_Project
                 }
             }
         }
-        
+
         //Order Loading
         void LoadDataOrders()
         {
@@ -388,7 +388,6 @@ namespace ASD_Final_Project
                 MessageBox.Show("Error loading data: " + ex.Message);
             }
         }
-
         void LoadDataOrders(int Wh_ID)
         {
             try
@@ -400,7 +399,6 @@ namespace ASD_Final_Project
                 MessageBox.Show("Error loading data: " + ex.Message);
             }
         }
-
         private void pn_Order_VisibleChanged(object sender, EventArgs e)
         {
             if (pn_Order.Visible)
@@ -419,12 +417,12 @@ namespace ASD_Final_Project
         //count label
         private void quantity(int wh_id)
         {
-            if(wh_id == 1) 
-            { 
+            if (wh_id == 1)
+            {
                 label41.Text = _userService.CountUser(wh_id).ToString();
                 label47.Text = _productService.CountProduct(wh_id).ToString();
             }
-            else if(wh_id == 2)
+            else if (wh_id == 2)
             {
                 label54.Text = _userService.CountUser(wh_id).ToString();
                 label60.Text = _productService.CountProduct(wh_id).ToString();
@@ -444,7 +442,7 @@ namespace ASD_Final_Project
         //transfer function
         private void checkRole(string role, string wh)
         {
-            if(role == "Admin")
+            if (role == "Admin")
             {
                 btn_wh1.Visible = true;
                 btn_wh2.Visible = true;
@@ -468,9 +466,9 @@ namespace ASD_Final_Project
                     btn_wh3.Visible = false;
                 }
             }
-            
+
         }//done
-        
+
         private int GetWareHouseID(string warehouse)
         {
             switch (warehouse)
@@ -481,7 +479,7 @@ namespace ASD_Final_Project
                 default: throw new ArgumentException("Invalid warehouse name");
             }
         } //done
-        
+
         private string GetRoleName(int role)
         {
             switch (role)
@@ -493,9 +491,9 @@ namespace ASD_Final_Project
             }
         } //done
 
-        private string GetWareHouseName(int role)
+        private string GetWareHouseName(int warehouse)
         {
-            switch (role)
+            switch (warehouse)
             {
                 case 1: return "Warehouse North";
                 case 2: return "Warehouse South";
@@ -515,6 +513,235 @@ namespace ASD_Final_Project
             }
         } //done
 
-     
+        private void btn_el_add_Click(object sender, EventArgs e)
+        {
+            if (pn_el_add.Visible)
+            {
+                pn_el_add.Visible = false;
+            } else
+            {
+                pn_el_add.Visible = true;
+                pn_el_edit.Visible = false;
+            }
+
+        }
+
+        private void btn_el_add_submit_Click(object sender, EventArgs e)
+        {
+            if (txt_el_name == null || cbx_el_role.SelectedIndex == -1 || cbx_el_wh.SelectedIndex== -1)
+            {
+                MessageBox.Show("vui lòng không để trống thông tin");
+            }
+            else
+            {
+                User user = new User();
+                user.Username = txt_el_name.Text;
+                user.Password = txt_el_pw.Text;
+                user.Address = "Home";
+                user.Phone = "12345678";
+                user.Role = GetRoleName(cbx_el_role.SelectedIndex+1);
+                user.Warehouse = GetWareHouseName(cbx_el_wh.SelectedIndex+1);
+                try
+                {
+                    _userService.AddUser(user);
+                    if (wh_id != 0)
+                    {
+                        LoadDataUsers(wh_id);
+                    }
+                    else
+                    {
+                        LoadDataUsers();
+                    }
+                    pn_el_add.Visible = false;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Loi he thong: " + ex);
+                    pn_el_add.Visible = false;
+                }
+            }
+            
+
+        }
+
+        private void btn_el_edit_Click(object sender, EventArgs e)
+        {
+            if (pn_el_edit.Visible == false)
+            { 
+                if (dgv_employee.SelectedRows.Count > 0)
+                {
+                    var seclectRow = dgv_employee.SelectedRows[0];
+                    string UserID = seclectRow.Cells[0].Value.ToString();
+                    pn_el_edit.Visible = true;
+                    pn_el_add.Visible = false;
+                    try
+                    {
+                        var user = _userService.GetUser(int.Parse(UserID));
+                        if (user != null)
+                        {
+                            txt_el_edit_id.Text = user.Id.ToString();
+                            txt_el_edit_name.Text = user.Username;
+                            cbx_el_edit_role.SelectedIndex = GetRoleID(user.Role) - 1;
+                            cbx_el_edit_wh.SelectedIndex = GetWareHouseID(user.Warehouse) - 1;
+                        }
+                        else
+                        {
+                            txt_el_edit_id.Text = string.Empty;
+                            txt_el_edit_name.Text = string.Empty;
+                            cbx_el_edit_role.SelectedIndex = -1;
+                            cbx_el_edit_wh.SelectedIndex = -1;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error loading data: " + ex.Message);
+                        pn_el_edit.Visible = false;
+                        pn_el_add.Visible = false;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("vui lòng chọn dòng");
+                    pn_el_edit.Visible = false;
+                    pn_el_add.Visible = false;
+                }
+                
+            }
+            else
+            {
+               pn_el_edit.Visible = false;
+                txt_el_edit_id.Text = string.Empty;
+                txt_el_edit_name.Text = string.Empty;
+                cbx_el_edit_role.SelectedIndex = -1;
+                cbx_el_edit_wh.SelectedIndex = -1;
+            }
+        }
+
+        private void btn_el_edit_submit_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(txt_el_edit_id.Text);
+            string role = GetRoleName(cbx_el_role.SelectedIndex + 1);
+            string wh = GetWareHouseName(cbx_el_wh.SelectedIndex + 1);
+
+            User user = _userService.GetUser(id);
+            user.Role = role;
+            user.Warehouse = wh;
+            _userService.UpdateUser(user);
+            if (wh_id != 0)
+            {
+                LoadDataUsers(wh_id);
+            }
+            else
+            {
+                LoadDataUsers();
+            }
+            pn_el_edit.Visible=false;
+        }
+
+        private void btn_el_delete_Click(object sender, EventArgs e)
+        {
+            if (dgv_employee.SelectedRows.Count > 0)
+            {
+                var selectRow = dgv_employee.SelectedRows[0];
+                var cellValue = selectRow.Cells[0].Value;
+                if (cellValue != null && int.TryParse(cellValue.ToString(), out int userDelete))
+                {
+                    _userService.DeleteUser(userDelete);
+                    MessageBox.Show("User deleted successfully!");
+                    if (wh_id != 0)
+                    {
+                        LoadDataUsers(wh_id);
+                    }
+                    else
+                    {
+                        LoadDataUsers();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Invalid value for deletion.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một dòng để xóa.");
+            }
+        }
+
+        private void btn_el_search_Click(object sender, EventArgs e)
+        {
+            if (wh_id == 0)
+            {
+                if (cbx_el_s_role.SelectedIndex == -1)
+                {
+                    loadDataSearch();
+                }
+                else
+                {
+                    loadDataSearch(cbx_el_s_role.SelectedIndex + 1);
+                }
+            }
+            else
+            {
+                loadDataSearchNonAdmin(wh_id);
+            }
+        }
+        private void loadDataSearch()
+        {
+            try
+            {
+                var user = _userService.GetUsers(txt_el_s_name.Text);
+                if (user != null && user.Any())
+                {
+                    dgv_employee.DataSource = user.ToList();
+                }
+                else
+                {
+                    MessageBox.Show("No data retrieved from the database.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading data: " + ex.Message);
+            }
+        }
+        private void loadDataSearch(int whid)
+        {
+            try
+            {
+                var user = _userService.GetUsers(whid,txt_el_s_name.Text);
+                if (user != null && user.Any())
+                {
+                    dgv_employee.DataSource = user.ToList();
+                }
+                else
+                {
+                    MessageBox.Show("No data retrieved from the database.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading data: " + ex.Message);
+            }
+        }
+        private void loadDataSearchNonAdmin(int whid)
+        {
+            try
+            {
+                var user = _userService.GetUsersNonAdmin(whid, txt_el_s_name.Text);
+                if (user != null && user.Any())
+                {
+                    dgv_employee.DataSource = user.ToList();
+                }
+                else
+                {
+                    MessageBox.Show("No data retrieved from the database.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading data: " + ex.Message);
+            }
+        }
     }
 }

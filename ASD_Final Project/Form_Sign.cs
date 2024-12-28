@@ -37,6 +37,7 @@ namespace ASD_Final_Project
                 var userLog = _userService.LoginUser(txt_name.Text, txt_password.Text);
                 if (userLog == null)
                 {
+                    txt_password.Text = "";
                     return;
                 }
                 else

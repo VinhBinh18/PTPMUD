@@ -30,6 +30,21 @@ namespace ASD_Final_Project.Program
             return _userRepository.GetAllUsers(Wh_ID);
         }
 
+        public IEnumerable<User> GetUsers(int WhID, string name)
+        {
+            return _userRepository.GetUsers(WhID, name);
+        }
+
+        public IEnumerable<User> GetUsers(string name)
+        {
+            return _userRepository.GetUsers(name);
+        }
+
+        public IEnumerable<User> GetUsersNonAdmin(int WhID, string name)
+        {
+            return _userRepository.GetUsersNonAdmin(WhID, name);
+        }
+
         public void AddUser(User user)
         {
             _userRepository.AddUser(user);
