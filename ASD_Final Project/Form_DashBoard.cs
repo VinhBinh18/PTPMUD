@@ -9,6 +9,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Web.Routing;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
@@ -84,7 +85,7 @@ namespace ASD_Final_Project
                 MoveSidePanel(btn_home);
                 ShowPanel(pn_Welcome);
             }
-            else
+            else if(_user.Role == "Staff")
             {
                 wh_id = GetWareHouseID(_user.Warehouse);
                 quantity(wh_id);
@@ -272,6 +273,19 @@ namespace ASD_Final_Project
                 if (wh_id != 0)
                 {
                     LoadDataUsers(wh_id);
+                    if(_user.Role == "Staff")
+                    {
+                        btn_el_add.Visible = false;
+                        btn_el_delete.Visible = false;
+                        btn_el_edit.Visible = false;
+                        cbx_el_s_role.Visible = false;
+                        label7.Visible = false;
+                    }
+                    else if(_user.Role == "Manager")
+                    {
+                        cbx_el_s_role.Visible = false;
+                        label7.Visible = false;
+                    }
                 }
                 else
                 {
@@ -456,10 +470,10 @@ namespace ASD_Final_Project
                     btn_wh1.Visible = false;
                     btn_wh3.Visible = false;
                 }
-                else
+                else if(wh == "Warehouse South")
                 {
+                    btn_wh1.Visible = false;
                     btn_wh2.Visible = false;
-                    btn_wh3.Visible = false;
                 }
             }
 
@@ -616,8 +630,8 @@ namespace ASD_Final_Project
         private void btn_el_edit_submit_Click(object sender, EventArgs e)
         {
             int id = int.Parse(txt_el_edit_id.Text);
-            string role = GetRoleName(cbx_el_role.SelectedIndex + 1);
-            string wh = GetWareHouseName(cbx_el_wh.SelectedIndex + 1);
+            string role = GetRoleName(cbx_el_edit_role.SelectedIndex + 1);
+            string wh = GetWareHouseName(cbx_el_edit_wh.SelectedIndex + 1);
 
             User user = _userService.GetUser(id);
             user.Role = role;
